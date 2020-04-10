@@ -1,0 +1,10 @@
+/* @font-face {
+  font-family: "Quattro";
+  src: url(./fonts/iAWriterQuattroS-Regular.ttf);
+  font-weight: 400;
+} */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
