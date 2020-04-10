@@ -1,10 +1,19 @@
 import React from "react";
 import Page from "../components/Page";
 import { useConfig, Section, H1, P1 } from "superlinear-react-ui";
+import Helmet from "react-helmet";
 
 const IndexPage = () => {
   return (
     <Page title="Home">
+      <Helmet
+        meta={[
+          {
+            name: "robots",
+            content: "noindex"
+          }
+        ]}
+      />
       <PageContent />
     </Page>
   );

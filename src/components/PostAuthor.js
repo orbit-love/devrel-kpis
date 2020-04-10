@@ -27,6 +27,10 @@ const PostAuthor = props => {
   const blogAuthors = site.siteMetadata.blogAuthors;
   const foundAuthor = blogAuthors.find(a => a.id === author);
 
+  if (!foundAuthor) {
+    return null;
+  }
+
   return (
     <div>
       <P1 color={config.colors.c4}>
