@@ -1,6 +1,6 @@
 import React from "react";
 import Page from "../components/Page";
-import { useConfig, Section, H1, P1 } from "superlinear-react-ui";
+import { useConfig, Section, H1, H3, P1, Button, Grid } from "superlinear-react-ui";
 import Helmet from "react-helmet";
 
 const IndexPage = () => {
@@ -22,9 +22,16 @@ const IndexPage = () => {
 const PageContent = () => {
   const config = useConfig();
   return (
-    <Section>
-      <H1>Welcome</H1>
-      <P1>This is an awesome website.</P1>
+    <Section center>
+      <H1>inboxze.ro</H1>
+      <H3 align="center">
+        We’ve asked our friends to tell us how they get to inbox zero, and we’ve collected exclusive discounts to the
+        best email apps and services out there.
+      </H3>
+      <Grid>
+        <Button style={{ background: "linear-gradient(180deg, #7E62EE 0%, #522DE3 100%)" }}>Get started</Button>
+        <Button color="white">Submit your tip</Button>
+      </Grid>
     </Section>
   );
 };
