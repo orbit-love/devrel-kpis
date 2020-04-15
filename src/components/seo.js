@@ -32,6 +32,7 @@ function SEO({ description, lang, meta, keywords, title, card }) {
       title={metaTitle}
       titleTemplate={metaTitle}
       link={[
+        { rel: "stylesheet", href: `https://use.typekit.net/qru7zue.css` },
         { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` },
         { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon}` },
         { rel: "shortcut icon", type: "image/png", href: favicon },

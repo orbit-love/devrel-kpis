@@ -9,7 +9,7 @@
     "@emotion/styled": "^10.0.22",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "gatsby": "^2.3.32",
+    "gatsby": "^2.20.21",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-canonical-urls": "^2.1.13",
     "gatsby-plugin-emotion": "^4.1.13",
@@ -34,7 +34,7 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^5.1.2",
     "react-tippy": "^1.2.3",
-    "superlinear-react-ui": "^0.12.70"
+    "superlinear-react-ui": "file:../superlinear-react-ui"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
