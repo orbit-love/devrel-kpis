@@ -22,7 +22,7 @@ function SEO({ description, lang, meta, keywords, title, card }) {
 
   const metaTitle = title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
-  const metaCard = `${site.siteMetadata.siteUrl}/cards/${card || "card.png"}`;
+  const metaCard = `${site.siteMetadata.siteUrl}/${card || "card.png"}`;
 
   return (
     <Helmet
