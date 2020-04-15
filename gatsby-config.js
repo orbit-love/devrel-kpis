@@ -3,21 +3,7 @@ module.exports = {
     title: "inboxze.ro",
     description: "Receive the best content from the sites and apps you love in beautiful, automated, newsletters.",
     author: "@",
-    siteUrl: "https://inboxze.ro",
-    blogAuthors: [
-      {
-        id: "fab",
-        name: "Fabrizio",
-        twitter: "linuz90",
-        url: "https://twitter.com/linuz90"
-      },
-      {
-        id: "frank",
-        name: "Francesco",
-        twitter: "frankdilo",
-        url: "https://twitter.com/frankdilo"
-      }
-    ]
+    siteUrl: "https://inboxze.ro"
   },
   plugins: [
     "gatsby-plugin-emotion",
@@ -72,64 +58,6 @@ module.exports = {
         // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
         // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID", // Set Variation ID. 0 for original 1,2,3....
         cookieDomain: "inboxze.ro"
-      }
-    },
-    {
-      resolve: "gatsby-plugin-feed",
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges
-                .filter(edge => edge.node.frontmatter.author)
-                .map(edge => {
-                  return Object.assign({}, edge.node.frontmatter, {
-                    description: edge.node.excerpt,
-                    date: edge.node.frontmatter.date,
-                    url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                    guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                    custom_elements: [{ "content:encoded": edge.node.html }]
-                  });
-                });
-            },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-									filter: { frontmatter: { draft: { eq: null } } }
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      html
-                      fields { slug }
-                      frontmatter {
-                        title
-                        author
-                        date
-                        path
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: "/rss.xml",
-            title: "inboxze.ro's blog"
-          }
-        ]
       }
     },
     {
