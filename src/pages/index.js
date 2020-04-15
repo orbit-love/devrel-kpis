@@ -80,7 +80,7 @@ const PageContent = () => {
         </H2>
         <Spacer />
         <P2>
-          <a href="#!">Notify me</a> where there are new tips & discounts
+          <a href="#!">Notify me</a> when there are new tips & discounts
         </P2>
         <Spacer />
         <Grid>
