@@ -29,7 +29,10 @@ import Linkify from "react-linkify";
 
 const IndexPage = () => {
   return (
-    <Page title="inboxze.ro">
+    <Page
+      title=""
+      description="A crowd-sourced collection of the best email tips, workflows & offers to dominate your inbox."
+    >
       <Helmet
         meta={[
           {
@@ -141,7 +144,16 @@ const PageContent = () => {
                 <Fragment>
                   <AnimateSharedLayout show={show} key={key} id={key}>
                     <Card inline width>
-                      <Tag tag={tag} onClick={() => setCurrentTag(tag)} />
+                      <Tag
+                        tag={tag}
+                        onClick={() => {
+                          if (tag === currentTag) {
+                            setCurrentTag("all");
+                          } else {
+                            setCurrentTag(tag);
+                          }
+                        }}
+                      />
                       {author && (
                         <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
                           <HStack gap="4px">
@@ -249,7 +261,6 @@ const PageContent = () => {
                       )}
                     </Card>
                   </AnimateSharedLayout>
-                  {/* {(index + 1) % 4 === 0 && <div style={{ clear: "float", width: "100%" }} />} */}
                 </Fragment>
               );
             })}
