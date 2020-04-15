@@ -10,7 +10,7 @@
 
 export const content = [
   {
-    tag: "tip",
+    tag: "advice",
     author: {
       name: "Marc Kaöhlbrugge",
       avatar: "twitter/marckohlbrugge",
@@ -27,15 +27,27 @@ export const content = [
       bio: "Automated email digests on any topic."
     },
     body:
-      "Mailbrew sends you automated email digests on your favorite topics.\nStop subscribing to many newsletters, and create a single, personal newsletter with the things you love.",
-    source_url: "https://mailbrew.com/?coupon=30_OFF",
+      "Receive automated email digests on your favorite topics.\n\nWith Mailbrew you create personal newsletter with the things you love, and get them on your schedule.",
+    preview_image:
+      "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
     offer: {
       title: "3 Months Free",
       subtitle: "Click here to claim the discount"
     }
   },
   {
-    tag: "app",
+    tag: "advice",
+    author: {
+      name: "DHH",
+      avatar: "twitter/dhh",
+      bio: "Basecamp Co-Founder"
+    },
+    body:
+      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "extension",
     author: {
       name: "Rich Vreenland",
       avatar: "richvreeland",
@@ -46,9 +58,9 @@ export const content = [
     source_url: "PRIVATE_EXCHANGE",
     chrome_extension: {
       title: "Inbox When Ready",
-      url: "...",
+      url: "https://inboxwhenready.org/",
       icon:
-        "https://lh3.googleusercontent.com/_6Y4tjYdppsZJlWOnAzFy2A8JjGwJpQOvoKocTYMfl66bTJg20mJ6pojdQaUGtvXa9HYurDChQ=w128-h128-e365"
+        "https://lh3.googleusercontent.com/QkFKUeSsig0JNrIA936iV5C8vdD7c51jmz6FjevlBbJUFaSXuIGteqV1Yge0jzFmkvGb5Xho=w128-h128-e365"
     }
   },
   {
@@ -76,6 +88,17 @@ export const content = [
   {
     tag: "tip",
     author: {
+      name: "Rich Vreenland",
+      avatar: "richvreeland",
+      bio: "Composer of “It Follows” soundtrack"
+    },
+    body:
+      "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "tip",
+    author: {
       name: "Kitze",
       avatar: "twitter/thekitze",
       bio: "Founder React Academy"
@@ -90,7 +113,9 @@ export const content = [
       avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
-    body: `Gmail is overrated. Use Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
+    body: `Gmail is overrated.\n\nUse missiveapp.com instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
+    preview_image:
+      "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
     source_url: "PRIVATE_EXCHANGE"
   },
   {
