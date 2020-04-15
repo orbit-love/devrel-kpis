@@ -80,8 +80,10 @@ const PageContent = () => {
             Contribute
           </StyledA>
           <DropDownMenu
+            buttonWidth="100%"
             fullWidth
             innerIcon="chevronDown"
+            iconSide="right"
             label={currentTagName}
             options={tagsValues}
             optionsNames={tagNames}
