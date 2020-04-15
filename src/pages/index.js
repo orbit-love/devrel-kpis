@@ -24,6 +24,7 @@ import StyledA from "../components/StyledA";
 import Highlight from "../components/Highlight";
 import { useQueryParam } from "../hooks/useQueryParam";
 import { motion, AnimatePresence } from "framer-motion";
+import Linkify from "react-linkify";
 
 const IndexPage = () => {
   return (
@@ -155,7 +156,26 @@ const PageContent = () => {
                         </VStack>
                       </HStack>
                     )}
-                    {body && <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>{body}</P1>}
+                    {body && (
+                      <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>
+                        <Linkify>{body}</Linkify>
+                      </P1>
+                    )}
+                    {preview_image && (
+                      <img
+                        style={{
+                          marginTop: "1em",
+                          maxWidth: "100%",
+                          borderRadius: "6px",
+                          border: `1px solid ${config.colors.uiBorderColor}`,
+                          maxHeight: "240px",
+                          objectFit: "cover",
+                          objectPosition: "top"
+                        }}
+                        src={preview_image}
+                        alt="Preview"
+                      />
+                    )}
                     {offer && (
                       <a
                         href={offer.url}

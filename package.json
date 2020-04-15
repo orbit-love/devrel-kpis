@@ -34,6 +34,7 @@
     "react-cursor-position": "^3.0.3",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-linkify": "^1.0.0-alpha",
     "react-router-dom": "^5.1.2",
     "react-tippy": "^1.2.3",
     "superlinear-react-ui": "^0.12.73"
