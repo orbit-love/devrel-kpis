@@ -13,7 +13,7 @@ export const content = [
     tag: "tip",
     author: {
       name: "Marc Kaöhlbrugge",
-      avatar: "marckohlbrugge",
+      avatar: "twitter/marckohlbrugge",
       bio: "Founder of W.I.P."
     },
     body: "Keep your replies short and sweet.",
@@ -23,7 +23,7 @@ export const content = [
     tag: "app",
     author: {
       name: "Mailbrew",
-      avatar: "hello@mailbrew.com",
+      avatar: "twitter/mailbrew",
       bio: "Automated email digests on any topic."
     },
     body:
@@ -37,7 +37,7 @@ export const content = [
   {
     tag: "app",
     author: {
-      name: "Rick Vreenland",
+      name: "Rich Vreenland",
       avatar: "richvreeland",
       bio: "Composer of “It Follows” soundtrack"
     },
@@ -66,7 +66,7 @@ export const content = [
     tag: "tip",
     author: {
       name: "Kitze",
-      avatar: "thekitze",
+      avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
     body:
@@ -77,7 +77,7 @@ export const content = [
     tag: "tip",
     author: {
       name: "Kitze",
-      avatar: "thekitze",
+      avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
     body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
@@ -87,7 +87,7 @@ export const content = [
     tag: "app",
     author: {
       name: "Kitze",
-      avatar: "thekitze",
+      avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
     body: `Gmail is overrated. Use Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
@@ -97,7 +97,7 @@ export const content = [
     tag: "tip",
     author: {
       name: "Francesco Di Lorenzo",
-      avatar: "frankdilo",
+      avatar: "twitter/frankdilo",
       bio: "Superlinear Co-founder"
     },
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,

@@ -86,7 +86,7 @@ const baseConfig = {
     smallRadius: "6px"
   },
   layout: {
-    layoutWidth: "100%",
+    layoutWidth: "72em",
     layoutPadding: ["2.5rem", "1rem"],
     gridGap: "0.8em",
     stackGap: "0.1em"

@@ -92,7 +92,7 @@ const PageContent = () => {
             Fabrizio
           </a>{" "}
           and{" "}
-          <a href="https://twitter.com/frankdilot" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
             Francesco
           </a>{" "}
           for updates
@@ -102,23 +102,19 @@ const PageContent = () => {
         <AnimatePresence>
           <div
             css={css`
-              columns: 3;
-              column-gap: 0;
-
-              @media (max-width: 1300px) {
-                columns: 2;
-              }
-
-              @media (max-width: 800px) {
-                columns: 1;
-              }
               > div {
                 padding: 10px;
-                -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-                page-break-inside: avoid; /* Firefox */
-                break-inside: avoid; /* IE 10+ */
+                width: calc(50% - 20px);
+                :nth-child(odd) {
+                  float: left;
+                }
+                :nth-child(even) {
+                  float: right;
+                }
                 @media (max-width: 800px) {
-                  padding: 0 0 20px;
+                  width: 100%;
+                  float: none;
+                  padding: 0 0 15px;
                 }
               }
             `}
