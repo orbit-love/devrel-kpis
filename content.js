@@ -1,5 +1,11 @@
 /**
- *  We use unavatar to fetch user images from their username or publicly available email address.
+ * This file contains all the tips and apps of https://inboxze.ro
+ *
+ * 💡 CONTRIBUTE:
+ *
+ * - Add your tip to the BOTTOM of this file.
+ * - Keep your tips short and sweet.
+ * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
  */
 
 const content = [
@@ -7,7 +13,7 @@ const content = [
     tag: "tip",
     author: {
       name: "Marc Kaöhlbrugge",
-      unavatar: "marckohlbrugge",
+      avatar: "marckohlbrugge",
       bio: "Founder of W.I.P."
     },
     body: "Keep your replies short and sweet.",
@@ -17,7 +23,7 @@ const content = [
     tag: "app",
     author: {
       name: "Mailbrew",
-      unavatar: "hello@mailbrew.com",
+      avatar: "hello@mailbrew.com",
       bio: "Automated email digests on any topic."
     },
     body:
@@ -32,7 +38,7 @@ const content = [
     tag: "app",
     author: {
       name: "Rick Vreenland",
-      unavatar: "richvreeland",
+      avatar: "richvreeland",
       bio: "Composer of “It Follows” soundtrack"
     },
     body:
@@ -49,7 +55,7 @@ const content = [
     tag: "tip",
     author: {
       name: "Manuel Frigerio",
-      unavatar: "manuel_frigerio",
+      avatar: "manuel_frigerio",
       bio: "Founder of ReferralHero, SparkLoop"
     },
     body:
@@ -60,7 +66,7 @@ const content = [
     tag: "tip",
     author: {
       name: "Kitze",
-      unavatar: "kitze",
+      avatar: "thekitze",
       bio: "Founder React Academy"
     },
     body:
@@ -71,7 +77,7 @@ const content = [
     tag: "tip",
     author: {
       name: "Kitze",
-      unavatar: "kitze",
+      avatar: "thekitze",
       bio: "Founder React Academy"
     },
     body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
@@ -81,7 +87,7 @@ const content = [
     tag: "app",
     author: {
       name: "Kitze",
-      unavatar: "kitze",
+      avatar: "thekitze",
       bio: "Founder React Academy"
     },
     body: `Gmail is overrated. Use Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
@@ -91,7 +97,7 @@ const content = [
     tag: "tip",
     author: {
       name: "Francesco Di Lorenzo",
-      unavatar: "frankdilo",
+      avatar: "frankdilo",
       bio: "Superlinear Co-founder"
     },
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,

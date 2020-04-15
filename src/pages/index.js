@@ -164,7 +164,7 @@ const PageContent = () => {
                   {author && (
                     <HStack gap="4px">
                       <img
-                        src={`https://unavatar.now.sh/${author.unavatar}`}
+                        src={`https://unavatar.now.sh/${author.avatar}`}
                         alt={author.name}
                         css={css`
                           width: 46px;
