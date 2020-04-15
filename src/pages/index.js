@@ -9,11 +9,13 @@ import {
   P1,
   P2,
   H4,
+  Icon,
   HStack,
   VStack,
   Card,
   Spacer,
   DropDownMenu,
+  SubtleCard,
   Grid
 } from "superlinear-react-ui";
 import Helmet from "react-helmet";
@@ -131,7 +133,7 @@ const PageContent = () => {
           `}
         >
           {content.map(el => {
-            const { tag, author, body, source_url, chrome_extension } = el;
+            const { tag, author, body, source_url, offer, chrome_extension } = el;
             return (
               <div className={tag}>
                 <Card inline width>
@@ -153,8 +155,25 @@ const PageContent = () => {
                       </VStack>
                     </HStack>
                   )}
-                  <Spacer size="xs" />
-                  {body && <P1 style={{ whiteSpace: "pre-line" }}>{body}</P1>}
+                  {body && <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>{body}</P1>}
+                  {offer && (
+                    <a
+                      href={offer.url}
+                      style={{ marginTop: "1em", borderBottom: "none" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <SubtleCard color="hsl(12, 100%, 62%)">
+                        <HStack gap="0.5em">
+                          <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
+                          <VStack gap={0}>
+                            <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
+                            <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
+                          </VStack>
+                        </HStack>
+                      </SubtleCard>
+                    </a>
+                  )}
                 </Card>
               </div>
             );

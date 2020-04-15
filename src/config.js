@@ -87,7 +87,9 @@ const baseConfig = {
   },
   layout: {
     layoutWidth: "66rem",
-    layoutPadding: ["2.5rem", "1rem"]
+    layoutPadding: ["2.5rem", "1rem"],
+    gridGap: "0.1em",
+    stackGap: "0.1em"
   },
   section: {
     padding: ["3rem", "1.5rem"]
@@ -100,6 +102,9 @@ const baseConfig = {
     hoverLighten: 0,
     activeLighten: 0,
     whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`
+  },
+  card: {
+    smallPadding: "6em"
   },
   header: {
     background: "transparent",
