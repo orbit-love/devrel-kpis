@@ -86,7 +86,13 @@ const PageContent = () => {
         </H2>
         <Spacer size="xxl" />
         <Grid>
-          <StyledA href="#" icon="github" type="primary">
+          <StyledA
+            href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
+            icon="github"
+            type="primary"
+            target="_blank"
+            rel="noopener"
+          >
             Contribute
           </StyledA>
           <DropDownMenu
