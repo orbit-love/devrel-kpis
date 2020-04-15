@@ -103,7 +103,15 @@ const PageContent = () => {
         </Grid>
         <Spacer />
         <P2>
-          <a href="#!">Notify me</a> when there are new tips & discounts
+          Follow{" "}
+          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+            Fabrizio
+          </a>{" "}
+          and{" "}
+          <a href="https://twitter.com/frankdilot" target="_blank" rel="noopener noreferrer">
+            Francesco
+          </a>{" "}
+          for updates
         </P2>
       </Section>
       <Section>
