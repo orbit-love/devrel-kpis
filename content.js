@@ -36,7 +36,7 @@ const content = [
       bio: "Composer of “It Follows” soundtrack"
     },
     body:
-      "I use a chrome extension called 'Inbox When Ready' which will hide my inbox by default after a certain period of time, to add an extra step to prevent compulsive e-mail checking.\n\nYou can even lock yourself out of it after a certain number of attempts per day, but I felt that was too restrictive for me.",
+      "I use a Chrome extension called 'Inbox When Ready' which will hide my inbox by default after a certain period of time, to add an extra step to prevent compulsive e-mail checking.\n\nYou can even lock yourself out of it after a certain number of attempts per day, but I felt that was too restrictive for me.",
     source_url: "PRIVATE_EXCHANGE",
     chrome_extension: {
       title: "Inbox When Ready",
@@ -54,6 +54,16 @@ const content = [
     },
     body:
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "tip",
+    author: {
+      name: "Francesco Di Lorenzo",
+      unavatar: "frankdilo",
+      bio: "Superlinear Co-founder"
+    },
+    body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
     source_url: "PRIVATE_EXCHANGE"
   }
 ];
