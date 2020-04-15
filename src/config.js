@@ -103,8 +103,8 @@ const baseConfig = {
     activeLighten: 0,
     whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`
   },
-  card: {
-    smallPadding: "6em"
+  cards: {
+    smallPadding: "1.2em"
   },
   header: {
     background: "transparent",

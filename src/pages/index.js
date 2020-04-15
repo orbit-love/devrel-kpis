@@ -16,6 +16,7 @@ import {
   DropDownMenu,
   SubtleCard,
   useWindow,
+  useConfig,
   Grid
 } from "superlinear-react-ui";
 import Helmet from "react-helmet";
@@ -43,6 +44,7 @@ const IndexPage = () => {
 };
 
 const PageContent = () => {
+  const config = useConfig();
   const window = useWindow();
 
   const urlTag = useQueryParam("tag");
@@ -66,7 +68,7 @@ const PageContent = () => {
         <Logo />
         <Spacer />
         <H2 align="center">
-          A crowd-sourced collection of the <Highlight>best email tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
+          A crowd-sourced collection of the best email <Highlight>tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
           <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
         </H2>
         <Spacer size="xxl" />
@@ -129,7 +131,7 @@ const PageContent = () => {
             `}
           >
             {content.map((el, index) => {
-              const { tag, author, body, source_url, offer, chrome_extension } = el;
+              const { tag, author, body, preview_image, source_url, offer, chrome_extension } = el;
 
               const show = currentTag === tag || currentTag === "all";
 
@@ -138,7 +140,7 @@ const PageContent = () => {
               return (
                 <AnimateSharedLayout show={show} key={key} id={key}>
                   <Card inline width>
-                    <Tag tag={tag} />
+                    <Tag tag={tag} onClick={() => setCurrentTag(tag)} />
                     {author && (
                       <HStack gap="4px">
                         <img
@@ -194,6 +196,43 @@ const PageContent = () => {
                         </SubtleCard>
                       </a>
                     )}
+                    {chrome_extension && (
+                      <a
+                        href={chrome_extension.url}
+                        style={{ marginTop: "1em", borderBottom: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <SubtleCard color="rgb(80,80,80)">
+                          <Grid columns="3em 1fr auto" gap="0.5em" vAlign="center">
+                            <img src={chrome_extension.icon} style={{ width: "3em" }} alt={chrome_extension.title} />
+                            <VStack gap={0}>
+                              <H4 color="hsl(12, 30%, 20%)" noWrap>
+                                {chrome_extension.title}
+                              </H4>
+                              <P2 noWrap>Add to Google Chrome</P2>
+                            </VStack>
+                            <span
+                              css={css`
+                                display: inline-block;
+                                background: #4285f4;
+                                padding: 1px 12px;
+                                border-radius: 5px;
+                                p {
+                                  font-size: 16px;
+                                  font-weight: 500;
+                                }
+                                @media (max-width: 640px) {
+                                  display: none;
+                                }
+                              `}
+                            >
+                              <P2 color="white">INSTALL</P2>
+                            </span>
+                          </Grid>
+                        </SubtleCard>
+                      </a>
+                    )}
                   </Card>
                 </AnimateSharedLayout>
               );
@@ -205,13 +244,14 @@ const PageContent = () => {
   );
 };
 
-const Tag = ({ tag }) => {
+const Tag = ({ tag, onClick }) => {
   if (!tag) return null;
 
   const thisTag = tags[tag];
 
   return (
     <span
+      onClick={onClick}
       css={css`
         display: inline-block;
         background: ${thisTag.color}22;
@@ -220,6 +260,7 @@ const Tag = ({ tag }) => {
         position: absolute;
         top: 8px;
         right: 8px;
+        cursor: pointer;
         p {
           text-transform: uppercase;
           font-size: 14px;
