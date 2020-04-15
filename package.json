@@ -35,7 +35,7 @@
     "react-helmet": "^5.2.0",
     "react-router-dom": "^5.1.2",
     "react-tippy": "^1.2.3",
-    "superlinear-react-ui": "file:../superlinear-react-ui"
+    "superlinear-react-ui": "^0.12.73"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
