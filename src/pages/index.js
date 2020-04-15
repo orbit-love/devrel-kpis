@@ -22,10 +22,8 @@ import StyledA from "../components/StyledA";
 import Highlight from "../components/Highlight";
 
 const IndexPage = () => {
-  console.log(content);
-
   return (
-    <Page title="Home">
+    <Page title="inboxze.ro">
       <Helmet
         meta={[
           {
@@ -39,21 +37,46 @@ const IndexPage = () => {
   );
 };
 
+const tags = {
+  tip: {
+    value: "tip",
+    name: "Tip",
+    color: "#FF6948"
+  },
+  app: {
+    value: "app",
+    name: "App",
+    color: "#4B5269"
+  },
+  advice: {
+    value: "advice",
+    name: "Advice",
+    color: "#8348FF"
+  },
+  extension: {
+    value: "extension",
+    name: "Extension",
+    color: "#3576F2"
+  }
+};
+
 const PageContent = () => {
   const config = useConfig();
 
-  const tags = ["all", "tips", "apps"];
-  const tagNames = ["Show All", "Tips", "Apps"];
+  const tagsValues = ["all", ...Object.values(tags).map(v => v.value)];
+  const tagNames = ["Show All", ...Object.values(tags).map(v => v.name)];
   const [currentTag, setCurrentTag] = useState(0);
+  const currentTagName = tagNames[currentTag];
 
   return (
     <Fragment>
       <Section center>
+        <Spacer size="xl" />
         <Logo />
         <Spacer />
         <H2 align="center">
           A crowd-sourced collection of the <Highlight>best email tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
-          <Highlight>offers</Highlight> to dominate your inbox.
+          <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
         </H2>
         <Spacer />
         <P2>
@@ -65,9 +88,10 @@ const PageContent = () => {
             Contribute
           </StyledA>
           <DropDownMenu
+            fullWidth
             innerIcon="chevronDown"
-            label={tagNames[currentTag]}
-            options={tags}
+            label={currentTagName}
+            options={tagsValues}
             optionsNames={tagNames}
             onSelect={(s, i) => {
               setCurrentTag(i);
@@ -79,19 +103,39 @@ const PageContent = () => {
         <div
           css={css`
             columns: 2;
+            column-gap: 0;
+
+            ${currentTag !== 0
+              ? css`
+                  > div {
+                    display: none;
+                  }
+                  > div.${tagsValues[currentTag]} {
+                    display: block;
+                  }
+                `
+              : ""}
+
+            @media (max-width: 800px) {
+              columns: 1;
+            }
             > div {
               padding: 10px;
               -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
               page-break-inside: avoid; /* Firefox */
               break-inside: avoid; /* IE 10+ */
+              @media (max-width: 800px) {
+                padding: 0 0 20px;
+              }
             }
           `}
         >
           {content.map(el => {
             const { tag, author, body, source_url, chrome_extension } = el;
             return (
-              <div>
+              <div className={tag}>
                 <Card inline width>
+                  <Tag tag={tag} />
                   {author && (
                     <HStack gap="4px">
                       <img
@@ -121,13 +165,52 @@ const PageContent = () => {
   );
 };
 
+const Tag = ({ tag }) => {
+  // debugger;
+
+  if (!tag) return null;
+
+  const thisTag = tags[tag];
+
+  return (
+    <span
+      css={css`
+        display: inline-block;
+        background: ${thisTag.color}22;
+        padding: 1px 6px;
+        border-radius: 5px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        p {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      `}
+    >
+      <P2 color={thisTag.color}>{thisTag.name}</P2>
+    </span>
+  );
+};
+
 const Logo = () => (
   <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="53" cy="53" r="53" fill="#25242B" />
-    <path
-      d="M41.4485 44.0779C43.2454 44.0779 44.6389 42.5744 44.6389 40.9975C44.6389 39.4206 43.2454 37.9538 41.4485 37.9538C39.6515 37.9538 38.258 39.4206 38.258 40.9975C38.258 42.5744 39.6515 44.0779 41.4485 44.0779ZM36.5345 63.8806H46.3991V61.7537H44.4555V45.6548H42.952L36.1677 47.7451V49.212L38.6614 50.2754V61.7537H36.5345V63.8806ZM46.7988 68.7213H48.5224L59.8906 37.0003H58.167L46.7988 68.7213ZM57.5863 63.8806H73.6851L74.1252 56.7663H72.8417L69.8346 61.9737L63.7838 62.4504L74.0885 47.5984V46.0215H59.1265L58.6864 52.4024H59.8599L62.647 47.9284L67.891 47.4884L57.5863 62.2304V63.8806Z"
-      fill="white"
-    />
+    <g clip-path="url(#clip0)">
+      <circle cx="53" cy="53" r="53" fill="#25242B" />
+      <path
+        opacity="0.1"
+        d="M23.941 97.3235C29.7616 101.14 36.2769 103.772 43.1148 105.07C49.9528 106.368 56.9794 106.307 63.7936 104.889C70.6078 103.472 77.0761 100.726 82.8292 96.8089C88.5822 92.8916 93.5074 87.8796 97.3235 82.059C101.14 76.2383 103.772 69.723 105.07 62.8851C106.368 56.0472 106.307 49.0205 104.889 42.2063C103.472 35.3921 100.726 28.9238 96.8088 23.1708C92.8916 17.4177 87.8796 12.4925 82.0589 8.67645L52.9999 53L23.941 97.3235Z"
+        fill="white"
+      />
+      <rect x="44.75" y="37.75" width="16.5" height="30.5" rx="8.25" stroke="white" stroke-width="3.5" />
+      <path d="M45.5 64L59.9999 42" stroke="white" stroke-width="3.5" />
+    </g>
+    <defs>
+      <clipPath id="clip0">
+        <path d="M0 0H106V106H0V0Z" fill="white" />
+      </clipPath>
+    </defs>
   </svg>
 );
 

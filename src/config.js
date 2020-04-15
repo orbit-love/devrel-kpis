@@ -49,7 +49,7 @@ const baseConfig = {
       P1: ["18px", "18px"],
       P2: ["17px", "16px"],
       H1: ["3em", "2em"],
-      H2: ["2.4em", "2.3em"],
+      H2: ["2.4em", "1.8em"],
       H3: "1.5em",
       H4: "20px",
       H5: "1.1em",
@@ -62,7 +62,7 @@ const baseConfig = {
     lineHeights: {
       normal: 1.5,
       H1: 1.3,
-      H2: 1.2,
+      H2: 1.4,
       H3: 1.2,
       H4: 1.2,
       H5: 1.2,
@@ -83,13 +83,20 @@ const baseConfig = {
   },
   appearance: {
     bigRadius: "12px",
-    smallRadius: "8px"
+    smallRadius: "6px"
+  },
+  layout: {
+    layoutWidth: "66rem",
+    layoutPadding: ["2.5rem", "1rem"]
+  },
+  section: {
+    padding: ["3rem", "1.5rem"]
   },
   buttons: {
     // General and Buttons,
-    height: "40px",
+    height: "42px",
     shadowSize: `0px 3px 3px`,
-    padding: "0 1.2em",
+    padding: "0 1.5em",
     hoverLighten: 0,
     activeLighten: 0,
     whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`
@@ -99,6 +106,11 @@ const baseConfig = {
     border: "none",
     height: "3.5em",
     breakPoint: "0px"
+  },
+  dropdown: {
+    anchor: "BOTTOM_LEFT",
+    lateralPadding: "1em",
+    rowSize: c => c.sizes.m
   }
 };
 
