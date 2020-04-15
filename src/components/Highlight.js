@@ -10,7 +10,7 @@ const Highlight = props => {
   const BackgroundSVG = () => (
     <svg
       width="100%"
-      height="auto"
+      height="100%"
       preserveAspectRatio="xMidYMin slice"
       viewBox="0 0 259 41"
       fill="none"
