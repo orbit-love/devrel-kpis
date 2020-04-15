@@ -47,7 +47,7 @@ const baseConfig = {
     sizes: {
       normal: ["1em", "16px"],
       P1: ["18px", "18px"],
-      P2: ["17px", "16px"],
+      P2: ["16px", "14px"],
       H1: ["3em", "2em"],
       H2: ["2.4em", "1.8em"],
       H3: "1.5em",
@@ -86,13 +86,13 @@ const baseConfig = {
     smallRadius: "6px"
   },
   layout: {
-    layoutWidth: "66rem",
+    layoutWidth: "100%",
     layoutPadding: ["2.5rem", "1rem"],
-    gridGap: "0.1em",
+    gridGap: "0.8em",
     stackGap: "0.1em"
   },
   section: {
-    padding: ["3rem", "1.5rem"]
+    padding: ["2.5rem", "1.5rem"]
   },
   buttons: {
     // General and Buttons,

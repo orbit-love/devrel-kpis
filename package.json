@@ -28,6 +28,7 @@
     "gatsby-transformer-sharp": "^2.1.18",
     "gatsby-transformer-xml": "^2.0.9",
     "prop-types": "^15.7.2",
+    "query-string": "^6.12.1",
     "react": "^16.8.6",
     "react-cursor-position": "^3.0.3",
     "react-dom": "^16.8.6",

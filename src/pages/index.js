@@ -22,6 +22,7 @@ import Helmet from "react-helmet";
 import content from "../../content";
 import StyledA from "../components/StyledA";
 import Highlight from "../components/Highlight";
+import { useQueryParam } from "../hooks/useQueryParam";
 
 const IndexPage = () => {
   return (
@@ -63,28 +64,27 @@ const tags = {
 };
 
 const PageContent = () => {
-  const config = useConfig();
+  const urlTag = useQueryParam("tag");
 
   const tagsValues = ["all", ...Object.values(tags).map(v => v.value)];
   const tagNames = ["Show All", ...Object.values(tags).map(v => v.name)];
-  const [currentTag, setCurrentTag] = useState(0);
+
+  const urlTagIndex = findUrlTagIndex(urlTag, tagsValues);
+
+  const [currentTag, setCurrentTag] = useState(urlTagIndex);
   const currentTagName = tagNames[currentTag];
 
   return (
     <Fragment>
-      <Section center>
-        <Spacer size="xl" />
+      <Section width="66rem" center>
+        <Spacer size="xxxl" />
         <Logo />
         <Spacer />
         <H2 align="center">
           A crowd-sourced collection of the <Highlight>best email tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
           <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
         </H2>
-        <Spacer />
-        <P2>
-          <a href="#!">Notify me</a> when there are new tips & discounts
-        </P2>
-        <Spacer />
+        <Spacer size="xxl" />
         <Grid>
           <StyledA href="#" icon="github" type="primary">
             Contribute
@@ -97,14 +97,19 @@ const PageContent = () => {
             optionsNames={tagNames}
             onSelect={(s, i) => {
               setCurrentTag(i);
+              updatedUrlTag(s);
             }}
           />
         </Grid>
+        <Spacer />
+        <P2>
+          <a href="#!">Notify me</a> when there are new tips & discounts
+        </P2>
       </Section>
       <Section>
         <div
           css={css`
-            columns: 2;
+            columns: 3;
             column-gap: 0;
 
             ${currentTag !== 0
@@ -117,6 +122,10 @@ const PageContent = () => {
                   }
                 `
               : ""}
+
+            @media (max-width: 1300px) {
+              columns: 2;
+            }
 
             @media (max-width: 800px) {
               columns: 1;
@@ -185,8 +194,6 @@ const PageContent = () => {
 };
 
 const Tag = ({ tag }) => {
-  // debugger;
-
   if (!tag) return null;
 
   const thisTag = tags[tag];
@@ -232,5 +239,25 @@ const Logo = () => (
     </defs>
   </svg>
 );
+
+function updatedUrlTag(tag) {
+  if (window.history.pushState) {
+    const newUrl =
+      tag === "all"
+        ? window.location.protocol + "//" + window.location.host + window.location.pathname
+        : window.location.protocol + "//" + window.location.host + window.location.pathname + `?tag=${tag}`;
+    window.history.pushState({ path: newUrl }, "", newUrl);
+  }
+}
+
+function findUrlTagIndex(tag, tagsValues) {
+  if (tag) {
+    const index = tagsValues.findIndex(t => t === tag);
+    if (index >= 0) {
+      return index;
+    }
+  }
+  return 0;
+}
 
 export default IndexPage;
