@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import Page from "../components/Page";
 import {
-  useConfig,
   Section,
   H2,
   P1,
@@ -16,13 +15,15 @@ import {
   Spacer,
   DropDownMenu,
   SubtleCard,
+  useWindow,
   Grid
 } from "superlinear-react-ui";
 import Helmet from "react-helmet";
-import content from "../../content";
+import { content, tags } from "../../content";
 import StyledA from "../components/StyledA";
 import Highlight from "../components/Highlight";
 import { useQueryParam } from "../hooks/useQueryParam";
+import { motion, AnimatePresence } from "framer-motion";
 
 const IndexPage = () => {
   return (
@@ -40,42 +41,25 @@ const IndexPage = () => {
   );
 };
 
-const tags = {
-  tip: {
-    value: "tip",
-    name: "Tip",
-    color: "#FF6948"
-  },
-  app: {
-    value: "app",
-    name: "App",
-    color: "#4B5269"
-  },
-  advice: {
-    value: "advice",
-    name: "Advice",
-    color: "#8348FF"
-  },
-  extension: {
-    value: "extension",
-    name: "Extension",
-    color: "#3576F2"
-  }
-};
-
 const PageContent = () => {
+  const window = useWindow();
+
   const urlTag = useQueryParam("tag");
 
-  const tagsValues = ["all", ...Object.values(tags).map(v => v.value)];
-  const tagNames = ["Show All", ...Object.values(tags).map(v => v.name)];
+  // solving issue with gatsby not picking up changes in style after re-hydration
+  // https://github.com/gatsbyjs/gatsby/issues/14601
+  const [render, setRender] = useState(0);
+  useEffect(() => setRender(1), [setRender]);
 
-  const urlTagIndex = findUrlTagIndex(urlTag, tagsValues);
+  const tagsValues = Object.keys(tags);
+  const tagNames = Object.values(tags).map(v => v.name);
 
-  const [currentTag, setCurrentTag] = useState(urlTagIndex);
-  const currentTagName = tagNames[currentTag];
+  const [currentTag, setCurrentTag] = useState(tags[urlTag] ? urlTag : "all");
+
+  const currentTagName = tags[currentTag].name;
 
   return (
-    <Fragment>
+    <Fragment key={render}>
       <Section width="66rem" center>
         <Spacer size="xxxl" />
         <Logo />
@@ -86,13 +70,7 @@ const PageContent = () => {
         </H2>
         <Spacer size="xxl" />
         <Grid>
-          <StyledA
-            href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
-            icon="github"
-            type="primary"
-            target="_blank"
-            rel="noopener"
-          >
+          <StyledA href="#" icon="github" type="primary">
             Contribute
           </StyledA>
           <DropDownMenu
@@ -101,9 +79,9 @@ const PageContent = () => {
             label={currentTagName}
             options={tagsValues}
             optionsNames={tagNames}
-            onSelect={(s, i) => {
-              setCurrentTag(i);
-              updatedUrlTag(s);
+            onSelect={(value, i) => {
+              setCurrentTag(value);
+              updatedUrlTag(value, window);
             }}
           />
         </Grid>
@@ -121,87 +99,83 @@ const PageContent = () => {
         </P2>
       </Section>
       <Section>
-        <div
-          css={css`
-            columns: 3;
-            column-gap: 0;
+        <AnimatePresence>
+          <div
+            css={css`
+              columns: 3;
+              column-gap: 0;
 
-            ${currentTag !== 0
-              ? css`
-                  > div {
-                    display: none;
-                  }
-                  > div.${tagsValues[currentTag]} {
-                    display: block;
-                  }
-                `
-              : ""}
-
-            @media (max-width: 1300px) {
-              columns: 2;
-            }
-
-            @media (max-width: 800px) {
-              columns: 1;
-            }
-            > div {
-              padding: 10px;
-              -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-              page-break-inside: avoid; /* Firefox */
-              break-inside: avoid; /* IE 10+ */
-              @media (max-width: 800px) {
-                padding: 0 0 20px;
+              @media (max-width: 1300px) {
+                columns: 2;
               }
-            }
-          `}
-        >
-          {content.map(el => {
-            const { tag, author, body, source_url, offer, chrome_extension } = el;
-            return (
-              <div className={tag}>
-                <Card inline width>
-                  <Tag tag={tag} />
-                  {author && (
-                    <HStack gap="4px">
-                      <img
-                        src={`https://unavatar.now.sh/${author.avatar}`}
-                        alt={author.name}
-                        css={css`
-                          width: 46px;
-                          height: 46px;
-                          border-radius: 50%;
-                        `}
-                      />
-                      <VStack gap={0}>
-                        <H4>{author.name}</H4>
-                        <P2>{author.bio}</P2>
-                      </VStack>
-                    </HStack>
-                  )}
-                  {body && <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>{body}</P1>}
-                  {offer && (
-                    <a
-                      href={offer.url}
-                      style={{ marginTop: "1em", borderBottom: "none" }}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <SubtleCard color="hsl(12, 100%, 62%)">
-                        <HStack gap="0.5em">
-                          <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
-                          <VStack gap={0}>
-                            <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
-                            <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
-                          </VStack>
-                        </HStack>
-                      </SubtleCard>
-                    </a>
-                  )}
-                </Card>
-              </div>
-            );
-          })}
-        </div>
+
+              @media (max-width: 800px) {
+                columns: 1;
+              }
+              > div {
+                padding: 10px;
+                -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+                page-break-inside: avoid; /* Firefox */
+                break-inside: avoid; /* IE 10+ */
+                @media (max-width: 800px) {
+                  padding: 0 0 20px;
+                }
+              }
+            `}
+          >
+            {content.map((el, index) => {
+              const { tag, author, body, source_url, offer, chrome_extension } = el;
+
+              const show = currentTag === tag || currentTag === "all";
+
+              const key = `${tag}${author.name}${index}${show}`;
+
+              return (
+                <AnimateSharedLayout show={show} key={key} id={key}>
+                  <Card inline width>
+                    <Tag tag={tag} />
+                    {author && (
+                      <HStack gap="4px">
+                        <img
+                          src={`https://unavatar.now.sh/${author.avatar}`}
+                          alt={author.name}
+                          css={css`
+                            width: 46px;
+                            height: 46px;
+                            border-radius: 50%;
+                          `}
+                        />
+                        <VStack gap={0}>
+                          <H4>{author.name}</H4>
+                          <P2>{author.bio}</P2>
+                        </VStack>
+                      </HStack>
+                    )}
+                    {body && <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>{body}</P1>}
+                    {offer && (
+                      <a
+                        href={offer.url}
+                        style={{ marginTop: "1em", borderBottom: "none" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <SubtleCard color="hsl(12, 100%, 62%)">
+                          <HStack gap="0.5em">
+                            <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
+                            <VStack gap={0}>
+                              <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
+                              <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
+                            </VStack>
+                          </HStack>
+                        </SubtleCard>
+                      </a>
+                    )}
+                  </Card>
+                </AnimateSharedLayout>
+              );
+            })}
+          </div>
+        </AnimatePresence>
       </Section>
     </Fragment>
   );
@@ -234,6 +208,18 @@ const Tag = ({ tag }) => {
   );
 };
 
+export const AnimateSharedLayout = ({ show, id, children }) =>
+  show && (
+    <motion.div
+      layoutId={id}
+      initial={{ opacity: 0, transform: "scale(0.8)" }}
+      animate={{ opacity: 1, transform: "scale(1)" }}
+      exit={{ opacity: 0, transform: "scale(0.8)" }}
+    >
+      {children}
+    </motion.div>
+  );
+
 const Logo = () => (
   <svg width="106" height="106" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0)">
@@ -254,7 +240,7 @@ const Logo = () => (
   </svg>
 );
 
-function updatedUrlTag(tag) {
+function updatedUrlTag(tag, window) {
   if (window.history.pushState) {
     const newUrl =
       tag === "all"
@@ -262,16 +248,6 @@ function updatedUrlTag(tag) {
         : window.location.protocol + "//" + window.location.host + window.location.pathname + `?tag=${tag}`;
     window.history.pushState({ path: newUrl }, "", newUrl);
   }
-}
-
-function findUrlTagIndex(tag, tagsValues) {
-  if (tag) {
-    const index = tagsValues.findIndex(t => t === tag);
-    if (index >= 0) {
-      return index;
-    }
-  }
-  return 0;
 }
 
 export default IndexPage;

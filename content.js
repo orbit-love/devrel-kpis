@@ -8,7 +8,7 @@
  * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
  */
 
-const content = [
+export const content = [
   {
     tag: "tip",
     author: {
@@ -104,5 +104,33 @@ const content = [
     source_url: "PRIVATE_EXCHANGE"
   }
 ];
+
+export const tags = {
+  all: {
+    value: "all",
+    name: "Show All",
+    color: ""
+  },
+  tip: {
+    value: "tip",
+    name: "Tip",
+    color: "#FF6948"
+  },
+  app: {
+    value: "app",
+    name: "App",
+    color: "#4B5269"
+  },
+  advice: {
+    value: "advice",
+    name: "Advice",
+    color: "#8348FF"
+  },
+  extension: {
+    value: "extension",
+    name: "Extension",
+    color: "#3576F2"
+  }
+};
 
 export default content;

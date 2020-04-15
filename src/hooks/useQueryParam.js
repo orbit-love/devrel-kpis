@@ -1,9 +1,13 @@
 import { useMemo } from "react";
 import { parse } from "query-string";
+import { useWindow } from "superlinear-react-ui";
 
 export function useQueryParam(paramName, tranformer) {
-  const search = window.location.search;
+  const window = useWindow();
+
+  const search = window && window.location.search;
   const parsedQueryParams = useMemo(() => {
+    if (!search) return;
     return parse(search);
   }, [search]);
 

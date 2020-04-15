@@ -9,6 +9,7 @@
     "@emotion/styled": "^10.0.22",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "framer-motion": "^2.0.0-beta.45",
     "gatsby": "^2.20.21",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-canonical-urls": "^2.1.13",

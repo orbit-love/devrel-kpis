@@ -6,7 +6,6 @@ import PostAuthor from "./PostAuthor";
 import BlogPostStyledWrapper from "./style/BlogPostStyledWrapper";
 
 const PostPreview = ({ post }) => {
-  // console.log(post);
   return (
     <div>
       <PostAuthor frontmatter={post.frontmatter} />
