@@ -59,6 +59,37 @@ const content = [
   {
     tag: "tip",
     author: {
+      name: "Kitze",
+      unavatar: "kitze",
+      bio: "Founder React Academy"
+    },
+    body:
+      'Check and answer emails once per day. Mark emails that can wait with a "fluff" label and answer them during the weekend.',
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "tip",
+    author: {
+      name: "Kitze",
+      unavatar: "kitze",
+      bio: "Founder React Academy"
+    },
+    body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "app",
+    author: {
+      name: "Kitze",
+      unavatar: "kitze",
+      bio: "Founder React Academy"
+    },
+    body: `Gmail is overrated. Use Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "tip",
+    author: {
       name: "Francesco Di Lorenzo",
       unavatar: "frankdilo",
       bio: "Superlinear Co-founder"
