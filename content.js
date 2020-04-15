@@ -28,11 +28,13 @@ export const content = [
     },
     body:
       "Receive automated email digests on your favorite topics.\n\nWith Mailbrew you create personal newsletter with the things you love, and get them on your schedule.",
+    url: "https://mailbrew.com/?coupon=K9h1JrBP",
     preview_image:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
     offer: {
-      title: "3 Months Free",
-      subtitle: "Click here to claim the discount"
+      title: "40% OFF for 3 Months",
+      subtitle: "Click here to claim the discount",
+      url: "https://mailbrew.com/?coupon=K9h1JrBP"
     }
   },
   {
@@ -44,6 +46,17 @@ export const content = [
     },
     body:
       "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
+    source_url: "PRIVATE_EXCHANGE"
+  },
+  {
+    tag: "tip",
+    author: {
+      name: "Manuel Frigerio",
+      avatar: "manuel_frigerio",
+      bio: "Founder of ReferralHero, SparkLoop"
+    },
+    body:
+      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
     source_url: "PRIVATE_EXCHANGE"
   },
   {
@@ -64,15 +77,22 @@ export const content = [
     }
   },
   {
-    tag: "tip",
+    tag: "app",
     author: {
-      name: "Manuel Frigerio",
-      avatar: "manuel_frigerio",
-      bio: "Founder of ReferralHero, SparkLoop"
+      name: "Boxy Suite",
+      avatar: "twitter/getboxy",
+      bio: "Gmail, redesigned for Mac."
     },
     body:
-      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
-    source_url: "PRIVATE_EXCHANGE"
+      "Boxy Suite brings Gmail, Calendar and other G Suite apps to your Mac.\n\nIt features polished UI, Minimal Mode, Reader Mode, a convenient Quick Launched, Tracking Detection and more.",
+    url: "https://boxysuite.com/?coupon=inboxzero",
+    preview_image:
+      "https://previews.dropbox.com/p/thumb/AAypYp18wI_jP8fiBT4d6TMYMqotNjZOxmuiL__DTCNGNf5Pi63Nh2W7KqUUmvwEOq46ssDkBrSnCd3rfSRmD25SlgxHGyfn2U2MFVtNDfQyWiZJz8ZR7jVAxqYJ6PkR-XIn_9JmAj9yNq8q_whJgKNnbqx-9VqwmaHjECXmDMCgE1VtlWw_oKdVisWpsCW8aBQKImc6MYI-2Vfh-LfCqP8nLA3LYPjcECvPW48Mjj5vbeMa4645qHLeBGhQWww4L46KABAG4d-C5jk9v1gfdgIFOZFl1xXgEW_LslhFV0KsUjkyfcuC3ACIoizKezkujhYR64MCi9k2DGIfKMwLx82q/p.png?fv_content=true&size_mode=5",
+    offer: {
+      title: "20% OFF",
+      subtitle: "Click here to claim the discount",
+      url: "https://boxysuite.com/?coupon=inboxzero"
+    }
   },
   {
     tag: "tip",
@@ -97,6 +117,18 @@ export const content = [
     source_url: "PRIVATE_EXCHANGE"
   },
   {
+    tag: "app",
+    author: {
+      name: "Pigeon",
+      avatar: "twitter/trypigeon",
+      bio: "Powerful CRM inside Gmail."
+    },
+    url: "https://trypigeon.co/",
+    body:
+      "Your business runs on email - so why are you using tools that don't integrate with it?\n\nGet replies, close deals, and attract customers. All inside Gmail.",
+    preview_image: "https://s3.amazonaws.com/www.trypigeon.co/homepage/gmail-thread-2.png"
+  },
+  {
     tag: "tip",
     author: {
       name: "Kitze",
@@ -113,7 +145,8 @@ export const content = [
       avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
-    body: `Gmail is overrated.\n\nUse missiveapp.com instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
+    body: `Gmail is overrated.\n\nUse Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
+    url: "https://missiveapp.com",
     preview_image:
       "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
     source_url: "PRIVATE_EXCHANGE"

@@ -131,110 +131,126 @@ const PageContent = () => {
             `}
           >
             {content.map((el, index) => {
-              const { tag, author, body, preview_image, source_url, offer, chrome_extension } = el;
+              const { tag, author, body, url, preview_image, source_url, offer, chrome_extension } = el;
 
               const show = currentTag === tag || currentTag === "all";
 
               const key = `${tag}${author.name}${index}${show}`;
 
               return (
-                <AnimateSharedLayout show={show} key={key} id={key}>
-                  <Card inline width>
-                    <Tag tag={tag} onClick={() => setCurrentTag(tag)} />
-                    {author && (
-                      <HStack gap="4px">
-                        <img
-                          src={`https://unavatar.now.sh/${author.avatar}`}
-                          alt={author.name}
-                          css={css`
-                            width: 46px;
-                            height: 46px;
-                            border-radius: 50%;
-                          `}
-                        />
-                        <VStack gap={0}>
-                          <H4>{author.name}</H4>
-                          <P2>{author.bio}</P2>
-                        </VStack>
-                      </HStack>
-                    )}
-                    {body && (
-                      <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>
-                        <Linkify>{body}</Linkify>
-                      </P1>
-                    )}
-                    {preview_image && (
-                      <img
-                        style={{
-                          marginTop: "1em",
-                          maxWidth: "100%",
-                          borderRadius: "6px",
-                          border: `1px solid ${config.colors.uiBorderColor}`,
-                          maxHeight: "240px",
-                          objectFit: "cover",
-                          objectPosition: "top"
-                        }}
-                        src={preview_image}
-                        alt="Preview"
-                      />
-                    )}
-                    {offer && (
-                      <a
-                        href={offer.url}
-                        style={{ marginTop: "1em", borderBottom: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <SubtleCard color="hsl(12, 100%, 62%)">
-                          <HStack gap="0.5em">
-                            <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
+                <Fragment>
+                  <AnimateSharedLayout show={show} key={key} id={key}>
+                    <Card inline width>
+                      <Tag tag={tag} onClick={() => setCurrentTag(tag)} />
+                      {author && (
+                        <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
+                          <HStack gap="4px">
+                            <img
+                              src={`https://unavatar.now.sh/${author.avatar}`}
+                              alt={author.name}
+                              css={css`
+                                width: 46px;
+                                height: 46px;
+                                border-radius: 50%;
+                              `}
+                            />
                             <VStack gap={0}>
-                              <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
-                              <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
+                              <H4>{author.name}</H4>
+                              <P2>{author.bio}</P2>
                             </VStack>
                           </HStack>
-                        </SubtleCard>
-                      </a>
-                    )}
-                    {chrome_extension && (
-                      <a
-                        href={chrome_extension.url}
-                        style={{ marginTop: "1em", borderBottom: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <SubtleCard color="rgb(80,80,80)">
-                          <Grid columns="3em 1fr auto" gap="0.5em" vAlign="center">
-                            <img src={chrome_extension.icon} style={{ width: "3em" }} alt={chrome_extension.title} />
-                            <VStack gap={0}>
-                              <H4 color="hsl(12, 30%, 20%)" noWrap>
-                                {chrome_extension.title}
-                              </H4>
-                              <P2 noWrap>Add to Google Chrome</P2>
-                            </VStack>
-                            <span
-                              css={css`
-                                display: inline-block;
-                                background: #4285f4;
-                                padding: 1px 12px;
-                                border-radius: 5px;
-                                p {
-                                  font-size: 16px;
-                                  font-weight: 500;
-                                }
-                                @media (max-width: 640px) {
-                                  display: none;
-                                }
-                              `}
-                            >
-                              <P2 color="white">INSTALL</P2>
-                            </span>
-                          </Grid>
-                        </SubtleCard>
-                      </a>
-                    )}
-                  </Card>
-                </AnimateSharedLayout>
+                        </a>
+                      )}
+                      {body && (
+                        <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>
+                          <Linkify>{body}</Linkify>
+                        </P1>
+                      )}
+                      {preview_image && (
+                        <img
+                          style={{
+                            marginTop: "1em",
+                            maxWidth: "100%",
+                            borderRadius: "6px",
+                            border: `1px solid ${config.colors.uiBorderColor}`,
+                            maxHeight: "240px",
+                            objectFit: "cover",
+                            objectPosition: "top"
+                          }}
+                          src={preview_image}
+                          alt="Preview"
+                        />
+                      )}
+                      {offer && (
+                        <a
+                          href={offer.url}
+                          style={{ marginTop: "1em", borderBottom: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SubtleCard color="hsl(12, 100%, 62%)">
+                            <HStack gap="0.5em">
+                              <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
+                              <VStack gap={0}>
+                                <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
+                                <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
+                              </VStack>
+                            </HStack>
+                          </SubtleCard>
+                        </a>
+                      )}
+                      {tag === "app" && !offer && url && (
+                        <StyledA
+                          style={{ marginTop: "1em" }}
+                          type="primary"
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Get it
+                        </StyledA>
+                      )}
+                      {chrome_extension && (
+                        <a
+                          href={chrome_extension.url}
+                          style={{ marginTop: "1em", borderBottom: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SubtleCard color="rgb(80,80,80)">
+                            <Grid columns="3em 1fr auto" gap="0.5em" vAlign="center">
+                              <img src={chrome_extension.icon} style={{ width: "3em" }} alt={chrome_extension.title} />
+                              <VStack gap={0}>
+                                <H4 color="hsl(12, 30%, 20%)" noWrap>
+                                  {chrome_extension.title}
+                                </H4>
+                                <P2 noWrap>Add to Google Chrome</P2>
+                              </VStack>
+                              <span
+                                css={css`
+                                  display: inline-block;
+                                  background: #4285f4;
+                                  padding: 1px 12px;
+                                  border-radius: 5px;
+                                  p {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                  }
+                                  @media (max-width: 640px) {
+                                    display: none;
+                                  }
+                                `}
+                              >
+                                <P2 color="white">INSTALL</P2>
+                              </span>
+                            </Grid>
+                          </SubtleCard>
+                        </a>
+                      )}
+                    </Card>
+                  </AnimateSharedLayout>
+                  {/* {(index + 1) % 4 === 0 && <div style={{ clear: "float", width: "100%" }} />} */}
+                </Fragment>
               );
             })}
           </div>
