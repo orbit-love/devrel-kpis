@@ -221,7 +221,7 @@ const PageContent = props => {
                 display: "flex",
                 zIndex: 3,
                 overflow: "scroll",
-                webkitOverflowScrolling: "touch",
+                WebkitOverflowScrolling: "touch",
                 padding: "3em 1em",
               }}
             >

@@ -54,10 +54,15 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </HStack>
         )}
         {body && (
-          <P1
+          <div
             css={css`
               margin-top: 1em;
               white-space: pre-line;
+              color: ${config.colors.c2};
+              font-size: 17px;
+              @media (max-width: 640px) {
+                font-size: 16px;
+              }
               em {
                 font-style: normal;
                 background: linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%);
@@ -79,7 +84,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             `}
           >
             <ReactMarkdown source={body} />
-          </P1>
+          </div>
         )}
         {preview_image && (
           <img
@@ -166,7 +171,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
 };
 
 const AnimatedDiv = ({ id, children, style }) => (
-  <motion.div layoutId={id} style={{ zIndex: 2, ...style }}>
+  <motion.div initial={false} layoutId={id} style={{ zIndex: 2, ...style }}>
     {children}
   </motion.div>
 );

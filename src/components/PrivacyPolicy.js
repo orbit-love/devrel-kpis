@@ -43,7 +43,7 @@ Place of processing: Ireland – [Privacy Policy](https://policies.google.com/pr
 
   return (
     <Modal show={show} setShow={setShow} width="50em">
-      <P1
+      <div
         css={css`
           h2,
           h3,
@@ -59,7 +59,7 @@ Place of processing: Ireland – [Privacy Policy](https://policies.google.com/pr
         `}
       >
         <ReactMarkdown source={policy} />
-      </P1>
+      </div>
     </Modal>
   );
 };
