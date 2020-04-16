@@ -37,12 +37,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-...",
+        trackingId: "UA-23035506-17",
         head: true,
         respectDNT: true,
-        // exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-        // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID", // Set Variation ID. 0 for original 1,2,3....
         cookieDomain: "inboxze.ro",
       },
     },

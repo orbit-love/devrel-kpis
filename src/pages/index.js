@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import Columns from "react-columns";
@@ -9,6 +9,8 @@ import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
+import { Link } from "gatsby";
+import PrivacyPolicy from "../components/PrivacyPolicy";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component
@@ -30,6 +32,7 @@ const IndexPage = () => {
           <PageContent key={sharedKey} path="/t/:tipId" />
           <PageContent key={sharedKey} path="/:tagId" />
           <PageContent key={sharedKey} path="/:tagId/:tipId" />
+          <PageContent key={sharedKey} path="/privacy-policy" />
         </Router>
       </AnimateSharedLayout>
     </Page>
@@ -39,7 +42,18 @@ const IndexPage = () => {
 const PageContent = props => {
   const config = useConfig();
 
-  const { tagId: currentTag = "all", tipId } = props;
+  const { path, tagId: currentTag = "all", tipId } = props;
+
+  const [showPrivacy, setShowPrivacy] = useState(path === "/privacy-policy");
+
+  useEffect(() => {
+    if (path === "/privacy-policy") {
+      setShowPrivacy(true);
+    } else {
+      setShowPrivacy(false);
+    }
+  }, [showPrivacy, path]);
+
   const tagsValues = Object.keys(tags);
   const tagNames = Object.values(tags).map(v => v.name);
 
@@ -105,15 +119,15 @@ const PageContent = props => {
         </Grid>
         <Spacer />
         <P2>
-          Follow{" "}
+          Made by{" "}
           <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
             Fabrizio
           </a>{" "}
           and{" "}
           <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
             Francesco
-          </a>{" "}
-          for updates
+          </a>
+          . Privacy Policy <Link to="/privacy-policy">here</Link>.
         </P2>
       </Section>
       <Section width="100%">
@@ -228,6 +242,7 @@ const PageContent = props => {
           </Fragment>
         )}
       </AnimatePresence>
+      <PrivacyPolicy show={showPrivacy} setShow={() => navigate("/")} />
     </Fragment>
   );
 };
