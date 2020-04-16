@@ -45,6 +45,7 @@ Place of processing: Ireland – [Privacy Policy](https://policies.google.com/pr
     <Modal show={show} setShow={setShow} width="50em">
       <div
         css={css`
+          line-height: 1.5;
           h2,
           h3,
           h4,
@@ -53,7 +54,7 @@ Place of processing: Ireland – [Privacy Policy](https://policies.google.com/pr
             color: ${config.colors.c1};
           }
           p {
-            margin: 0 0 0.5em;
+            margin: 0 0 0.8em;
             color: ${config.colors.c2};
           }
         `}

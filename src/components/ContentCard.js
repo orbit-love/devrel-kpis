@@ -60,6 +60,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
               white-space: pre-line;
               color: ${config.colors.c2};
               font-size: 17px;
+              line-height: 1.5;
               @media (max-width: 640px) {
                 font-size: 16px;
               }
