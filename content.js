@@ -276,7 +276,7 @@ export const content = [
       bio: "Founder of Grouper",
     },
     body:
-      "This widely circulated system for using G-mail from Andreas Klinger was the tipping point. It takes about 15 minutes to set up, and gives you a thoughtful, efficient system for plowing through your inbox.\n\nThe system itself is great, but I found that just having a system at all made it a lot easier to dive in to a full inbox.",
+      "This widely circulated system for using Gmail from Andreas Klinger was the tipping point. It takes about 15 minutes to set up, and gives you a thoughtful, efficient system for plowing through your inbox.\n\nThe system itself is great, but I found that just having a system at all made it a lot easier to dive in to a full inbox.",
     source_url: "http://waxman.me/30-days-of-inbox-zero-how-i-did-it",
     url: "https://klinger.io/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
     label: "Read about this system",
@@ -404,6 +404,28 @@ export const content = [
     body: `The number one tool I use probably 20 times a day is FollowUpThen.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
     url: "https://www.followupthen.com/",
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
+  },
+  {
+    id: "43avkdi5",
+    tag: "tip",
+    author: {
+      name: "Andrew Mellen",
+      avatar: "twitter/andrewjmellen",
+      bio: "Professional Organizer",
+    },
+    body: `Always _update the subject line when you’re changing thread_ or content. Don’t allow threads to carry over for months. With subject lines, always use complete information. Try to avoid being vague with phrases like “checking in” or “update,” instead write “update on the Jones project.” It’ll save you and the recipient time because you won’t have to guess what’s inside the email.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
+  },
+  {
+    id: "2dnug8c1",
+    tag: "tip",
+    author: {
+      name: "Brendan Hufford",
+      avatar: "twitter/BrendanHufford",
+      bio: "Creator, SEO for the Rest of Us",
+    },
+    body: `Emails are either answered immediately, starred for later, forwarded to a teammate, or deleted. Following the [Eisenhower Box](https://jamesclear.com/eisenhower-box).`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-brendan-hufford/",
   },
 ];
 
