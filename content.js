@@ -123,7 +123,6 @@ export const content = [
     },
     body: "_Turn off all email notifications._ Phone, desktop, literally everywhere. You'll be fine.",
   },
-
   {
     id: "pwfg01t4",
     tag: "tip",
@@ -147,6 +146,16 @@ export const content = [
       "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
     url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
     label: "Read Essay",
+  },
+  {
+    id: "u28lx4zr",
+    tag: "tip",
+    author: {
+      name: "Fabrizio Rinaldi",
+      avatar: "twitter/linuz90",
+      bio: "Co-Founder Mailbrew & Boxy Suite",
+    },
+    body: `A few months ago I've decided to always press unsubscribe or mark as spam if I'm not interested in an email.\n\nSince then, my inbox has become progressively cleaner, and now I hit inbox zero every few days effortlessly.\n\n_You need to unsubscribe ruthlessly._`,
   },
   {
     id: "h1q0fvf7",
@@ -377,7 +386,7 @@ export const content = [
     author: {
       name: "Francesco Di Lorenzo",
       avatar: "twitter/frankdilo",
-      bio: "Co-founder Superlinear",
+      bio: "Co-Founder Mailbrew & Boxy Suite",
     },
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
   },
