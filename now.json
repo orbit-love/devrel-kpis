@@ -1,6 +1,7 @@
 {
   "routes": [
     { "src": "(.*\\.(js|json|png|jpg|jpeg))", "dest": "/$1" },
+    { "src": ".*", "status": 404, "dest": "/404.html" },
     { "src": "^/(.*)", "dest": "/index.html" }
   ]
 }
