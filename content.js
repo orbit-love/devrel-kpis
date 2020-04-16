@@ -178,9 +178,49 @@ export const content = [
     author: {
       name: "Francesco Di Lorenzo",
       avatar: "twitter/frankdilo",
-      bio: "Superlinear Co-founder",
+      bio: "Co-founder Superlinear",
     },
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
+  },
+  {
+    tag: "tip",
+    author: {
+      name: "Pat Walls",
+      avatar: "twitter/thepatwalls",
+      bio: "Founder Starter Story & Pigeon",
+    },
+    body: `Need to do something every Tuesday at 1 PM? I set a Google Calendar event and turn email notifications on.\n\nForget push notifications, I treat email as the central source for these tasks so I never miss them.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
+  },
+  {
+    tag: "opinion",
+    author: {
+      name: "Pat Walls",
+      avatar: "twitter/thepatwalls",
+      bio: "Founder Starter Story & Pigeon",
+    },
+    body: `“Email is dead” is the greatest lie in the tech industry.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
+  },
+  {
+    tag: "app",
+    author: {
+      name: "Peter Shankman",
+      avatar: "twitter/petershankman",
+      bio: "Author, Entrepreneur, and PR Strategist",
+    },
+    body: `The number one tool I use probably 20 times a day is followupthen.com.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
+    source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
+  },
+  {
+    tag: "tip",
+    author: {
+      name: "Peter Shankman",
+      avatar: "twitter/petershankman",
+      bio: "Author, Entrepreneur, and PR Strategist",
+    },
+    body: `Subject lines are EVERYTHING, and they simply MUST include a benefit to the reader.`,
+    source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
   },
 ];
 
