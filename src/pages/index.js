@@ -1,18 +1,21 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
+import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import Columns from "react-columns";
 import Helmet from "react-helmet";
-import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer, useConfig, useWindow } from "superlinear-react-ui";
+import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer } from "superlinear-react-ui";
 import { content, tags } from "../../content";
 import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
-import { useQueryParam } from "../hooks/useQueryParam";
 
 const IndexPage = () => {
+  // Use a shared key to that animation understands its the same component
+  const sharedKey = "__index__";
+
   return (
     <Page
       title=""
@@ -26,202 +29,202 @@ const IndexPage = () => {
           },
         ]}
       />
-      <PageContent />
+      <AnimateSharedLayout type="crossfade">
+        <Router>
+          <PageContent key={sharedKey} path="/" />
+          <PageContent key={sharedKey} path="/t/:tipId" />
+          <PageContent key={sharedKey} path="/:tagId" />
+          <PageContent key={sharedKey} path="/:tagId/:tipId" />
+        </Router>
+      </AnimateSharedLayout>
     </Page>
   );
 };
 
-const PageContent = () => {
-  const config = useConfig();
-  const window = useWindow();
-
-  const urlTag = useQueryParam("tag");
-
-  // solving issue with gatsby not picking up changes in style after re-hydration
-  // https://github.com/gatsbyjs/gatsby/issues/14601
-  const [render, setRender] = useState(0);
-  useEffect(() => setRender(1), [setRender]);
-
+const PageContent = props => {
+  const { tagId: currentTag = "all", tipId } = props;
   const tagsValues = Object.keys(tags);
   const tagNames = Object.values(tags).map(v => v.name);
 
-  const [currentTag, setCurrentTag] = useState(tags[urlTag] ? urlTag : "all");
-
   const currentTagName = tags[currentTag].name;
 
-  function handleSelectTag(tag) {
-    setCurrentTag(tag);
-    updateUrlTag(tag, window);
-  }
+  const handleSelectTag = tag => {
+    if (tag === "all") {
+      navigate("/");
+    } else {
+      navigate(`/${tag}`);
+    }
+  };
 
-  const [selectedCard, setSelectedCard] = useState(null);
+  const handleSelectTip = tip => {
+    if (tipId) {
+      if (currentTag && currentTag !== "all") {
+        navigate(`/${currentTag}`);
+      } else {
+        navigate("/");
+      }
+    } else {
+      if (currentTag && currentTag !== "all") {
+        navigate(`/${currentTag}/${tip.id}`);
+      } else {
+        navigate(`t/${tip.id}`);
+      }
+    }
+  };
+
+  const selectedTip = tipId ? content.find(tip => tip.id === tipId) : null;
 
   return (
-    <Fragment key={render}>
-      <AnimateSharedLayout type="crossfade">
-        <Section width="56rem" center>
-          <Spacer size="xxxl" />
-          <Logo />
-          <Spacer />
-          <H2 align="center">You're doing email wrong.</H2>
-          <H3 align="center" style={{ maxWidth: "46rem" }}>
-            Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
-            <Highlight>workflows</Highlight> and <Highlight>offers</Highlight> to dominate your inbox.
-          </H3>
-          <Grid width="22em">
-            <StyledA
-              href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
-              icon="github"
-              type="primary"
-              target="_blank"
-              rel="noopener"
-            >
-              Contribute
-            </StyledA>
-            <DropDownMenu
-              buttonWidth="100%"
-              fullWidth
-              innerIcon="chevronDown"
-              iconSide="right"
-              label={currentTagName}
-              options={tagsValues}
-              optionsNames={tagNames}
-              onSelect={value => {
-                handleSelectTag(value);
+    <Fragment>
+      <Section width="56rem" center>
+        <Spacer size="xxxl" />
+        <Logo />
+        <Spacer />
+        <H2 align="center">You're doing email wrong.</H2>
+        <H3 align="center" style={{ maxWidth: "46rem" }}>
+          Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
+          <Highlight>workflows</Highlight> and <Highlight>apps</Highlight> to dominate your inbox.
+        </H3>
+        <Grid width="22em">
+          <StyledA
+            href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
+            icon="github"
+            type="primary"
+            target="_blank"
+            rel="noopener"
+          >
+            Contribute
+          </StyledA>
+          <DropDownMenu
+            buttonWidth="100%"
+            fullWidth
+            innerIcon="chevronDown"
+            iconSide="right"
+            label={currentTagName}
+            options={tagsValues}
+            optionsNames={tagNames}
+            onSelect={handleSelectTag}
+          />
+        </Grid>
+        <Spacer />
+        <P2>
+          Follow{" "}
+          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+            Fabrizio
+          </a>{" "}
+          and{" "}
+          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
+            Francesco
+          </a>{" "}
+          for updates
+        </P2>
+      </Section>
+      <Section width="100%">
+        <Columns
+          queries={[
+            {
+              columns: 1,
+              query: "min-width: 0px",
+            },
+            {
+              columns: 2,
+              query: "min-width: 680px",
+            },
+            {
+              columns: 3,
+              query: "min-width: 1250px",
+            },
+            {
+              columns: 4,
+              query: "min-width: 1800px",
+            },
+          ]}
+          gap="10px"
+        >
+          {content.map(tip => {
+            const key = tip.id;
+            const tag = tip.tag;
+            const show = currentTag === tag || currentTag === "all";
+
+            return (
+              <ContentCard
+                key={key}
+                show={show}
+                element={tip}
+                onTagClick={() => handleSelectTag(tag === currentTag ? "all" : tag)}
+                onLinkClick={() => handleSelectTip(tip)}
+              />
+            );
+          })}
+        </Columns>
+        <Spacer size="xxxl" />
+        <P2 align="center">
+          Made by{" "}
+          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+            Fabrizio
+          </a>{" "}
+          and{" "}
+          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
+            Francesco
+          </a>{" "}
+          with{" "}
+          <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+            Gatsby
+          </a>
+          ,{" "}
+          <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
+            Framer Motion
+          </a>{" "}
+          and{" "}
+          <a href="https://zeit.co/" target="_blank" rel="noopener noreferrer">
+            Zeit
+          </a>
+          .
+        </P2>
+      </Section>
+      <AnimatePresence>
+        {selectedTip && (
+          <Fragment>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                zIndex: 0,
+                background: "rgba(0,0,0,.2)",
               }}
             />
-          </Grid>
-          <Spacer />
-          <P2>
-            Follow{" "}
-            <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
-              Fabrizio
-            </a>{" "}
-            and{" "}
-            <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
-              Francesco
-            </a>{" "}
-            for updates
-          </P2>
-        </Section>
-        <Section width="100%">
-          <Columns
-            queries={[
-              {
-                columns: 1,
-                query: "min-width: 0px",
-              },
-              {
-                columns: 2,
-                query: "min-width: 680px",
-              },
-              {
-                columns: 3,
-                query: "min-width: 1250px",
-              },
-              {
-                columns: 4,
-                query: "min-width: 1800px",
-              },
-            ]}
-            gap="10px"
-          >
-            {content.map(element => {
-              const key = element.id;
-              const tag = element.tag;
-              const show = currentTag === tag || currentTag === "all";
-
-              return (
-                <ContentCard
-                  key={key}
-                  show={show}
-                  element={element}
-                  onTagClick={() => handleSelectTag(tag === currentTag ? "all" : tag)}
-                  onLinkClick={() => {
-                    if (selectedCard) {
-                      setSelectedCard(null);
-                    } else {
-                      setSelectedCard(element);
-                    }
-                  }}
-                />
-              );
-            })}
-          </Columns>
-          <Spacer size="xxxl" />
-          <P2 align="center">
-            Made by{" "}
-            <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
-              Fabrizio
-            </a>{" "}
-            and{" "}
-            <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
-              Francesco
-            </a>{" "}
-            with{" "}
-            <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
-              Gatsby
-            </a>
-            ,{" "}
-            <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
-              Framer Motion
-            </a>{" "}
-            and{" "}
-            <a href="https://zeit.co/" target="_blank" rel="noopener noreferrer">
-              Zeit
-            </a>
-            .
-          </P2>
-        </Section>
-        <AnimatePresence>
-          {selectedCard && (
-            <Fragment>
-              <motion.div
-                onClick={() => setSelectedCard(null)}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+            <motion.div
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 3,
+              }}
+            >
+              <ContentCard
+                id={selectedTip.id}
+                show={selectedTip}
+                element={selectedTip}
                 style={{
-                  position: "fixed",
-                  cursor: "pointer",
-                  top: 0,
-                  left: 0,
-                  bottom: 0,
-                  right: 0,
-                  zIndex: 0,
-                  background: "rgba(0,0,0,.2)",
+                  maxWidth: "34em",
                 }}
+                onLinkClick={handleSelectTip}
               />
-              <motion.div
-                style={{
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  bottom: 0,
-                  right: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  zIndex: 3,
-                }}
-              >
-                <ContentCard
-                  id={selectedCard.id}
-                  show={selectedCard}
-                  element={selectedCard}
-                  style={{
-                    width: "36em",
-                    maxWidth: "100%",
-                  }}
-                  onLinkClick={() => {
-                    setSelectedCard(null);
-                  }}
-                />
-              </motion.div>
-            </Fragment>
-          )}
-        </AnimatePresence>
-      </AnimateSharedLayout>
+            </motion.div>
+          </Fragment>
+        )}
+      </AnimatePresence>
     </Fragment>
   );
 };
@@ -282,15 +285,5 @@ const Logo = () => (
     </defs>
   </svg>
 );
-
-function updateUrlTag(tag, window) {
-  if (window.history.pushState) {
-    const newUrl =
-      tag === "all"
-        ? window.location.protocol + "//" + window.location.host + window.location.pathname
-        : window.location.protocol + "//" + window.location.host + window.location.pathname + `?tag=${tag}`;
-    window.history.pushState({ path: newUrl }, "", newUrl);
-  }
-}
 
 export default IndexPage;
