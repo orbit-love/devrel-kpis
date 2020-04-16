@@ -78,42 +78,6 @@ const PageContent = () => {
   return (
     <Fragment key={render}>
       <AnimateSharedLayout type="crossfade">
-        {selectedCard && (
-          <div
-            css={css`
-              position: fixed;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              display: flex;
-              z-index: 10;
-              :before {
-                content: "";
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background: rgba(0, 0, 0, 0.2);
-              }
-            `}
-          >
-            <ContentCard
-              id={selectedCardKey}
-              show={selectedCard}
-              element={selectedCard}
-              style={{
-                maxWidth: "34em",
-                margin: "auto",
-              }}
-              onLinkClick={() => {
-                setSelectedCard(null);
-              }}
-            />
-          </div>
-        )}
         <Section width="56rem" center>
           <Spacer size="xxxl" />
           <Logo />
@@ -185,8 +149,7 @@ const PageContent = () => {
               const { tag } = element;
 
               const key = getCardKey(element);
-
-              const show = (currentTag === tag || currentTag === "all") && key !== selectedCardKey;
+              const show = currentTag === tag || currentTag === "all";
 
               return (
                 <ContentCard
@@ -231,6 +194,51 @@ const PageContent = () => {
             .
           </P2>
         </Section>
+        <AnimatePresence>
+          {selectedCard && (
+            <Fragment>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  zIndex: 0,
+                  background: "rgba(0,0,0,.2)",
+                }}
+              />
+              <motion.div
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  right: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  zIndex: 3,
+                }}
+              >
+                <ContentCard
+                  id={selectedCardKey}
+                  show={selectedCard}
+                  element={selectedCard}
+                  style={{
+                    maxWidth: "34em",
+                  }}
+                  onLinkClick={() => {
+                    setSelectedCard(null);
+                  }}
+                />
+              </motion.div>
+            </Fragment>
+          )}
+        </AnimatePresence>
       </AnimateSharedLayout>
     </Fragment>
   );

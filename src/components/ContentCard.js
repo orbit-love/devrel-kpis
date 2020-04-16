@@ -58,7 +58,7 @@ const ContentCard = ({ id, show, element, onLinkClick, onTagClick, style }) => {
               border: `1px solid ${config.colors.uiBorderColor}`,
               maxHeight: "240px",
               objectFit: "cover",
-              objectPosition: "top"
+              objectPosition: "top",
             }}
             src={preview_image}
             alt="Preview"
@@ -132,10 +132,13 @@ const ContentCard = ({ id, show, element, onLinkClick, onTagClick, style }) => {
 export const AnimatedDiv = ({ id, children, style }) => (
   <motion.div
     layoutId={id}
-    initial={{ opacity: 0, transform: "scale(0.8)" }}
-    animate={{ opacity: 1, transform: "scale(1)" }}
-    exit={{ opacity: 0, transform: "scale(0.8)" }}
-    style={style}
+    // initial={{ opacity: 0 }}
+    // animate={{ opacity: 1 }}
+    // exit={{ opacity: 0 }}
+    // initial={{ opacity: 0, transform: "scale(0.8)" }}
+    // animate={{ opacity: 1, transform: "scale(1)" }}
+    // exit={{ opacity: 0, transform: "scale(0.8)" }}
+    style={{ zIndex: 2, ...style }}
   >
     {children}
   </motion.div>
