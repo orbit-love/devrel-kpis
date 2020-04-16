@@ -6,7 +6,7 @@ import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, VStack } f
 import { tags } from "../../content";
 import StyledA from "./StyledA";
 
-const ContentCard = ({ id, show, element, onLinkClick, onTagClick, style }) => {
+const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
@@ -14,7 +14,7 @@ const ContentCard = ({ id, show, element, onLinkClick, onTagClick, style }) => {
   if (!show) return null;
 
   return (
-    <AnimatedDiv id={id} style={style}>
+    <AnimatedDiv id={element.id} style={style}>
       <Card inline width style={{ marginBottom: "20px" }}>
         <HStack align="right" vAlign="center" style={{ position: "absolute", top: "9px", right: "9px" }} gap="4px">
           <Icon onClick={onLinkClick} name="link" color={config.colors.c4} size="16px" />

@@ -1,34 +1,16 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { useState, Fragment, useEffect } from "react";
-import Page from "../components/Page";
-import {
-  P1,
-  P2,
-  H2,
-  H3,
-  H4,
-  Icon,
-  HStack,
-  VStack,
-  Card,
-  Spacer,
-  Section,
-  DropDownMenu,
-  SubtleCard,
-  useWindow,
-  useConfig,
-  Grid,
-} from "superlinear-react-ui";
-import Helmet from "react-helmet";
-import { content, tags } from "../../content";
-import StyledA from "../components/StyledA";
-import Highlight from "../components/Highlight";
-import { useQueryParam } from "../hooks/useQueryParam";
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import Linkify from "react-linkify";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { Fragment, useEffect, useState } from "react";
 import Columns from "react-columns";
+import Helmet from "react-helmet";
+import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer, useConfig, useWindow } from "superlinear-react-ui";
+import { content, tags } from "../../content";
 import ContentCard from "../components/ContentCard";
+import Highlight from "../components/Highlight";
+import Page from "../components/Page";
+import StyledA from "../components/StyledA";
+import { useQueryParam } from "../hooks/useQueryParam";
 
 const IndexPage = () => {
   return (
@@ -73,7 +55,6 @@ const PageContent = () => {
   }
 
   const [selectedCard, setSelectedCard] = useState(null);
-  const selectedCardKey = getCardKey(selectedCard);
 
   return (
     <Fragment key={render}>
@@ -146,15 +127,13 @@ const PageContent = () => {
             gap="10px"
           >
             {content.map(element => {
-              const { tag } = element;
-
-              const key = getCardKey(element);
+              const key = element.id;
+              const tag = element.tag;
               const show = currentTag === tag || currentTag === "all";
 
               return (
                 <ContentCard
                   key={key}
-                  id={key}
                   show={show}
                   element={element}
                   onTagClick={() => handleSelectTag(tag === currentTag ? "all" : tag)}
@@ -225,7 +204,7 @@ const PageContent = () => {
                 }}
               >
                 <ContentCard
-                  id={selectedCardKey}
+                  id={selectedCard.id}
                   show={selectedCard}
                   element={selectedCard}
                   style={{
@@ -309,11 +288,6 @@ function updateUrlTag(tag, window) {
         : window.location.protocol + "//" + window.location.host + window.location.pathname + `?tag=${tag}`;
     window.history.pushState({ path: newUrl }, "", newUrl);
   }
-}
-
-function getCardKey(card) {
-  if (!card) return null;
-  return (card.author.name + card.tag + card.body.slice(0, 12)).replace(/\s/g, "");
 }
 
 export default IndexPage;
