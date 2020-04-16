@@ -2,14 +2,13 @@ import React, { Fragment, useState, useEffect } from "react";
 import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import Columns from "react-columns";
-import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer, useConfig } from "superlinear-react-ui";
+import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer } from "superlinear-react-ui";
 import { content, tags } from "../../content";
 import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
 import { Link } from "gatsby";
-import PrivacyPolicy from "../components/PrivacyPolicy";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component
@@ -31,19 +30,7 @@ const IndexPage = () => {
 };
 
 const PageContent = props => {
-  const config = useConfig();
-
   const { path, tagId: currentTag = "all", tipId } = props;
-
-  const [showPrivacy, setShowPrivacy] = useState(path === "/privacy-policy");
-
-  useEffect(() => {
-    if (path === "/privacy-policy") {
-      setShowPrivacy(true);
-    } else {
-      setShowPrivacy(false);
-    }
-  }, [showPrivacy, path]);
 
   const tagsValues = Object.keys(tags);
   const tagNames = Object.values(tags).map(v => v.name);
@@ -233,7 +220,6 @@ const PageContent = props => {
           </Fragment>
         )}
       </AnimatePresence>
-      <PrivacyPolicy show={showPrivacy} setShow={() => navigate("/")} />
     </Fragment>
   );
 };

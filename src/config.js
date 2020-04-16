@@ -97,8 +97,10 @@ const baseConfig = {
   buttons: {
     // General and Buttons,
     height: "42px",
+    smallHeight: "38px",
     shadowSize: `0px 3px 3px`,
     padding: "0 1.5em",
+    smallPadding: "0 1em",
     hoverLighten: 0,
     activeLighten: 0,
     whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`,

@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
-import { P1, H4, Modal, useConfig } from "superlinear-react-ui";
+import { HStack, Section } from "superlinear-react-ui";
+import Page from "../components/Page";
 import ReactMarkdown from "react-markdown";
+import StyledLink from "../components/StyledLink";
 
-const PrivacyPolicy = props => {
-  const { show, setShow } = props;
-  const config = useConfig();
-
+const PrivacyPolicyPage = () => {
   const policy = `
 ## Privacy Policy
 
@@ -42,27 +41,23 @@ Place of processing: Ireland – [Privacy Policy](https://policies.google.com/pr
   `;
 
   return (
-    <Modal show={show} setShow={setShow} width="50em">
-      <div
-        css={css`
-          line-height: 1.5;
-          h2,
-          h3,
-          h4,
-          h5 {
-            margin: 0.1em 0 0.2em;
-            color: ${config.colors.c1};
-          }
-          p {
-            margin: 0 0 0.8em;
-            color: ${config.colors.c2};
-          }
-        `}
-      >
-        <ReactMarkdown source={policy} />
-      </div>
-    </Modal>
+    <Page title="Not found">
+      <Section width="56rem" center>
+        <HStack align="right" width="100%">
+          <StyledLink type="primary" to="/" icon="chevronLeft" small>
+            Home
+          </StyledLink>
+        </HStack>
+        <div
+          css={css`
+            line-height: 1.5;
+          `}
+        >
+          <ReactMarkdown source={policy} />
+        </div>
+      </Section>
+    </Page>
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;

@@ -1,12 +1,14 @@
+import { Link } from "gatsby";
 import React from "react";
-import SEO from "../components/seo";
+import { H2, Section } from "superlinear-react-ui";
 import Page from "../components/Page";
 
 const NotFoundPage = () => (
-  <Page>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <Page title="Not found">
+    <Section width="56rem" center>
+      <H2>Ops, not found.</H2>
+      <Link to="/">Go home.</Link>
+    </Section>
   </Page>
 );
 
