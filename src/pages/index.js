@@ -81,9 +81,9 @@ const PageContent = props => {
         <Logo />
         <Spacer />
         <H2 align="center">You're doing email wrong.</H2>
-        <H3 align="center" style={{ maxWidth: "46rem" }}>
-          Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
-          <Highlight>workflows</Highlight> and <Highlight>apps</Highlight> to dominate your inbox.
+        <H3 align="center" style={{ maxWidth: "48rem" }}>
+          Here’s how the most productive people manage their inbox. A&nbsp;collection of <Highlight>tips</Highlight>,{" "}
+          <Highlight>workflows</Highlight> and <Highlight>apps</Highlight>.
         </H3>
         <Grid width="22em">
           <StyledA

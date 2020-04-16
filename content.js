@@ -41,15 +41,27 @@ export const content = [
     body: "Keep your replies short and sweet.",
   },
   {
-    id: "hcv51m5n",
-    tag: "app",
+    id: "c5i1j2um",
+    tag: "advice",
     author: {
-      name: "DHH",
-      avatar: "twitter/dhh",
-      bio: "Basecamp Co-Founder",
+      name: "Naval Ravikant",
+      avatar: "twitter/naval",
+      bio: "Entrepreneur, AngelList Co-Founder",
+    },
+    body: "If you can’t delete an email without flinching or responding, you won’t scale.",
+    source_url: "https://twitter.com/naval/status/1012396688349192192?s=20",
+  },
+  {
+    id: "8ujxxbrl",
+    tag: "advice",
+    author: {
+      name: "James Hamblin",
+      avatar: "twitter/jameshamblin",
+      bio: "Staff Writer The Atlantic",
     },
     body:
-      "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME. Now it's out for all! I use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss. It's a perfect use case for email.",
+      "Best? Cheers? Thanks?\n\nNone of the above. You can write your name if it feels too naked or abrupt not to have something down there. But it shouldn’t, and it wouldn’t if it were the norm.",
+    source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
   },
   {
     id: "v64tehbe",
@@ -63,6 +75,17 @@ export const content = [
     source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
   },
   {
+    id: "hcv51m5n",
+    tag: "app",
+    author: {
+      name: "DHH",
+      avatar: "twitter/dhh",
+      bio: "Basecamp Co-Founder",
+    },
+    body:
+      "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME.\n\nI use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss.\n\n_It's a perfect use case for email._",
+  },
+  {
     id: "0db5tzie",
     tag: "app",
     author: {
@@ -71,7 +94,7 @@ export const content = [
       bio: "Automated digests on things you love.",
     },
     body:
-      "Mailbrew helps you to keep in touch with the people and things you care about by sending you _personal automated digests_ — saving you hours of time spent checking sites and scrolling feeds.",
+      "You don't need many different newsletters to stay in touch with the people and things you care about.\n\nCreate your own email digest, from your favorite sources.",
     preview_image:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
     offer: {
@@ -90,17 +113,6 @@ export const content = [
     },
     body:
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
-  },
-  {
-    id: "c5i1j2um",
-    tag: "advice",
-    author: {
-      name: "Naval Ravikant",
-      avatar: "twitter/naval",
-      bio: "Entrepreneur, AngelList Co-Founder",
-    },
-    body: "If you can’t delete an email without flinching or responding, you won’t scale.",
-    source_url: "https://twitter.com/naval/status/1012396688349192192?s=20",
   },
   {
     id: "589etf84",
@@ -167,18 +179,6 @@ export const content = [
     source_url: "https://twitter.com/naval/status/203644276645707776?s=20",
   },
   {
-    id: "8ujxxbrl",
-    tag: "advice",
-    author: {
-      name: "James Hamblin",
-      avatar: "twitter/jameshamblin",
-      bio: "Staff Writer The Atlantic",
-    },
-    body:
-      "Best? Cheers? Thanks?\n\nNone of the above. You can write your name if it feels too naked or abrupt not to have something down there. But it shouldn’t, and it wouldn’t if it were the norm.",
-    source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
-  },
-  {
     id: "szjvyo4o",
     tag: "opinion",
     author: {
@@ -236,7 +236,8 @@ export const content = [
       avatar: "twitter/rrhoover",
       bio: "Product Hunt Founder",
     },
-    body: "I never understood inbox zero. Every email isn’t more important than all the other commitments I’ve made.",
+    body:
+      "I never understood inbox zero.\n\nEvery email isn’t more important than all the other commitments I’ve made.",
     source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
   },
   {
@@ -248,7 +249,7 @@ export const content = [
       bio: "Gmail, redesigned for Mac.",
     },
     body:
-      "Boxy Suite brings Gmail, Calendar and other G Suite apps to your Mac.\n\nIt features polished UI, Minimal Mode, Reader Mode, a convenient Quick Launched, Tracking Detection and more.",
+      "Multitasking kills productivity, and doing email in your browser is a recipe for disaster.\n\nBoxy Suite brings Gmail, Calendar and other G Suite apps to your Mac, with single-purpose apps that look and feel native.",
     preview_image:
       "https://previews.dropbox.com/p/thumb/AAypYp18wI_jP8fiBT4d6TMYMqotNjZOxmuiL__DTCNGNf5Pi63Nh2W7KqUUmvwEOq46ssDkBrSnCd3rfSRmD25SlgxHGyfn2U2MFVtNDfQyWiZJz8ZR7jVAxqYJ6PkR-XIn_9JmAj9yNq8q_whJgKNnbqx-9VqwmaHjECXmDMCgE1VtlWw_oKdVisWpsCW8aBQKImc6MYI-2Vfh-LfCqP8nLA3LYPjcECvPW48Mjj5vbeMa4645qHLeBGhQWww4L46KABAG4d-C5jk9v1gfdgIFOZFl1xXgEW_LslhFV0KsUjkyfcuC3ACIoizKezkujhYR64MCi9k2DGIfKMwLx82q/p.png?fv_content=true&size_mode=5",
     offer: {
