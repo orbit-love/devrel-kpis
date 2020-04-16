@@ -3,16 +3,17 @@ import { css, jsx } from "@emotion/core";
 import { useState, Fragment, useEffect } from "react";
 import Page from "../components/Page";
 import {
-  Section,
-  H2,
   P1,
   P2,
+  H2,
+  H3,
   H4,
   Icon,
   HStack,
   VStack,
   Card,
   Spacer,
+  Section,
   DropDownMenu,
   SubtleCard,
   useWindow,
@@ -26,6 +27,7 @@ import Highlight from "../components/Highlight";
 import { useQueryParam } from "../hooks/useQueryParam";
 import { motion, AnimatePresence } from "framer-motion";
 import Linkify from "react-linkify";
+import Columns from "react-columns";
 
 const IndexPage = () => {
   return (
@@ -71,16 +73,16 @@ const PageContent = () => {
 
   return (
     <Fragment key={render}>
-      <Section width="66rem" center>
+      <Section width="56rem" center>
         <Spacer size="xxxl" />
         <Logo />
         <Spacer />
-        <H2 align="center">
-          A crowd-sourced collection of the best email <Highlight>tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
-          <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
-        </H2>
-        <Spacer size="xxl" />
-        <Grid>
+        <H2 align="center">You're doing email wrong.</H2>
+        <H3 align="center" style={{ maxWidth: "46rem" }}>
+          Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
+          <Highlight>workflows</Highlight> and <Highlight>offers</Highlight> to dominate your inbox.
+        </H3>
+        <Grid width="22em">
           <StyledA
             href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
             icon="github"
@@ -116,29 +118,31 @@ const PageContent = () => {
           for updates
         </P2>
       </Section>
-      <Section>
+      <Section width="100%">
         <AnimatePresence>
-          <div
-            css={css`
-              > div {
-                padding: 10px;
-                width: calc(50% - 20px);
-                :nth-child(odd) {
-                  float: left;
-                }
-                :nth-child(even) {
-                  float: right;
-                }
-                @media (max-width: 800px) {
-                  width: 100%;
-                  float: none;
-                  padding: 0 0 15px;
-                }
+          <Columns
+            queries={[
+              {
+                columns: 1,
+                query: "min-width: 0px"
+              },
+              {
+                columns: 2,
+                query: "min-width: 680px"
+              },
+              {
+                columns: 3,
+                query: "min-width: 1100px"
+              },
+              {
+                columns: 4,
+                query: "min-width: 1700px"
               }
-            `}
+            ]}
+            gap="10px"
           >
             {content.map((el, index) => {
-              const { tag, author, body, url, preview_image, source_url, offer, chrome_extension } = el;
+              const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = el;
 
               const show = currentTag === tag || currentTag === "all";
 
@@ -147,16 +151,33 @@ const PageContent = () => {
               return (
                 <Fragment key={key}>
                   <AnimateSharedLayout show={show} id={key}>
-                    <Card inline width>
-                      <Tag
-                        tag={tag}
-                        onClick={() => {
-                          handleSelectTag(tag === currentTag ? "all" : tag);
-                        }}
-                      />
+                    <Card inline width style={{ marginBottom: "20px" }}>
+                      <HStack
+                        align="right"
+                        vAlign="center"
+                        style={{ position: "absolute", top: "9px", right: "9px" }}
+                        gap="4px"
+                      >
+                        {source_url && (
+                          <a
+                            href={source_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ borderBottom: "none" }}
+                          >
+                            <Icon name="link" color={config.colors.c4} size="16px" />
+                          </a>
+                        )}
+                        <Tag
+                          tag={tag}
+                          onClick={() => {
+                            handleSelectTag(tag === currentTag ? "all" : tag);
+                          }}
+                        />
+                      </HStack>
                       {author && (
                         <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
-                          <HStack gap="4px">
+                          <HStack gap="4px" noWrap>
                             <img
                               src={`https://unavatar.now.sh/${author.avatar}`}
                               alt={author.name}
@@ -168,7 +189,7 @@ const PageContent = () => {
                             />
                             <VStack gap={0}>
                               <H4>{author.name}</H4>
-                              <P2>{author.bio}</P2>
+                              <P2 noWrap>{author.bio}</P2>
                             </VStack>
                           </HStack>
                         </a>
@@ -211,7 +232,7 @@ const PageContent = () => {
                           </SubtleCard>
                         </a>
                       )}
-                      {tag === "app" && !offer && url && (
+                      {url && (
                         <StyledA
                           style={{ marginTop: "1em" }}
                           type="primary"
@@ -219,7 +240,7 @@ const PageContent = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Get it
+                          {label || "Get it"}
                         </StyledA>
                       )}
                       {chrome_extension && (
@@ -264,8 +285,32 @@ const PageContent = () => {
                 </Fragment>
               );
             })}
-          </div>
+          </Columns>
         </AnimatePresence>
+        <Spacer size="xxxl" />
+        <P2 align="center">
+          Made by{" "}
+          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+            Fabrizio
+          </a>{" "}
+          and{" "}
+          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
+            Francesco
+          </a>{" "}
+          with{" "}
+          <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+            Gatsby
+          </a>
+          ,{" "}
+          <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
+            Framer Motion
+          </a>{" "}
+          and{" "}
+          <a href="https://zeit.co/" target="_blank" rel="noopener noreferrer">
+            Zeit
+          </a>
+          .
+        </P2>
       </Section>
     </Fragment>
   );
@@ -284,9 +329,6 @@ const Tag = ({ tag, onClick }) => {
         background: ${thisTag.color}22;
         padding: 1px 6px;
         border-radius: 5px;
-        position: absolute;
-        top: 8px;
-        right: 8px;
         cursor: pointer;
         p {
           text-transform: uppercase;

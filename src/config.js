@@ -1,8 +1,8 @@
 const baseConfig = {
   colors: {
     c1: "hsl(249, 9%, 15%)",
-    c2: "hsl(249, 9%, 18%)",
-    c3: "hsl(249, 9%, 22%)",
+    c2: "hsl(249, 9%, 20%)",
+    c3: "hsl(249, 9%, 30%)",
     c4: "hsl(249, 9%, 60%)",
     c5: "hsl(249, 9%, 75%)",
     c6: "hsl(249, 9%, 92%)",
@@ -25,8 +25,8 @@ const baseConfig = {
     weights: {
       normal: 400,
       H1: 700,
-      H2: 500,
-      H3: 600,
+      H2: 600,
+      H3: 500,
       H4: 500,
       H5: 500,
       Label: 400,
@@ -37,8 +37,8 @@ const baseConfig = {
     margins: {
       normal: "0",
       H1: "0",
-      H2: "0",
-      H3: "0",
+      H2: "0 0 0.3em",
+      H3: "0 0 1em",
       H4: "0",
       H5: "0",
       SmallText: "0",
@@ -46,12 +46,12 @@ const baseConfig = {
     },
     sizes: {
       normal: ["1em", "16px"],
-      P1: ["18px", "18px"],
+      P1: ["18px", "16px"],
       P2: ["16px", "14px"],
       H1: ["3em", "2em"],
       H2: ["2.4em", "1.8em"],
-      H3: "1.5em",
-      H4: "20px",
+      H3: ["1.8em", "1.4em"],
+      H4: ["20px", "18px"],
       H5: "1.1em",
       Badge: ["0.9em", "16px"],
       SmallText: ["0.8em", "16px"],
@@ -63,7 +63,7 @@ const baseConfig = {
       normal: 1.5,
       H1: 1.3,
       H2: 1.4,
-      H3: 1.2,
+      H3: 1.5,
       H4: 1.2,
       H5: 1.2,
       Badge: 1.3
