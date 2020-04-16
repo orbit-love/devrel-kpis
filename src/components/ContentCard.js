@@ -132,12 +132,7 @@ const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
 export const AnimatedDiv = ({ id, children, style }) => (
   <motion.div
     layoutId={id}
-    // initial={{ opacity: 0 }}
-    // animate={{ opacity: 1 }}
-    // exit={{ opacity: 0 }}
-    // initial={{ opacity: 0, transform: "scale(0.8)" }}
-    // animate={{ opacity: 1, transform: "scale(1)" }}
-    // exit={{ opacity: 0, transform: "scale(0.8)" }}
+    transition={{ type: "spring", damping: 5, mass: 0.5, velocity: 5 }}
     style={{ zIndex: 2, ...style }}
   >
     {children}

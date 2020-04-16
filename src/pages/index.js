@@ -177,11 +177,13 @@ const PageContent = () => {
           {selectedCard && (
             <Fragment>
               <motion.div
+                onClick={() => setSelectedCard(null)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 style={{
                   position: "fixed",
+                  cursor: "pointer",
                   top: 0,
                   left: 0,
                   bottom: 0,
@@ -208,7 +210,8 @@ const PageContent = () => {
                   show={selectedCard}
                   element={selectedCard}
                   style={{
-                    maxWidth: "34em",
+                    width: "36em",
+                    maxWidth: "100%",
                   }}
                   onLinkClick={() => {
                     setSelectedCard(null);

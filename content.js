@@ -32,12 +32,12 @@ export const content = [
     id: "hcv51m5n",
     tag: "app",
     author: {
-      name: "Mailbrew",
-      avatar: "twitter/mailbrew",
-      bio: "Automated email digests on any topic.",
+      name: "DHH",
+      avatar: "twitter/dhh",
+      bio: "Basecamp Co-Founder",
     },
     body:
-      "Receive automated email digests on your favorite topics.\n\nWith Mailbrew you create personal newsletter with the things you love, and get them on your schedule.",
+      "I've been using Mailbrew for the past several months, and it's AWESOME. Now it's out for all! I use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss. It's a perfect use case for email.",
     url: "https://mailbrew.com/?coupon=K9h1JrBP",
     preview_image:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
@@ -48,18 +48,7 @@ export const content = [
     },
   },
   {
-    id: "j3ir7629",
-    tag: "opinion",
-    author: {
-      name: "DHH",
-      avatar: "twitter/dhh",
-      bio: "Basecamp Co-Founder",
-    },
-    body:
-      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
-  },
-  {
-    id: "za2zv518",
+    id: "53khm0uz",
     tag: "advice",
     author: {
       name: "Paul Graham",
@@ -83,7 +72,18 @@ export const content = [
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
   },
   {
-    id: "r3kip4a8",
+    id: "pwfg01t4",
+    tag: "tip",
+    author: {
+      name: "Pat Walls",
+      avatar: "twitter/thepatwalls",
+      bio: "Founder Starter Story & Pigeon",
+    },
+    body: `Need to do something every Tuesday at 1 PM? I set a Google Calendar event and turn email notifications on.\n\nForget push notifications, I treat email as the central source for these tasks so I never miss them.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
+  },
+  {
+    id: "h1q0fvf7",
     tag: "extension",
     author: {
       name: "Rich Vreenland",
@@ -101,6 +101,19 @@ export const content = [
   },
   {
     id: "fqx7o672",
+    tag: "opinion",
+    author: {
+      name: "Brod Gondwana",
+      avatar: "twitter/brongondwana",
+      bio: "CEO at Fastmail",
+    },
+    body:
+      "The email in your mailbox is your copy of what was said, and nobody else can change it or make it go away. The fact that the content of an email can’t be edited is one of the best things about POP3 and IMAP email standards. I admit it annoyed me when I first ran into it – why can’t you just fix up a message in place – but the immutability is the real strength of email. You can safely forget the detail of something that you read in an email, knowing that when you go back to look at it, the information will be exactly the same.",
+    url: "https://fastmail.blog/2018/02/14/email-is-your-electronic-memory/",
+    label: "Read blog post",
+  },
+  {
+    id: "qskiwa9h",
     tag: "opinion",
     author: {
       name: "Ryan Hoover",
@@ -130,7 +143,18 @@ export const content = [
     },
   },
   {
-    id: "y3kgq0o0",
+    id: "j3ir7629",
+    tag: "opinion",
+    author: {
+      name: "DHH",
+      avatar: "twitter/dhh",
+      bio: "Basecamp Co-Founder",
+    },
+    body:
+      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
+  },
+  {
+    id: "742ds0t7",
     tag: "tip",
     author: {
       name: "Kitze",
@@ -198,18 +222,7 @@ export const content = [
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
   },
   {
-    id: "pwfg01t4",
-    tag: "tip",
-    author: {
-      name: "Pat Walls",
-      avatar: "twitter/thepatwalls",
-      bio: "Founder Starter Story & Pigeon",
-    },
-    body: `Need to do something every Tuesday at 1 PM? I set a Google Calendar event and turn email notifications on.\n\nForget push notifications, I treat email as the central source for these tasks so I never miss them.`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
-  },
-  {
-    id: "ariyzb5p",
+    id: "9xxefltv",
     tag: "opinion",
     author: {
       name: "Pat Walls",
@@ -228,6 +241,7 @@ export const content = [
       bio: "Author, Entrepreneur, and PR Strategist",
     },
     body: `The number one tool I use probably 20 times a day is followupthen.com.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
+    url: "https://www.followupthen.com/",
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
   },
   {
