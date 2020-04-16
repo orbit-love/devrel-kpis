@@ -38,7 +38,7 @@
     "react-linkify": "^1.0.0-alpha",
     "react-router-dom": "^5.1.2",
     "react-tippy": "^1.2.3",
-    "superlinear-react-ui": "^0.12.73"
+    "superlinear-react-ui": "^0.12.75"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
