@@ -6,7 +6,7 @@ import { tags } from "../../content";
 import StyledA from "./StyledA";
 import ReactMarkdown from "react-markdown";
 
-const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style, screenshotMode }) => {
+const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
@@ -16,16 +16,14 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
   return (
     <AnimatedDiv id={element.id} style={style}>
       <Card inline width style={{ marginBottom: "20px" }}>
-        {!screenshotMode && (
-          <HStack align="right" vAlign="center" style={{ position: "absolute", top: "9px", right: "9px" }} gap="4px">
-            <Icon
-              onClick={onLinkClick}
-              name={isCurrentCard ? "closeBold" : "link"}
-              color={config.colors.c4}
-              size={isCurrentCard ? "24px" : "16px"}
-            />
-          </HStack>
-        )}
+        <HStack align="right" vAlign="center" style={{ position: "absolute", top: "9px", right: "9px" }} gap="4px">
+          <Icon
+            onClick={onLinkClick}
+            name={isCurrentCard ? "closeBold" : "link"}
+            color={config.colors.c4}
+            size={isCurrentCard ? "24px" : "16px"}
+          />
+        </HStack>
         {author && (
           <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer" }}>
             {author.avatar && (
@@ -61,8 +59,8 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
               margin-top: 1em;
               white-space: pre-line;
               color: ${config.colors.c2};
-              font-size: ${screenshotMode ? "20px" : "17px"};
-              line-height: ${screenshotMode ? 1.2 : 1.4};
+              font-size: 17px;
+              line-height: 1.5;
               @media (max-width: 640px) {
                 font-size: 16px;
               }
@@ -165,7 +163,6 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </a>
         )}
         <HStack align="right" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
-          {!screenshotMode && <Tweet />}
           {source_url && <Source href={source_url} />}
           <Tag tag={tag} onClick={onTagClick} />
         </HStack>
@@ -203,34 +200,6 @@ const Tag = ({ tag, onClick }) => {
     >
       <P2 color={thisTag.color}>{thisTag.name}</P2>
     </span>
-  );
-};
-
-const Tweet = () => {
-  return (
-    <a
-      href="#"
-      css={css`
-        display: inline-block;
-        border: 1px solid #1da1f2;
-        box-sizing: border-box;
-        padding: 0px 6px;
-        border-radius: 5px;
-        cursor: pointer;
-        p {
-          text-transform: uppercase;
-          font-size: 13px;
-          font-weight: 500;
-        }
-      `}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <P2 color="#1DA1F2">
-        <Icon offset="-1px" name="twitter" color="#1DA1F2" size="12px" style={{ marginRight: "3px" }} />
-        Tweet
-      </P2>
-    </a>
   );
 };
 
