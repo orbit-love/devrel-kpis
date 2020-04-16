@@ -26,7 +26,7 @@ const IndexPage = () => {
           },
         ]}
       />
-      <AnimateSharedLayout type="crossfade" transition={{ type: "spring", damping: 9, mass: 0.35 }}>
+      <AnimateSharedLayout type="crossfade" transition={{ type: "spring", damping: 9, mass: 0.3, velocity: 20 }}>
         <Router>
           <PageContent key={sharedKey} path="/" />
           <PageContent key={sharedKey} path="/t/:tipId" />
