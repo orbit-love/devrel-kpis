@@ -5,9 +5,20 @@
  *
  * - Add your tip to the BOTTOM of this file.
  * - Keep your tips short and sweet.
+ *
  * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
  * - Use this URL to get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
+ *
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
+ *
+ * - Use `source_url` by default, and only use `url` when visiting the link is required to learn more about the tip/workflow.
+ *
+ * - Use one of these tags:
+ *   - tip
+ *   - app
+ *   - advice
+ *   - opinion
+ *   - extension
  *
  * 📩 SOURCES:
  *
@@ -39,7 +50,28 @@ export const content = [
     },
     body:
       "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME. Now it's out for all! I use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss. It's a perfect use case for email.",
-    url: "https://mailbrew.com/?coupon=K9h1JrBP",
+  },
+  {
+    id: "v64tehbe",
+    tag: "tip",
+    author: {
+      name: "Peter Shankman",
+      avatar: "twitter/petershankman",
+      bio: "Author, Entrepreneur, and PR Strategist",
+    },
+    body: `_Subject lines are EVERYTHING_, and they simply MUST include a benefit to the reader.`,
+    source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
+  },
+  {
+    id: "0db5tzie",
+    tag: "app",
+    author: {
+      name: "Mailbrew",
+      avatar: "twitter/mailbrew",
+      bio: "Automated digests on things you love.",
+    },
+    body:
+      "Mailbrew helps you to keep in touch with the people and things you care about by sending you _personal automated digests_ — saving you hours of time spent checking sites and scrolling feeds.",
     preview_image:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
     offer: {
@@ -60,6 +92,17 @@ export const content = [
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
   },
   {
+    id: "c5i1j2um",
+    tag: "advice",
+    author: {
+      name: "Naval Ravikant",
+      avatar: "twitter/naval",
+      bio: "Entrepreneur, AngelList Co-Founder",
+    },
+    body: "If you can’t delete an email without flinching or responding, you won’t scale.",
+    source_url: "https://twitter.com/naval/status/1012396688349192192?s=20",
+  },
+  {
     id: "589etf84",
     tag: "advice",
     author: {
@@ -69,6 +112,7 @@ export const content = [
     },
     body: "_Turn off all email notifications._ Phone, desktop, literally everywhere. You'll be fine.",
   },
+
   {
     id: "pwfg01t4",
     tag: "tip",
@@ -111,7 +155,19 @@ export const content = [
     },
   },
   {
-    id: "szjvyo4o",
+    id: "s4h604vl",
+    tag: "advice",
+    author: {
+      name: "Naval Ravikant",
+      avatar: "twitter/naval",
+      bio: "Entrepreneur, AngelList Co-Founder",
+    },
+    body:
+      "Note to world — 95% of what you want to meet for can be easily handled in a 5-minute email exchange. Be efficient!",
+    source_url: "https://twitter.com/naval/status/203644276645707776?s=20",
+  },
+  {
+    id: "8ujxxbrl",
     tag: "advice",
     author: {
       name: "James Hamblin",
@@ -157,7 +213,7 @@ export const content = [
     },
     body:
       "The email in your mailbox is _your copy of what was said_, and nobody else can change it or make it go away.\n\nThe fact that the content of an email can’t be edited is one of the best things about POP3 and IMAP email standards. I admit it annoyed me when I first ran into it – why can’t you just fix up a message in place – but the immutability is the real strength of email.\n\nYou can safely forget the detail of something that you read in an email, knowing that when you go back to look at it, the information will be exactly the same.",
-    url: "https://fastmail.blog/2018/02/14/email-is-your-electronic-memory/",
+    source_url: "https://fastmail.blog/2018/02/14/email-is-your-electronic-memory/",
     label: "Read blog post",
   },
   {
@@ -184,20 +240,6 @@ export const content = [
     source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
   },
   {
-    id: "imlnicr3",
-    tag: "advice",
-    author: {
-      name: "Michael Waxman",
-      avatar: "twitter/wxmn",
-      bio: "Founder of Grouper",
-    },
-    body:
-      "This widely circulated system for using Gmail from Andreas Klinger was the tipping point. It takes about 15 minutes to set up, and gives you a thoughtful, efficient system for plowing through your inbox.\n\nThe system itself is great, but I found that just having a system at all made it a lot easier to dive in to a full inbox.",
-    source_url: "http://waxman.me/30-days-of-inbox-zero-how-i-did-it",
-    url: "https://klinger.io/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
-    label: "Read about this system",
-  },
-  {
     id: "zerywvyz",
     tag: "app",
     author: {
@@ -207,7 +249,6 @@ export const content = [
     },
     body:
       "Boxy Suite brings Gmail, Calendar and other G Suite apps to your Mac.\n\nIt features polished UI, Minimal Mode, Reader Mode, a convenient Quick Launched, Tracking Detection and more.",
-    url: "https://boxysuite.com/?coupon=inboxzero",
     preview_image:
       "https://previews.dropbox.com/p/thumb/AAypYp18wI_jP8fiBT4d6TMYMqotNjZOxmuiL__DTCNGNf5Pi63Nh2W7KqUUmvwEOq46ssDkBrSnCd3rfSRmD25SlgxHGyfn2U2MFVtNDfQyWiZJz8ZR7jVAxqYJ6PkR-XIn_9JmAj9yNq8q_whJgKNnbqx-9VqwmaHjECXmDMCgE1VtlWw_oKdVisWpsCW8aBQKImc6MYI-2Vfh-LfCqP8nLA3LYPjcECvPW48Mjj5vbeMa4645qHLeBGhQWww4L46KABAG4d-C5jk9v1gfdgIFOZFl1xXgEW_LslhFV0KsUjkyfcuC3ACIoizKezkujhYR64MCi9k2DGIfKMwLx82q/p.png?fv_content=true&size_mode=5",
     offer: {
@@ -225,6 +266,20 @@ export const content = [
       bio: "Basecamp Co-Founder",
     },
     body: `Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\n_All email is not important_. In fact, most of it is not important! I savor my [Mailbrews](https://mailbrew.com) exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product [Hey](https://hey.com) – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.`,
+  },
+  {
+    id: "imlnicr3",
+    tag: "advice",
+    author: {
+      name: "Michael Waxman",
+      avatar: "twitter/wxmn",
+      bio: "Founder of Grouper",
+    },
+    body:
+      "This widely circulated system for using G-mail from Andreas Klinger was the tipping point. It takes about 15 minutes to set up, and gives you a thoughtful, efficient system for plowing through your inbox.\n\nThe system itself is great, but I found that just having a system at all made it a lot easier to dive in to a full inbox.",
+    source_url: "http://waxman.me/30-days-of-inbox-zero-how-i-did-it",
+    url: "https://klinger.io/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
+    label: "Read about this system",
   },
   {
     id: "742ds0t7",
@@ -285,8 +340,7 @@ export const content = [
     body:
       "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
     preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
-    url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
-    label: "Read the article",
+    source_url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
   },
   {
     id: "69l3kl5g",
@@ -298,7 +352,7 @@ export const content = [
     },
     body:
       "Diary Email is a calm place to capture your life and share the best moments with your friends. No big brother is trying to get into your head to sell you more stuff.",
-    url: "https://diaryemail.com/",
+    preview_image: "https://diaryemail.com/card.png",
     offer: {
       title: "30% OFF",
       subtitle: `Enter "ZEROINBOX" during checkout`,
@@ -347,42 +401,9 @@ export const content = [
       avatar: "twitter/petershankman",
       bio: "Author, Entrepreneur, and PR Strategist",
     },
-    body: `The number one tool I use probably 20 times a day is followupthen.com.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
+    body: `The number one tool I use probably 20 times a day is FollowUpThen.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
     url: "https://www.followupthen.com/",
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
-  },
-  {
-    id: "v64tehbe",
-    tag: "tip",
-    author: {
-      name: "Peter Shankman",
-      avatar: "twitter/petershankman",
-      bio: "Author, Entrepreneur, and PR Strategist",
-    },
-    body: `Subject lines are EVERYTHING, and they simply MUST include a benefit to the reader.`,
-    source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
-  },
-  {
-    id: "43avkdi5",
-    tag: "tip",
-    author: {
-      name: "Andrew Mellen",
-      avatar: "twitter/andrewjmellen",
-      bio: "Professional Organizer",
-    },
-    body: `Always _update the subject line when you’re changing thread or content_. Don’t allow threads to carry over for months. With subject lines, always use complete information. Try to avoid being vague with phrases like “checking in” or “update,” instead write “update on the Jones project.” It’ll save you and the recipient time because you won’t have to guess what’s inside the email.`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
-  },
-  {
-    id: "2dnug8c1",
-    tag: "tip",
-    author: {
-      name: "Brendan Hufford",
-      avatar: "twitter/BrendanHufford",
-      bio: "Creator, SEO for the Rest of Us",
-    },
-    body: `Emails are either answered immediately, starred for later, forwarded to a teammate, or deleted. Following the [Eisenhower Box](https://jamesclear.com/eisenhower-box).`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-brendan-hufford/",
   },
 ];
 
@@ -410,7 +431,7 @@ export const tags = {
   opinion: {
     value: "opinion",
     name: "Opinion",
-    color: "#334569",
+    color: "#4545A1",
   },
   extension: {
     value: "extension",
