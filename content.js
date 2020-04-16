@@ -338,6 +338,17 @@ export const content = [
     preview_image: "https://s3.amazonaws.com/www.trypigeon.co/homepage/gmail-thread-2.png",
   },
   {
+    id: "43avkdi5",
+    tag: "tip",
+    author: {
+      name: "Andrew Mellen",
+      avatar: "twitter/andrewjmellen",
+      bio: "Professional Organizer",
+    },
+    body: `Always _update the subject line when you’re changing thread_ or content. Don’t allow threads to carry over for months. With subject lines, always use complete information. Try to avoid being vague with phrases like “checking in” or “update,” instead write “update on the Jones project.” It’ll save you and the recipient time because you won’t have to guess what’s inside the email.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
+  },
+  {
     id: "of6jsxq1",
     tag: "tip",
     author: {
@@ -412,17 +423,6 @@ export const content = [
     body: `The number one tool I use probably 20 times a day is FollowUpThen.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
     url: "https://www.followupthen.com/",
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
-  },
-  {
-    id: "43avkdi5",
-    tag: "tip",
-    author: {
-      name: "Andrew Mellen",
-      avatar: "twitter/andrewjmellen",
-      bio: "Professional Organizer",
-    },
-    body: `Always _update the subject line when you’re changing thread_ or content. Don’t allow threads to carry over for months. With subject lines, always use complete information. Try to avoid being vague with phrases like “checking in” or “update,” instead write “update on the Jones project.” It’ll save you and the recipient time because you won’t have to guess what’s inside the email.`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
   },
   {
     id: "2dnug8c1",
