@@ -76,9 +76,6 @@ const PageContent = () => {
         <Logo />
         <Spacer />
         <H2 align="center">
-          You're doing email <Highlight>wrong</Highlight>. Learn from the <Highlight>pros</Highlight>.
-        </H2>
-        <H2 align="center">
           A crowd-sourced collection of the best email <Highlight>tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
           <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
         </H2>
