@@ -404,7 +404,7 @@ export const content = [
       avatar: "twitter/frankdilo",
       bio: "Co-Founder Mailbrew & Boxy Suite",
     },
-    body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
+    body: `I use a dedicated email address for subscribing to newsletters: frank+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
   },
   {
     id: "9xxefltv",
