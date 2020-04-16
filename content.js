@@ -332,10 +332,15 @@ export const content = [
       avatar: "twitter/trypigeon",
       bio: "Powerful CRM inside Gmail.",
     },
-    url: "https://trypigeon.co/",
     body:
       "Your business runs on email - so why are you using tools that don't integrate with it?\n\nGet replies, close deals, and attract customers. All inside Gmail.",
     preview_image: "https://s3.amazonaws.com/www.trypigeon.co/homepage/gmail-thread-2.png",
+    chrome_extension: {
+      title: "Pigeon for Gmail",
+      url: "https://chrome.google.com/webstore/detail/pigeon-for-gmail/ggflodpkeedjmjepigkckjmhcbhlflng?hl=en",
+      icon:
+        "https://lh3.googleusercontent.com/-Tm5zlsGljfFhGXAmb9VVKspSuIsgZKasUaSNZZt7l9q3MSOimjpSeGZbvxN0pU2N42OMh5BpQ=w128-h128-e365",
+    },
   },
   {
     id: "43avkdi5",
