@@ -15,10 +15,7 @@ const IndexPage = () => {
   const sharedKey = "__index__";
 
   return (
-    <Page
-      title=""
-      description="A crowd-sourced collection of the best email tips, workflows & offers to dominate your inbox."
-    >
+    <Page title="">
       <Helmet
         meta={[
           {
