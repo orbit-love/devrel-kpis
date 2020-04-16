@@ -5,11 +5,14 @@ import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, VStack } f
 import { tags } from "../../content";
 import StyledA from "./StyledA";
 import ReactMarkdown from "react-markdown";
+import removeMd from "remove-markdown";
 
 const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
+
+  const tweetLink = createTweetLink(element);
 
   if (!show) return null;
 
@@ -164,6 +167,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
         )}
         <HStack align="right" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
           {source_url && <Source href={source_url} />}
+          <Tweet href={tweetLink} />
           <Tag tag={tag} onClick={onTagClick} />
         </HStack>
       </Card>
@@ -223,9 +227,53 @@ const Source = ({ href }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <P2 color="hsl(0, 0%, 60%)">Source</P2>
+      <P2 color="hsl(0, 0%, 50%)">
+        <Icon offset="-1px" name="open" color="hsl(0, 0%, 50%)" size="12px" />
+      </P2>
     </a>
   );
 };
+
+const Tweet = ({ href }) => {
+  return (
+    <a
+      href={href}
+      css={css`
+        display: inline-block;
+        border: 1px solid #1da1f288;
+        box-sizing: border-box;
+        padding: 0px 6px;
+        border-radius: 5px;
+        cursor: pointer;
+        p {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 500;
+        }
+      `}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <P2 color="#1DA1F2">
+        <Icon offset="-1px" name="twitter" color="#1DA1F2" size="12px" style={{ marginRight: "3px" }} />
+        Tweet
+      </P2>
+    </a>
+  );
+};
+
+function createTweetLink(tip) {
+  const plainText = removeMd(tip.body);
+
+  const trimmedBody = plainText.length > 220 ? plainText.slice(0, 220) + "..." : plainText;
+
+  const introText = tip.tag === "tip" || tip.tag === "advice" ? `Love this ${tip.tag}:\n\n` : "";
+
+  const text = `${introText}"${trimmedBody}"`;
+
+  const url = `http://inboxze.ro/t/${tip.id}`;
+
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+}
 
 export default ContentCard;
