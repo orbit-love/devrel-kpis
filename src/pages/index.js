@@ -20,6 +20,7 @@ const IndexPage = () => {
         <Router>
           <PageContent key={sharedKey} path="/" />
           <PageContent key={sharedKey} path="/t/:tipId" />
+          <TipShareCard key={sharedKey} path="/tip_card/:tipId" />
           <PageContent key={sharedKey} path="/:tagId" />
           <PageContent key={sharedKey} path="/:tagId/:tipId" />
           <PageContent key={sharedKey} path="/privacy-policy" />
@@ -204,7 +205,6 @@ const PageContent = props => {
               }}
             >
               <ContentCard
-                id={selectedTip.id}
                 isCurrentCard={true}
                 show={selectedTip}
                 element={selectedTip}
@@ -250,5 +250,39 @@ const Logo = () => (
     </defs>
   </svg>
 );
+
+const TipShareCard = ({ tipId }) => {
+  const tip = content.find(c => c.id === tipId);
+
+  return (
+    <motion.div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        display: "flex",
+        zIndex: 3,
+        overflow: "scroll",
+        WebkitOverflowScrolling: "touch",
+        padding: "3em 1em",
+      }}
+    >
+      <ContentCard
+        screenshotMode
+        isCurrentCard={true}
+        show
+        element={tip}
+        style={{
+          margin: "auto",
+          pointerEvents: "auto",
+          width: "36em",
+          maxWidth: "100%",
+        }}
+      />
+    </motion.div>
+  );
+};
 
 export default IndexPage;
