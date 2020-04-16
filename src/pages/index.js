@@ -186,6 +186,7 @@ const PageContent = props => {
         {selectedTip && (
           <Fragment>
             <motion.div
+              onClick={() => handleSelectTip(null)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -197,6 +198,7 @@ const PageContent = props => {
                 right: 0,
                 zIndex: 0,
                 background: "rgba(0,0,0,.2)",
+                cursor: "pointer",
               }}
             />
             <motion.div
@@ -210,6 +212,7 @@ const PageContent = props => {
                 alignItems: "center",
                 justifyContent: "center",
                 zIndex: 3,
+                pointerEvents: "none",
               }}
             >
               <ContentCard
@@ -217,7 +220,9 @@ const PageContent = props => {
                 show={selectedTip}
                 element={selectedTip}
                 style={{
-                  maxWidth: "34em",
+                  pointerEvents: "auto",
+                  width: "36em",
+                  maxWidth: "100%",
                 }}
                 onLinkClick={handleSelectTip}
               />
