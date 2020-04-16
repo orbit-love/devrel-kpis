@@ -83,6 +83,19 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
+    id: "nckucbst",
+    tag: "opinion",
+    author: {
+      name: "Alexis C. Madrigal",
+      avatar: "twitter/alexismadrigal",
+      bio: "Staff Writer The Atlantic",
+    },
+    body:
+      "Email is actually a tremendous, decentralized, open platform on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
+    url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
+    label: "Read Essay",
+  },
+  {
     id: "h1q0fvf7",
     tag: "extension",
     author: {
@@ -111,6 +124,32 @@ export const content = [
       "The email in your mailbox is your copy of what was said, and nobody else can change it or make it go away. The fact that the content of an email can’t be edited is one of the best things about POP3 and IMAP email standards. I admit it annoyed me when I first ran into it – why can’t you just fix up a message in place – but the immutability is the real strength of email. You can safely forget the detail of something that you read in an email, knowing that when you go back to look at it, the information will be exactly the same.",
     url: "https://fastmail.blog/2018/02/14/email-is-your-electronic-memory/",
     label: "Read blog post",
+  },
+  {
+    id: "erpxshiu",
+    tag: "tip",
+    author: {
+      name: "Keith Rarick",
+      avatar: "twitter/krarick",
+      bio: "Programmer",
+    },
+    body: "Mute. Heavily. The 'm' shortcut key is your friend.",
+    url: "https://xph.us/2013/01/22/inbox-zero-for-life.html",
+    label: "Read more tips & shortcuts",
+  },
+  {
+    id: "imlnicr3",
+    tag: "advice",
+    author: {
+      name: "Michael Waxman",
+      avatar: "twitter/wxmn",
+      bio: "Founder of Grouper",
+    },
+    body:
+      "This widely circulated system for using G-mail from Andreas Klinger was the tipping point. It takes about 15 minutes to set up, and gives you a thoughtful, efficient system for plowing through your inbox.\n\nThe system itself is great, but I found that just having a system at all made it a lot easier to dive in to a full inbox.",
+    source_url: "http://waxman.me/30-days-of-inbox-zero-how-i-did-it",
+    url: "https://klinger.io/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
+    label: "Read about this system",
   },
   {
     id: "qskiwa9h",
