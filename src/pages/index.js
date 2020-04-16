@@ -18,16 +18,17 @@ import {
   SubtleCard,
   useWindow,
   useConfig,
-  Grid
+  Grid,
 } from "superlinear-react-ui";
 import Helmet from "react-helmet";
 import { content, tags } from "../../content";
 import StyledA from "../components/StyledA";
 import Highlight from "../components/Highlight";
 import { useQueryParam } from "../hooks/useQueryParam";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import Linkify from "react-linkify";
 import Columns from "react-columns";
+import ContentCard from "../components/ContentCard";
 
 const IndexPage = () => {
   return (
@@ -39,8 +40,8 @@ const IndexPage = () => {
         meta={[
           {
             name: "robots",
-            content: "noindex"
-          }
+            content: "noindex",
+          },
         ]}
       />
       <PageContent />
@@ -71,242 +72,166 @@ const PageContent = () => {
     updateUrlTag(tag, window);
   }
 
+  const [selectedCard, setSelectedCard] = useState(null);
+  const selectedCardKey = getCardKey(selectedCard);
+
   return (
     <Fragment key={render}>
-      <Section width="56rem" center>
-        <Spacer size="xxxl" />
-        <Logo />
-        <Spacer />
-        <H2 align="center">You're doing email wrong.</H2>
-        <H3 align="center" style={{ maxWidth: "46rem" }}>
-          Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
-          <Highlight>workflows</Highlight> and <Highlight>offers</Highlight> to dominate your inbox.
-        </H3>
-        <Grid width="22em">
-          <StyledA
-            href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
-            icon="github"
-            type="primary"
-            target="_blank"
-            rel="noopener"
+      <AnimateSharedLayout type="crossfade">
+        {selectedCard && (
+          <div
+            css={css`
+              position: fixed;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              z-index: 10;
+              :before {
+                content: "";
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.2);
+              }
+            `}
           >
-            Contribute
-          </StyledA>
-          <DropDownMenu
-            buttonWidth="100%"
-            fullWidth
-            innerIcon="chevronDown"
-            iconSide="right"
-            label={currentTagName}
-            options={tagsValues}
-            optionsNames={tagNames}
-            onSelect={value => {
-              handleSelectTag(value);
-            }}
-          />
-        </Grid>
-        <Spacer />
-        <P2>
-          Follow{" "}
-          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
-            Fabrizio
-          </a>{" "}
-          and{" "}
-          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
-            Francesco
-          </a>{" "}
-          for updates
-        </P2>
-      </Section>
-      <Section width="100%">
-        <AnimatePresence>
+            <ContentCard
+              id={selectedCardKey}
+              show={selectedCard}
+              element={selectedCard}
+              style={{
+                maxWidth: "34em",
+                margin: "auto",
+              }}
+              onLinkClick={() => {
+                setSelectedCard(null);
+              }}
+            />
+          </div>
+        )}
+        <Section width="56rem" center>
+          <Spacer size="xxxl" />
+          <Logo />
+          <Spacer />
+          <H2 align="center">You're doing email wrong.</H2>
+          <H3 align="center" style={{ maxWidth: "46rem" }}>
+            Here’s how the most productive people get to inbox zero. <Highlight>Tips</Highlight>,{" "}
+            <Highlight>workflows</Highlight> and <Highlight>offers</Highlight> to dominate your inbox.
+          </H3>
+          <Grid width="22em">
+            <StyledA
+              href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
+              icon="github"
+              type="primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Contribute
+            </StyledA>
+            <DropDownMenu
+              buttonWidth="100%"
+              fullWidth
+              innerIcon="chevronDown"
+              iconSide="right"
+              label={currentTagName}
+              options={tagsValues}
+              optionsNames={tagNames}
+              onSelect={value => {
+                handleSelectTag(value);
+              }}
+            />
+          </Grid>
+          <Spacer />
+          <P2>
+            Follow{" "}
+            <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+              Fabrizio
+            </a>{" "}
+            and{" "}
+            <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
+              Francesco
+            </a>{" "}
+            for updates
+          </P2>
+        </Section>
+        <Section width="100%">
           <Columns
             queries={[
               {
                 columns: 1,
-                query: "min-width: 0px"
+                query: "min-width: 0px",
               },
               {
                 columns: 2,
-                query: "min-width: 680px"
+                query: "min-width: 680px",
               },
               {
                 columns: 3,
-                query: "min-width: 1100px"
+                query: "min-width: 1250px",
               },
               {
                 columns: 4,
-                query: "min-width: 1700px"
-              }
+                query: "min-width: 1800px",
+              },
             ]}
             gap="10px"
           >
-            {content.map((el, index) => {
-              const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = el;
+            {content.map(element => {
+              const { tag } = element;
 
-              const show = currentTag === tag || currentTag === "all";
+              const key = getCardKey(element);
 
-              const key = `${tag}${author.name}${index}${show}`;
-
-              if (!show) return null;
+              const show = (currentTag === tag || currentTag === "all") && key !== selectedCardKey;
 
               return (
-                <AnimatedDiv key={key} id={key}>
-                  <Card inline width style={{ marginBottom: "20px" }}>
-                    <HStack
-                      align="right"
-                      vAlign="center"
-                      style={{ position: "absolute", top: "9px", right: "9px" }}
-                      gap="4px"
-                    >
-                      {source_url && (
-                        <a href={source_url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
-                          <Icon name="link" color={config.colors.c4} size="16px" />
-                        </a>
-                      )}
-                      <Tag
-                        tag={tag}
-                        onClick={() => {
-                          handleSelectTag(tag === currentTag ? "all" : tag);
-                        }}
-                      />
-                    </HStack>
-                    {author && (
-                      <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
-                        <HStack gap="4px" noWrap>
-                          <img
-                            src={`https://unavatar.now.sh/${author.avatar}`}
-                            alt={author.name}
-                            css={css`
-                              width: 46px;
-                              height: 46px;
-                              border-radius: 50%;
-                            `}
-                          />
-                          <VStack gap={0}>
-                            <H4>{author.name}</H4>
-                            <P2 noWrap>{author.bio}</P2>
-                          </VStack>
-                        </HStack>
-                      </a>
-                    )}
-                    {body && (
-                      <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>
-                        <Linkify>{body}</Linkify>
-                      </P1>
-                    )}
-                    {preview_image && (
-                      <img
-                        style={{
-                          marginTop: "1em",
-                          maxWidth: "100%",
-                          borderRadius: "6px",
-                          border: `1px solid ${config.colors.uiBorderColor}`,
-                          maxHeight: "240px",
-                          objectFit: "cover",
-                          objectPosition: "top"
-                        }}
-                        src={preview_image}
-                        alt="Preview"
-                      />
-                    )}
-                    {offer && (
-                      <a
-                        href={offer.url}
-                        style={{ marginTop: "1em", borderBottom: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <SubtleCard color="hsl(12, 100%, 62%)">
-                          <HStack gap="0.5em">
-                            <Icon size="2em" name="couponBold" color="hsl(12, 100%, 62%)" />
-                            <VStack gap={0}>
-                              <H4 color="hsl(12, 30%, 20%)">{offer.title}</H4>
-                              <P2 color="hsl(12, 100%, 62%)">{offer.subtitle}</P2>
-                            </VStack>
-                          </HStack>
-                        </SubtleCard>
-                      </a>
-                    )}
-                    {url && (
-                      <StyledA
-                        style={{ marginTop: "1em" }}
-                        type="primary"
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {label || "Get it"}
-                      </StyledA>
-                    )}
-                    {chrome_extension && (
-                      <a
-                        href={chrome_extension.url}
-                        style={{ marginTop: "1em", borderBottom: "none" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <SubtleCard color="rgb(80,80,80)">
-                          <Grid columns="3em 1fr auto" gap="0.5em" vAlign="center">
-                            <img src={chrome_extension.icon} style={{ width: "3em" }} alt={chrome_extension.title} />
-                            <VStack gap={0}>
-                              <H4 color="hsl(12, 30%, 20%)" noWrap>
-                                {chrome_extension.title}
-                              </H4>
-                              <P2 noWrap>Add to Google Chrome</P2>
-                            </VStack>
-                            <span
-                              css={css`
-                                display: inline-block;
-                                background: #4285f4;
-                                padding: 1px 12px;
-                                border-radius: 5px;
-                                p {
-                                  font-size: 16px;
-                                  font-weight: 500;
-                                }
-                                @media (max-width: 640px) {
-                                  display: none;
-                                }
-                              `}
-                            >
-                              <P2 color="white">INSTALL</P2>
-                            </span>
-                          </Grid>
-                        </SubtleCard>
-                      </a>
-                    )}
-                  </Card>
-                </AnimatedDiv>
+                <ContentCard
+                  key={key}
+                  id={key}
+                  show={show}
+                  element={element}
+                  onTagClick={() => handleSelectTag(tag === currentTag ? "all" : tag)}
+                  onLinkClick={() => {
+                    if (selectedCard) {
+                      setSelectedCard(null);
+                    } else {
+                      setSelectedCard(element);
+                    }
+                  }}
+                />
               );
             })}
           </Columns>
-        </AnimatePresence>
-        <Spacer size="xxxl" />
-        <P2 align="center">
-          Made by{" "}
-          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
-            Fabrizio
-          </a>{" "}
-          and{" "}
-          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
-            Francesco
-          </a>{" "}
-          with{" "}
-          <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
-            Gatsby
-          </a>
-          ,{" "}
-          <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
-            Framer Motion
-          </a>{" "}
-          and{" "}
-          <a href="https://zeit.co/" target="_blank" rel="noopener noreferrer">
-            Zeit
-          </a>
-          .
-        </P2>
-      </Section>
+          <Spacer size="xxxl" />
+          <P2 align="center">
+            Made by{" "}
+            <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
+              Fabrizio
+            </a>{" "}
+            and{" "}
+            <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
+              Francesco
+            </a>{" "}
+            with{" "}
+            <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">
+              Gatsby
+            </a>
+            ,{" "}
+            <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">
+              Framer Motion
+            </a>{" "}
+            and{" "}
+            <a href="https://zeit.co/" target="_blank" rel="noopener noreferrer">
+              Zeit
+            </a>
+            .
+          </P2>
+        </Section>
+      </AnimateSharedLayout>
     </Fragment>
   );
 };
@@ -376,6 +301,11 @@ function updateUrlTag(tag, window) {
         : window.location.protocol + "//" + window.location.host + window.location.pathname + `?tag=${tag}`;
     window.history.pushState({ path: newUrl }, "", newUrl);
   }
+}
+
+function getCardKey(card) {
+  if (!card) return null;
+  return (card.author.name + card.tag + card.body.slice(0, 12)).replace(/\s/g, "");
 }
 
 export default IndexPage;
