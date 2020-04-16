@@ -6,6 +6,7 @@
  * - Add your tip to the BOTTOM of this file.
  * - Keep your tips short and sweet.
  * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
+ * - Use this URL to get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
  *
  * 📩 SOURCES:
  *
@@ -18,6 +19,7 @@
 
 export const content = [
   {
+    id: "uj2ecty5",
     tag: "advice",
     author: {
       name: "Marc Kaöhlbrugge",
@@ -27,6 +29,7 @@ export const content = [
     body: "Keep your replies short and sweet.",
   },
   {
+    id: "hcv51m5n",
     tag: "app",
     author: {
       name: "Mailbrew",
@@ -45,6 +48,7 @@ export const content = [
     },
   },
   {
+    id: "j3ir7629",
     tag: "opinion",
     author: {
       name: "DHH",
@@ -55,6 +59,7 @@ export const content = [
       "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
   },
   {
+    id: "za2zv518",
     tag: "advice",
     author: {
       name: "Paul Graham",
@@ -67,6 +72,7 @@ export const content = [
     label: "Read the essay",
   },
   {
+    id: "cjz4ignh",
     tag: "tip",
     author: {
       name: "Manuel Frigerio",
@@ -77,6 +83,7 @@ export const content = [
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
   },
   {
+    id: "r3kip4a8",
     tag: "extension",
     author: {
       name: "Rich Vreenland",
@@ -93,6 +100,7 @@ export const content = [
     },
   },
   {
+    id: "fqx7o672",
     tag: "opinion",
     author: {
       name: "Ryan Hoover",
@@ -103,6 +111,7 @@ export const content = [
     source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
   },
   {
+    id: "zerywvyz",
     tag: "app",
     author: {
       name: "Boxy Suite",
@@ -121,6 +130,7 @@ export const content = [
     },
   },
   {
+    id: "y3kgq0o0",
     tag: "tip",
     author: {
       name: "Kitze",
@@ -131,6 +141,7 @@ export const content = [
       'Check and answer emails once per day. Mark emails that can wait with a "fluff" label and answer them during the weekend.',
   },
   {
+    id: "ageyw1qv",
     tag: "tip",
     author: {
       name: "Rich Vreenland",
@@ -141,6 +152,7 @@ export const content = [
       "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
   },
   {
+    id: "skpjf90r",
     tag: "app",
     author: {
       name: "Pigeon",
@@ -153,6 +165,7 @@ export const content = [
     preview_image: "https://s3.amazonaws.com/www.trypigeon.co/homepage/gmail-thread-2.png",
   },
   {
+    id: "589etf84",
     tag: "tip",
     author: {
       name: "Kitze",
@@ -162,6 +175,7 @@ export const content = [
     body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
   },
   {
+    id: "6ip8wgwy",
     tag: "app",
     author: {
       name: "Kitze",
@@ -174,6 +188,7 @@ export const content = [
       "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
   },
   {
+    id: "1am7ezzm",
     tag: "tip",
     author: {
       name: "Francesco Di Lorenzo",
@@ -183,6 +198,7 @@ export const content = [
     body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
   },
   {
+    id: "pwfg01t4",
     tag: "tip",
     author: {
       name: "Pat Walls",
@@ -193,6 +209,7 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
+    id: "ariyzb5p",
     tag: "opinion",
     author: {
       name: "Pat Walls",
@@ -203,6 +220,7 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
+    id: "lmivwwg2",
     tag: "app",
     author: {
       name: "Peter Shankman",
@@ -213,6 +231,7 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
   },
   {
+    id: "v64tehbe",
     tag: "tip",
     author: {
       name: "Peter Shankman",
