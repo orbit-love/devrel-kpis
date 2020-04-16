@@ -95,8 +95,7 @@ export const content = [
     },
     body:
       "You don't need many different newsletters to stay in touch with the people and things you care about.\n\nCreate your own email digest, from your favorite sources.",
-    preview_image:
-      "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
+    preview_image: "https://superlinear-assets.s3.us-east-1.amazonaws.com/inboxzero/mailbrew.png",
     offer: {
       title: "40% OFF for 3 Months",
       subtitle: "Click here to claim the discount",
@@ -250,8 +249,7 @@ export const content = [
     },
     body:
       "Multitasking kills productivity, and doing email in your browser is a recipe for disaster.\n\nBoxy Suite brings Gmail, Calendar and other G Suite apps to your Mac, with single-purpose apps that look and feel native.",
-    preview_image:
-      "https://previews.dropbox.com/p/thumb/AAypYp18wI_jP8fiBT4d6TMYMqotNjZOxmuiL__DTCNGNf5Pi63Nh2W7KqUUmvwEOq46ssDkBrSnCd3rfSRmD25SlgxHGyfn2U2MFVtNDfQyWiZJz8ZR7jVAxqYJ6PkR-XIn_9JmAj9yNq8q_whJgKNnbqx-9VqwmaHjECXmDMCgE1VtlWw_oKdVisWpsCW8aBQKImc6MYI-2Vfh-LfCqP8nLA3LYPjcECvPW48Mjj5vbeMa4645qHLeBGhQWww4L46KABAG4d-C5jk9v1gfdgIFOZFl1xXgEW_LslhFV0KsUjkyfcuC3ACIoizKezkujhYR64MCi9k2DGIfKMwLx82q/p.png?fv_content=true&size_mode=5",
+    preview_image: "https://superlinear-assets.s3.us-east-1.amazonaws.com/inboxzero/boxy-suite.png",
     offer: {
       title: "20% OFF",
       subtitle: "Click here to claim the discount",
