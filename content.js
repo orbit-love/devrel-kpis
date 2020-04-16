@@ -6,6 +6,14 @@
  * - Add your tip to the BOTTOM of this file.
  * - Keep your tips short and sweet.
  * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
+ *
+ * 📩 SOURCES:
+ *
+ * Some content doesn't has a source. That's because some people were so kind
+ * to send us private messages with their tips and takes on email.
+ *
+ * So thank you to DHH, Kitze, Rich Vreeland, Manuel Frigerio and Marc Köhlbrugge for their messages.
+ *
  */
 
 export const content = [
@@ -16,8 +24,7 @@ export const content = [
       avatar: "twitter/marckohlbrugge",
       bio: "Founder of W.I.P."
     },
-    body: "Keep your replies short and sweet.",
-    source_url: "PRIVATE_EXCHANGE"
+    body: "Keep your replies short and sweet."
   },
   {
     tag: "app",
@@ -38,26 +45,36 @@ export const content = [
     }
   },
   {
-    tag: "advice",
+    tag: "opinion",
     author: {
       name: "DHH",
       avatar: "twitter/dhh",
       bio: "Basecamp Co-Founder"
     },
     body:
-      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
-    source_url: "PRIVATE_EXCHANGE"
+      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame."
+  },
+  {
+    tag: "advice",
+    author: {
+      name: "Paul Graham",
+      avatar: "twitter/paulg",
+      bio: "Y-Combinator Co-Founder"
+    },
+    body:
+      "There are many ways to fight spam. Which works best? So far the best single solution is probably Bayesian filtering. But you don't have to choose just one. Many of the following solutions could be used in combination.",
+    url: "http://www.paulgraham.com/stopspam.html",
+    label: "Read the essay"
   },
   {
     tag: "tip",
     author: {
       name: "Manuel Frigerio",
-      avatar: "manuel_frigerio",
+      avatar: "twitter/manuel_frigerio",
       bio: "Founder of ReferralHero, SparkLoop"
     },
     body:
-      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
-    source_url: "PRIVATE_EXCHANGE"
+      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week."
   },
   {
     tag: "extension",
@@ -68,13 +85,22 @@ export const content = [
     },
     body:
       "I use a Chrome extension called 'Inbox When Ready' which will hide my inbox by default after a certain period of time, to add an extra step to prevent compulsive e-mail checking.\n\nYou can even lock yourself out of it after a certain number of attempts per day, but I felt that was too restrictive for me.",
-    source_url: "PRIVATE_EXCHANGE",
     chrome_extension: {
       title: "Inbox When Ready",
       url: "https://inboxwhenready.org/",
       icon:
         "https://lh3.googleusercontent.com/QkFKUeSsig0JNrIA936iV5C8vdD7c51jmz6FjevlBbJUFaSXuIGteqV1Yge0jzFmkvGb5Xho=w128-h128-e365"
     }
+  },
+  {
+    tag: "opinion",
+    author: {
+      name: "Ryan Hoover",
+      avatar: "twitter/rrhoover",
+      bio: "Product Hunt Founder"
+    },
+    body: "I never understood inbox zero. Every email isn’t more important than all the other commitments I’ve made.",
+    source_url: "https://twitter.com/rrhoover/status/1167874754532917252"
   },
   {
     tag: "app",
@@ -102,8 +128,7 @@ export const content = [
       bio: "Founder React Academy"
     },
     body:
-      'Check and answer emails once per day. Mark emails that can wait with a "fluff" label and answer them during the weekend.',
-    source_url: "PRIVATE_EXCHANGE"
+      'Check and answer emails once per day. Mark emails that can wait with a "fluff" label and answer them during the weekend.'
   },
   {
     tag: "tip",
@@ -113,8 +138,7 @@ export const content = [
       bio: "Composer of “It Follows” soundtrack"
     },
     body:
-      "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
-    source_url: "PRIVATE_EXCHANGE"
+      "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail."
   },
   {
     tag: "app",
@@ -135,8 +159,7 @@ export const content = [
       avatar: "twitter/thekitze",
       bio: "Founder React Academy"
     },
-    body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
-    source_url: "PRIVATE_EXCHANGE"
+    body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine."
   },
   {
     tag: "app",
@@ -148,8 +171,7 @@ export const content = [
     body: `Gmail is overrated.\n\nUse Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
     url: "https://missiveapp.com",
     preview_image:
-      "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
-    source_url: "PRIVATE_EXCHANGE"
+      "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png"
   },
   {
     tag: "tip",
@@ -158,8 +180,7 @@ export const content = [
       avatar: "twitter/frankdilo",
       bio: "Superlinear Co-founder"
     },
-    body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
-    source_url: "PRIVATE_EXCHANGE"
+    body: `I use a dedicated email address for subscribing to newsletters: mygmail+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`
   }
 ];
 
@@ -183,6 +204,11 @@ export const tags = {
     value: "advice",
     name: "Advice",
     color: "#8348FF"
+  },
+  opinion: {
+    value: "opinion",
+    name: "Opinion",
+    color: "#334569"
   },
   extension: {
     value: "extension",
