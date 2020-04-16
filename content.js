@@ -7,6 +7,7 @@
  * - Keep your tips short and sweet.
  * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
  * - Use this URL to get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
+ * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
  *
  * 📩 SOURCES:
  *
@@ -37,7 +38,7 @@ export const content = [
       bio: "Basecamp Co-Founder",
     },
     body:
-      "I've been using Mailbrew for the past several months, and it's AWESOME. Now it's out for all! I use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss. It's a perfect use case for email.",
+      "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME. Now it's out for all! I use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss. It's a perfect use case for email.",
     url: "https://mailbrew.com/?coupon=K9h1JrBP",
     preview_image:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F2007bda6-aa34-498d-9409-9048fe39d8ac%2FMailbrew_05.png?table=block&id=c181bc9f-ae1c-4c21-b0b5-743f104ae10e&width=4800&cache=v2",
@@ -46,19 +47,6 @@ export const content = [
       subtitle: "Click here to claim the discount",
       url: "https://mailbrew.com/?coupon=K9h1JrBP",
     },
-  },
-  {
-    id: "53khm0uz",
-    tag: "advice",
-    author: {
-      name: "Paul Graham",
-      avatar: "twitter/paulg",
-      bio: "Y-Combinator Co-Founder",
-    },
-    body:
-      "There are many ways to fight spam. Which works best? So far the best single solution is probably Bayesian filtering. But you don't have to choose just one. Many of the following solutions could be used in combination.",
-    url: "http://www.paulgraham.com/stopspam.html",
-    label: "Read the essay",
   },
   {
     id: "cjz4ignh",
@@ -70,6 +58,16 @@ export const content = [
     },
     body:
       "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
+  },
+  {
+    id: "589etf84",
+    tag: "advice",
+    author: {
+      name: "Kitze",
+      avatar: "twitter/thekitze",
+      bio: "Founder React Academy",
+    },
+    body: "_Turn off all email notifications._ Phone, desktop, literally everywhere. You'll be fine.",
   },
   {
     id: "pwfg01t4",
@@ -91,7 +89,7 @@ export const content = [
       bio: "Staff Writer The Atlantic",
     },
     body:
-      "Email is actually a tremendous, decentralized, open platform on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
+      "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
     url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
     label: "Read Essay",
   },
@@ -113,6 +111,43 @@ export const content = [
     },
   },
   {
+    id: "szjvyo4o",
+    tag: "advice",
+    author: {
+      name: "James Hamblin",
+      avatar: "twitter/jameshamblin",
+      bio: "Staff Writer The Atlantic",
+    },
+    body:
+      "Best? Cheers? Thanks?\n\nNone of the above. You can write your name if it feels too naked or abrupt not to have something down there. But it shouldn’t, and it wouldn’t if it were the norm.",
+    source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
+  },
+  {
+    id: "szjvyo4o",
+    tag: "opinion",
+    author: {
+      name: "James Hamblin",
+      avatar: "twitter/jameshamblin",
+      bio: "Staff Writer The Atlantic",
+    },
+    body:
+      "Aspiring to inbox zero—an empty inbox, perfectly clean and organized and contained—is for most people some mythical idea. The world seems to be conspiring to keep it from happening. And _obsessing over it can be totally counterproductive_ if it means you give priority to emails that don’t deserve your attention at the moment.\n\nBut inbox zero is totally possible if you add emails to a to-do list, along with all other worldly tasks, that you can keep prioritized according to what you really need to get done. What you really want out of any given day, week, or lifetime. Which is rarely to be beholden to the whims of an inbox.",
+    source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
+  },
+  {
+    id: "53khm0uz",
+    tag: "advice",
+    author: {
+      name: "Paul Graham",
+      avatar: "twitter/paulg",
+      bio: "Y-Combinator Co-Founder",
+    },
+    body:
+      "There are many ways to fight spam. Which works best? So far the best single solution is probably Bayesian filtering. But you don't have to choose just one. Many of the following solutions could be used in combination.",
+    url: "http://www.paulgraham.com/stopspam.html",
+    label: "Read the essay",
+  },
+  {
     id: "fqx7o672",
     tag: "opinion",
     author: {
@@ -121,7 +156,7 @@ export const content = [
       bio: "CEO at Fastmail",
     },
     body:
-      "The email in your mailbox is your copy of what was said, and nobody else can change it or make it go away. The fact that the content of an email can’t be edited is one of the best things about POP3 and IMAP email standards. I admit it annoyed me when I first ran into it – why can’t you just fix up a message in place – but the immutability is the real strength of email. You can safely forget the detail of something that you read in an email, knowing that when you go back to look at it, the information will be exactly the same.",
+      "The email in your mailbox is _your copy of what was said_, and nobody else can change it or make it go away.\n\nThe fact that the content of an email can’t be edited is one of the best things about POP3 and IMAP email standards. I admit it annoyed me when I first ran into it – why can’t you just fix up a message in place – but the immutability is the real strength of email.\n\nYou can safely forget the detail of something that you read in an email, knowing that when you go back to look at it, the information will be exactly the same.",
     url: "https://fastmail.blog/2018/02/14/email-is-your-electronic-memory/",
     label: "Read blog post",
   },
@@ -138,6 +173,17 @@ export const content = [
     label: "Read more tips & shortcuts",
   },
   {
+    id: "qskiwa9h",
+    tag: "opinion",
+    author: {
+      name: "Ryan Hoover",
+      avatar: "twitter/rrhoover",
+      bio: "Product Hunt Founder",
+    },
+    body: "I never understood inbox zero. Every email isn’t more important than all the other commitments I’ve made.",
+    source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
+  },
+  {
     id: "imlnicr3",
     tag: "advice",
     author: {
@@ -150,17 +196,6 @@ export const content = [
     source_url: "http://waxman.me/30-days-of-inbox-zero-how-i-did-it",
     url: "https://klinger.io/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
     label: "Read about this system",
-  },
-  {
-    id: "qskiwa9h",
-    tag: "opinion",
-    author: {
-      name: "Ryan Hoover",
-      avatar: "twitter/rrhoover",
-      bio: "Product Hunt Founder",
-    },
-    body: "I never understood inbox zero. Every email isn’t more important than all the other commitments I’ve made.",
-    source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
   },
   {
     id: "zerywvyz",
@@ -189,8 +224,7 @@ export const content = [
       avatar: "twitter/dhh",
       bio: "Basecamp Co-Founder",
     },
-    body:
-      "Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\nAll email is not important. In fact, most of it is not important! I savor my Mailbrews exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product hey.com – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.",
+    body: `Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\n_All email is not important_. In fact, most of it is not important! I savor my [Mailbrews](https://mailbrew.com) exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product [Hey](https://hey.com) – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.`,
   },
   {
     id: "742ds0t7",
@@ -201,7 +235,7 @@ export const content = [
       bio: "Founder React Academy",
     },
     body:
-      'Check and answer emails once per day. Mark emails that can wait with a "fluff" label and answer them during the weekend.',
+      'Check and answer emails once per day.\n\nMark emails that can wait with a "fluff" label and answer them during the weekend.',
   },
   {
     id: "ageyw1qv",
@@ -213,6 +247,19 @@ export const content = [
     },
     body:
       "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
+  },
+  {
+    id: "75yrc814",
+    tag: "advice",
+    author: {
+      name: "Ja Raphael",
+      avatar: "twitter/jrraphael",
+      bio: "Writer Android Intelligence, Fast Company and more",
+    },
+    body:
+      "For every email you encounter, choose from the following fast-triage options:\n\n* If a message requires no action on your behalf, archive it immediately.\n\n* If a message requires a simple reply that you can knock out in a minute or less, respond right then and there—and then archive it immediately.\n\n* If a message requires some level of thought or response that you can’t get to right away, snooze it to a time and date when you will be able to handle it—whether it’s later that same day, sometime the following week, or on a Friday two months down the road.",
+    url: "https://www.fastcompany.com/40507663/the-7-step-guide-to-achieving-inbox-zero-and-staying-there-in-2018",
+    label: "Read the guide to inbox zero",
   },
   {
     id: "skpjf90r",
@@ -228,14 +275,35 @@ export const content = [
     preview_image: "https://s3.amazonaws.com/www.trypigeon.co/homepage/gmail-thread-2.png",
   },
   {
-    id: "589etf84",
+    id: "of6jsxq1",
     tag: "tip",
     author: {
-      name: "Kitze",
-      avatar: "twitter/thekitze",
-      bio: "Founder React Academy",
+      name: "Tim Sneath",
+      avatar: "twitter/timsneath",
+      bio: "Product Manager for Flutter & Dart",
     },
-    body: "Turn off all email notifications. Phone, desktop, literally everywhere. You'll be fine.",
+    body:
+      "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
+    preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
+    url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
+    label: "Read the article",
+  },
+  {
+    id: "69l3kl5g",
+    tag: "app",
+    author: {
+      name: "Diary Email",
+      image: "https://diaryemail.com/favicon-96x96.png",
+      bio: "Email as your diary.",
+    },
+    body:
+      "Diary Email is a calm place to capture your life and share the best moments with your friends. No big brother is trying to get into your head to sell you more stuff.",
+    url: "https://diaryemail.com/",
+    offer: {
+      title: "30% OFF",
+      subtitle: `Enter "ZEROINBOX" during checkout`,
+      url: "https://diaryemail.com/",
+    },
   },
   {
     id: "6ip8wgwy",
