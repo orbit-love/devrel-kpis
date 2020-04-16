@@ -11,6 +11,7 @@ import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
+import "../main.css";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component

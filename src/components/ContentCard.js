@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { motion } from "framer-motion";
-import Linkify from "react-linkify";
 import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, VStack } from "superlinear-react-ui";
 import { tags } from "../../content";
 import StyledA from "./StyledA";
+import ReactMarkdown from "react-markdown";
 
 const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
@@ -28,15 +28,27 @@ const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
         {author && (
           <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
             <HStack gap="4px" noWrap>
-              <img
-                src={`https://unavatar.now.sh/${author.avatar}`}
-                alt={author.name}
-                css={css`
-                  width: 46px;
-                  height: 46px;
-                  border-radius: 50%;
-                `}
-              />
+              {author.avatar && (
+                <img
+                  src={`https://unavatar.now.sh/${author.avatar}`}
+                  alt={author.name}
+                  css={css`
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 50%;
+                  `}
+                />
+              )}
+              {!author.avatar && author.image && (
+                <img
+                  src={author.image}
+                  alt={author.name}
+                  css={css`
+                    width: 46px;
+                    height: 46px;
+                  `}
+                />
+              )}
               <VStack gap={0}>
                 <H4>{author.name}</H4>
                 <P2 noWrap>{author.bio}</P2>
@@ -45,8 +57,31 @@ const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
           </a>
         )}
         {body && (
-          <P1 style={{ marginTop: "1em", whiteSpace: "pre-line" }}>
-            <Linkify>{body}</Linkify>
+          <P1
+            css={css`
+              margin-top: 1em;
+              white-space: pre-line;
+              em {
+                font-style: normal;
+                background: linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%);
+                padding: 3px 4px;
+                margin: -3px -4px;
+              }
+              p {
+                margin: 0 0 0.8em;
+                :last-of-type {
+                  margin-bottom: 0;
+                }
+              }
+              ul {
+                padding-left: 18px;
+                li {
+                  margin-bottom: 6px;
+                }
+              }
+            `}
+          >
+            <ReactMarkdown source={body} />
           </P1>
         )}
         {preview_image && (

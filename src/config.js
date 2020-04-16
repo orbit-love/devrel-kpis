@@ -15,12 +15,12 @@ const baseConfig = {
     error: "hsl(360, 90%, 60%)",
     success: "hsl(130, 70%, 45%)",
     uiBorderColor: "hsla(0, 0%, 0%, 0.14)",
-    shadowColor: "hsla(0, 0%, 0%, .05)"
+    shadowColor: "hsla(0, 0%, 0%, .05)",
   },
   fonts: {
     faces: {
       normal:
-        "niveau-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"
+        "niveau-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     },
     weights: {
       normal: 400,
@@ -32,7 +32,7 @@ const baseConfig = {
       Label: 400,
       Button: 400,
       Input: 400,
-      smallHeading: 600
+      smallHeading: 600,
     },
     margins: {
       normal: "0",
@@ -42,11 +42,11 @@ const baseConfig = {
       H4: "0",
       H5: "0",
       SmallText: "0",
-      smallHeading: "0"
+      smallHeading: "0",
     },
     sizes: {
       normal: ["1em", "16px"],
-      P1: ["18px", "16px"],
+      P1: ["17px", "16px"],
       P2: ["16px", "14px"],
       H1: ["3em", "2em"],
       H2: ["2.4em", "1.8em"],
@@ -57,7 +57,7 @@ const baseConfig = {
       SmallText: ["0.8em", "16px"],
       smallHeading: ["1em", "16px"],
       Button: ["17px", "16px"],
-      Input: ["1em", "16px"]
+      Input: ["1em", "16px"],
     },
     lineHeights: {
       normal: 1.5,
@@ -66,7 +66,7 @@ const baseConfig = {
       H3: 1.5,
       H4: 1.2,
       H5: 1.2,
-      Badge: 1.3
+      Badge: 1.3,
     },
     colors: {
       normal: c => c.colors.c2,
@@ -75,24 +75,24 @@ const baseConfig = {
       H3: c => c.colors.c2,
       H4: c => c.colors.c3,
       H5: c => c.colors.c3,
-      P1: c => c.colors.c3,
+      P1: c => c.colors.c2,
       P2: c => c.colors.c4,
       SmallText: c => c.colors.c4,
-      smallHeading: c => c.colors.c3
-    }
+      smallHeading: c => c.colors.c3,
+    },
   },
   appearance: {
     bigRadius: "12px",
-    smallRadius: "6px"
+    smallRadius: "6px",
   },
   layout: {
     layoutWidth: "72em",
     layoutPadding: ["2.5rem", "1rem"],
     gridGap: "0.8em",
-    stackGap: "0.1em"
+    stackGap: "0.1em",
   },
   section: {
-    padding: ["2.5rem", "1.5rem"]
+    padding: ["2.5rem", "1.5rem"],
   },
   buttons: {
     // General and Buttons,
@@ -101,22 +101,22 @@ const baseConfig = {
     padding: "0 1.5em",
     hoverLighten: 0,
     activeLighten: 0,
-    whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`
+    whiteButtonsEffect: c => `border: 1px solid ${c.colors.uiBorderColor};`,
   },
   cards: {
-    smallPadding: "1.2em"
+    smallPadding: "1.2em",
   },
   header: {
     background: "transparent",
     border: "none",
     height: "3.5em",
-    breakPoint: "0px"
+    breakPoint: "0px",
   },
   dropdown: {
     anchor: "BOTTOM_LEFT",
     lateralPadding: "1em",
-    rowSize: c => c.sizes.m
-  }
+    rowSize: c => c.sizes.m,
+  },
 };
 
 const darkConfig = {};
