@@ -64,12 +64,20 @@ const PageContent = () => {
 
   const currentTagName = tags[currentTag].name;
 
+  function handleSelectTag(tag) {
+    setCurrentTag(tag);
+    updateUrlTag(tag, window);
+  }
+
   return (
     <Fragment key={render}>
       <Section width="66rem" center>
         <Spacer size="xxxl" />
         <Logo />
         <Spacer />
+        <H2 align="center">
+          You're doing email <Highlight>wrong</Highlight>. Learn from the <Highlight>pros</Highlight>.
+        </H2>
         <H2 align="center">
           A crowd-sourced collection of the best email <Highlight>tips</Highlight>, <Highlight>workflows</Highlight> &{" "}
           <Highlight>offers</Highlight> to dominate your&nbsp;inbox.
@@ -93,9 +101,8 @@ const PageContent = () => {
             label={currentTagName}
             options={tagsValues}
             optionsNames={tagNames}
-            onSelect={(value, i) => {
-              setCurrentTag(value);
-              updatedUrlTag(value, window);
+            onSelect={value => {
+              handleSelectTag(value);
             }}
           />
         </Grid>
@@ -141,17 +148,13 @@ const PageContent = () => {
               const key = `${tag}${author.name}${index}${show}`;
 
               return (
-                <Fragment>
-                  <AnimateSharedLayout show={show} key={key} id={key}>
+                <Fragment key={key}>
+                  <AnimateSharedLayout show={show} id={key}>
                     <Card inline width>
                       <Tag
                         tag={tag}
                         onClick={() => {
-                          if (tag === currentTag) {
-                            setCurrentTag("all");
-                          } else {
-                            setCurrentTag(tag);
-                          }
+                          handleSelectTag(tag === currentTag ? "all" : tag);
                         }}
                       />
                       {author && (
@@ -314,23 +317,15 @@ export const AnimateSharedLayout = ({ show, id, children }) =>
 
 const Logo = () => (
   <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0)">
+    <g clipPath="url(#clip0)">
       <circle cx="48" cy="48" r="48" fill="#25242B" />
       <path
         opacity="0.06"
         d="M21.6824 88.1421C26.9539 91.5981 32.8546 93.9821 39.0474 95.1577C45.2403 96.3334 51.604 96.2778 57.7754 94.994C63.9467 93.7103 69.8048 91.2236 75.0151 87.6759C80.2254 84.1283 84.686 79.5891 88.142 74.3175C91.5981 69.046 93.982 63.1454 95.1577 56.9525C96.3334 50.7597 96.2777 44.3959 94.994 38.2246C93.7103 32.0532 91.2236 26.1952 87.6759 20.9848C84.1282 15.7745 79.5891 11.314 74.3175 7.85791L48 48L21.6824 88.1421Z"
         fill="white"
       />
-      <rect
-        x="40.5283"
-        y="34.1887"
-        width="14.9434"
-        height="27.6226"
-        rx="7.4717"
-        stroke="white"
-        stroke-width="3.16981"
-      />
-      <path d="M41.2075 57.9623L54.3395 38.0377" stroke="white" stroke-width="3.16981" />
+      <rect x="40.5283" y="34.1887" width="14.9434" height="27.6226" rx="7.4717" stroke="white" strokeWidth="3.16981" />
+      <path d="M41.2075 57.9623L54.3395 38.0377" stroke="white" strokeWidth="3.16981" />
     </g>
     <defs>
       <clipPath id="clip0">
@@ -340,7 +335,7 @@ const Logo = () => (
   </svg>
 );
 
-function updatedUrlTag(tag, window) {
+function updateUrlTag(tag, window) {
   if (window.history.pushState) {
     const newUrl =
       tag === "all"
