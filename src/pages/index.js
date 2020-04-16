@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from "react";
 import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import Columns from "react-columns";
-import Helmet from "react-helmet";
 import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer, useConfig } from "superlinear-react-ui";
 import { content, tags } from "../../content";
 import ContentCard from "../components/ContentCard";
@@ -18,14 +17,6 @@ const IndexPage = () => {
 
   return (
     <Page title="">
-      <Helmet
-        meta={[
-          {
-            name: "robots",
-            content: "noindex",
-          },
-        ]}
-      />
       <AnimateSharedLayout type="crossfade" transition={{ type: "spring", damping: 9, mass: 0.3, velocity: 20 }}>
         <Router>
           <PageContent key={sharedKey} path="/" />
