@@ -6,7 +6,7 @@ import { tags } from "../../content";
 import StyledA from "./StyledA";
 import ReactMarkdown from "react-markdown";
 
-const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
+const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
@@ -17,44 +17,41 @@ const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
     <AnimatedDiv id={element.id} style={style}>
       <Card inline width style={{ marginBottom: "20px" }}>
         <HStack align="right" vAlign="center" style={{ position: "absolute", top: "9px", right: "9px" }} gap="4px">
-          <Icon onClick={onLinkClick} name="link" color={config.colors.c4} size="16px" />
-          {source_url && (
-            <a href={source_url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
-              <Icon name="open" color={config.colors.c4} size="16px" />
-            </a>
-          )}
-          <Tag tag={tag} onClick={onTagClick} />
+          <Icon
+            onClick={onLinkClick}
+            name={isCurrentCard ? "closeBold" : "link"}
+            color={config.colors.c4}
+            size={isCurrentCard ? "24px" : "16px"}
+          />
         </HStack>
         {author && (
-          <a href={url} target="_blank" rel="noopener noreferrer" style={{ borderBottom: "none" }}>
-            <HStack gap="4px" noWrap>
-              {author.avatar && (
-                <img
-                  src={`https://unavatar.now.sh/${author.avatar}`}
-                  alt={author.name}
-                  css={css`
-                    width: 46px;
-                    height: 46px;
-                    border-radius: 50%;
-                  `}
-                />
-              )}
-              {!author.avatar && author.image && (
-                <img
-                  src={author.image}
-                  alt={author.name}
-                  css={css`
-                    width: 46px;
-                    height: 46px;
-                  `}
-                />
-              )}
-              <VStack gap={0}>
-                <H4>{author.name}</H4>
-                <P2 noWrap>{author.bio}</P2>
-              </VStack>
-            </HStack>
-          </a>
+          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer" }}>
+            {author.avatar && (
+              <img
+                src={`https://unavatar.now.sh/${author.avatar}`}
+                alt={author.name}
+                css={css`
+                  width: 46px;
+                  height: 46px;
+                  border-radius: 50%;
+                `}
+              />
+            )}
+            {!author.avatar && author.image && (
+              <img
+                src={author.image}
+                alt={author.name}
+                css={css`
+                  width: 46px;
+                  height: 46px;
+                `}
+              />
+            )}
+            <VStack gap={0}>
+              <H4>{author.name}</H4>
+              <P2 noWrap>{author.bio}</P2>
+            </VStack>
+          </HStack>
         )}
         {body && (
           <P1
@@ -159,17 +156,17 @@ const ContentCard = ({ show, element, onLinkClick, onTagClick, style }) => {
             </SubtleCard>
           </a>
         )}
+        <HStack align="right" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
+          {source_url && <Source href={source_url} />}
+          <Tag tag={tag} onClick={onTagClick} />
+        </HStack>
       </Card>
     </AnimatedDiv>
   );
 };
 
-export const AnimatedDiv = ({ id, children, style }) => (
-  <motion.div
-    layoutId={id}
-    transition={{ type: "spring", damping: 5, mass: 0.5, velocity: 5 }}
-    style={{ zIndex: 2, ...style }}
-  >
+const AnimatedDiv = ({ id, children, style }) => (
+  <motion.div layoutId={id} style={{ zIndex: 2, ...style }}>
     {children}
   </motion.div>
 );
@@ -190,13 +187,38 @@ const Tag = ({ tag, onClick }) => {
         cursor: pointer;
         p {
           text-transform: uppercase;
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 500;
         }
       `}
     >
       <P2 color={thisTag.color}>{thisTag.name}</P2>
     </span>
+  );
+};
+
+const Source = ({ href }) => {
+  return (
+    <a
+      href={href}
+      css={css`
+        display: inline-block;
+        border: 1px solid hsl(0, 0%, 80%);
+        box-sizing: border-box;
+        padding: 0px 6px;
+        border-radius: 5px;
+        cursor: pointer;
+        p {
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 500;
+        }
+      `}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <P2 color="hsl(0, 0%, 60%)">Source</P2>
+    </a>
   );
 };
 

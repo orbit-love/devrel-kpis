@@ -1,17 +1,14 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import React, { Fragment } from "react";
 import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
-import { Fragment } from "react";
 import Columns from "react-columns";
 import Helmet from "react-helmet";
-import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer } from "superlinear-react-ui";
+import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer, useConfig } from "superlinear-react-ui";
 import { content, tags } from "../../content";
 import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
-import "../main.css";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component
@@ -30,7 +27,7 @@ const IndexPage = () => {
           },
         ]}
       />
-      <AnimateSharedLayout type="crossfade">
+      <AnimateSharedLayout type="crossfade" transition={{ type: "spring", damping: 9, mass: 0.35 }}>
         <Router>
           <PageContent key={sharedKey} path="/" />
           <PageContent key={sharedKey} path="/t/:tipId" />
@@ -43,6 +40,8 @@ const IndexPage = () => {
 };
 
 const PageContent = props => {
+  const config = useConfig();
+
   const { tagId: currentTag = "all", tipId } = props;
   const tagsValues = Object.keys(tags);
   const tagNames = Object.values(tags).map(v => v.name);
@@ -149,6 +148,7 @@ const PageContent = props => {
 
             return (
               <ContentCard
+                isCurrentCard={false}
                 key={key}
                 show={show}
                 element={tip}
@@ -187,7 +187,6 @@ const PageContent = props => {
         {selectedTip && (
           <Fragment>
             <motion.div
-              onClick={() => handleSelectTip(null)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -198,8 +197,7 @@ const PageContent = props => {
                 bottom: 0,
                 right: 0,
                 zIndex: 0,
-                background: "rgba(0,0,0,.2)",
-                cursor: "pointer",
+                background: "rgba(40,40,40,.5)",
               }}
             />
             <motion.div
@@ -210,17 +208,19 @@ const PageContent = props => {
                 bottom: 0,
                 right: 0,
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 zIndex: 3,
-                pointerEvents: "none",
+                overflow: "scroll",
+                webkitOverflowScrolling: "touch",
+                padding: "3em 1em",
               }}
             >
               <ContentCard
                 id={selectedTip.id}
+                isCurrentCard={true}
                 show={selectedTip}
                 element={selectedTip}
                 style={{
+                  margin: "auto",
                   pointerEvents: "auto",
                   width: "36em",
                   maxWidth: "100%",
@@ -234,43 +234,6 @@ const PageContent = props => {
     </Fragment>
   );
 };
-
-const Tag = ({ tag, onClick }) => {
-  if (!tag) return null;
-
-  const thisTag = tags[tag];
-
-  return (
-    <span
-      onClick={onClick}
-      css={css`
-        display: inline-block;
-        background: ${thisTag.color}22;
-        padding: 1px 6px;
-        border-radius: 5px;
-        cursor: pointer;
-        p {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 500;
-        }
-      `}
-    >
-      <P2 color={thisTag.color}>{thisTag.name}</P2>
-    </span>
-  );
-};
-
-export const AnimatedDiv = ({ show, id, children }) => (
-  <motion.div
-    layoutId={id}
-    initial={{ opacity: 0, transform: "scale(0.8)" }}
-    animate={{ opacity: 1, transform: "scale(1)" }}
-    exit={{ opacity: 0, transform: "scale(0.8)" }}
-  >
-    {children}
-  </motion.div>
-);
 
 const Logo = () => (
   <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
