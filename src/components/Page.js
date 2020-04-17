@@ -3,7 +3,7 @@ import { UIContextProvider, Container, useUpdateConfig, useResetConfig, useDarkM
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { baseConfig, darkConfig } from "../config";
-import SEO from "./seo";
+import SEO from "./SEO";
 
 const Page = props => {
   const {
@@ -15,13 +15,13 @@ const Page = props => {
     withSidebar,
     children,
     loading,
-    hideChildrenWhileLoading = false
+    hideChildrenWhileLoading = false,
   } = props;
 
   const {
     site: {
-      siteMetadata: { title: siteTitle }
-    }
+      siteMetadata: { title: siteTitle },
+    },
   } = useStaticQuery(
     graphql`
       query {

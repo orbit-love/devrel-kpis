@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title, card }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={metaTitle}
       titleTemplate={metaTitle}
@@ -36,56 +36,56 @@ function SEO({ description, lang, meta, keywords, title, card }) {
         { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` },
         { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon}` },
         { rel: "shortcut icon", type: "image/png", href: favicon },
-        { rel: "apple-touch-icon-precomposed", type: "image/png", href: appleTouchIcon }
+        { rel: "apple-touch-icon-precomposed", type: "image/png", href: appleTouchIcon },
       ]}
       script={[]}
       meta={[
         {
           name: "description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: "og:title",
-          content: metaTitle
+          content: metaTitle,
         },
         {
           property: "og:description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: "og:type",
-          content: "website"
+          content: "website",
         },
         {
           property: "og:image",
-          content: metaCard
+          content: metaCard,
         },
         {
           name: "twitter:card",
-          content: "summary_large_image"
+          content: "summary_large_image",
         },
         {
           name: "twitter:creator",
-          content: site.siteMetadata.author
+          content: site.siteMetadata.author,
         },
         {
           name: "twitter:title",
-          content: metaTitle
+          content: metaTitle,
         },
         {
           name: "twitter:description",
-          content: metaDescription
+          content: metaDescription,
         },
         {
           name: "twitter:image",
-          content: metaCard
-        }
+          content: metaCard,
+        },
       ]
         .concat(
           keywords.length > 0
             ? {
                 name: "keywords",
-                content: keywords.join(", ")
+                content: keywords.join(", "),
               }
             : []
         )
@@ -98,7 +98,7 @@ SEO.defaultProps = {
   lang: "en",
   meta: [],
   keywords: [],
-  description: ""
+  description: "",
 };
 
 export default SEO;
