@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "inboxze.ro",
     description: "You're doing email wrong. Here’s how the most productive people manage their inbox.",
-    author: "@",
+    author: "@mailbrew",
     siteUrl: "https://inboxze.ro",
   },
   plugins: [
