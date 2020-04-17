@@ -4,13 +4,9 @@
  * 💡 CONTRIBUTE:
  *
  * - Add your tip to the BOTTOM of this file.
- * - Keep your tips short and sweet.
- *
- * - We use unavatar.now.sh for avatars, so in the "avatar" field you can specify a username, email address or domain
- * - Use this URL to get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
- *
+ * - In the "avatar" field you can specify a username, email address or domain (we use unavatar.now.sh)
+ * - Get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
- *
  * - Use `source_url` by default, and only use `url` when visiting the link is required to learn more about the tip/workflow.
  *
  * - Use one of these tags:
