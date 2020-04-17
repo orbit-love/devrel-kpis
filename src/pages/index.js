@@ -1,6 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react";
 import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { Link } from "gatsby";
+import React, { Fragment } from "react";
 import Columns from "react-columns";
 import { DropDownMenu, Grid, H2, H3, P2, Section, Spacer } from "superlinear-react-ui";
 import { content, tags } from "../../content";
@@ -8,7 +9,7 @@ import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
-import { Link } from "gatsby";
+import NotFoundPage from "./404";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component
@@ -22,7 +23,6 @@ const IndexPage = () => {
           <PageContent key={sharedKey} path="/t/:tipId" />
           <PageContent key={sharedKey} path="/:tagId" />
           <PageContent key={sharedKey} path="/:tagId/:tipId" />
-          <PageContent key={sharedKey} path="/privacy-policy" />
         </Router>
       </AnimateSharedLayout>
     </Page>
@@ -30,12 +30,10 @@ const IndexPage = () => {
 };
 
 const PageContent = props => {
-  const { path, tagId: currentTag = "all", tipId } = props;
+  const { tagId = "all", tipId } = props;
 
   const tagsValues = Object.keys(tags);
   const tagNames = Object.values(tags).map(v => v.name);
-
-  const currentTagName = tags[currentTag].name;
 
   const handleSelectTag = tag => {
     if (tag === "all") {
@@ -47,14 +45,14 @@ const PageContent = props => {
 
   const handleSelectTip = tip => {
     if (tipId) {
-      if (currentTag && currentTag !== "all") {
-        navigate(`/${currentTag}`);
+      if (tagId && tagId !== "all") {
+        navigate(`/${tagId}`);
       } else {
         navigate("/");
       }
     } else {
-      if (currentTag && currentTag !== "all") {
-        navigate(`/${currentTag}/${tip.id}`);
+      if (tagId && tagId !== "all") {
+        navigate(`/${tagId}/${tip.id}`);
       } else {
         navigate(`t/${tip.id}`);
       }
@@ -62,6 +60,10 @@ const PageContent = props => {
   };
 
   const selectedTip = tipId ? content.find(tip => tip.id === tipId) : null;
+
+  if ((tagId && !tags[tagId]) || (tipId && !selectedTip)) {
+    return <NotFoundPage />;
+  }
 
   return (
     <Fragment>
@@ -89,7 +91,7 @@ const PageContent = props => {
             fullWidth
             innerIcon="chevronDown"
             iconSide="right"
-            label={currentTagName}
+            label={tags[tagId].name}
             options={tagsValues}
             optionsNames={tagNames}
             onSelect={handleSelectTag}
@@ -133,7 +135,7 @@ const PageContent = props => {
           {content.map(tip => {
             const key = tip.id;
             const tag = tip.tag;
-            const show = currentTag === tag || currentTag === "all";
+            const show = tagId === tag || tagId === "all";
 
             return (
               <ContentCard
@@ -141,7 +143,7 @@ const PageContent = props => {
                 key={key}
                 show={show}
                 element={tip}
-                onTagClick={() => handleSelectTag(tag === currentTag ? "all" : tag)}
+                onTagClick={() => handleSelectTag(tag === tagId ? "all" : tag)}
                 onLinkClick={() => handleSelectTip(tip)}
               />
             );

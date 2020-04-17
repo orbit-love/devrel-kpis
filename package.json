@@ -54,6 +54,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "build_and_serve": "gatsby build && gatsby serve",
+    "clean": "gatsby clean",
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint": "eslint src",
     "start": "npm run develop",
