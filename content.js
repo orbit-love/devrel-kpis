@@ -436,6 +436,23 @@ export const content = [
     body: `Emails are either answered immediately, starred for later, forwarded to a teammate, or deleted. Following the [Eisenhower Box](https://jamesclear.com/eisenhower-box).`,
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-brendan-hufford/",
   },
+  {
+    id: "1s3fmslu",
+    tag: "extension",
+    author: {
+      name: "Hide Feed",
+      image: "https://www.hidefeed.com/inboxze.ro/logo.png",
+      bio: "Get things done without distractions.",
+    },
+    body:
+      "Checking your email too often? Want to read and write emails without getting distracted by all the new ones?\n\nHide your inbox by default and stay focused.",
+    preview_image: "https://www.hidefeed.com/inboxze.ro/preview.png",
+    chrome_extension: {
+      title: "Hide Feed",
+      url: "https://www.hidefeed.com/?ref=inboxze.ro",
+      icon: "https://www.hidefeed.com/inboxze.ro/logo.png",
+    },
+  },
 ];
 
 export const tags = {
