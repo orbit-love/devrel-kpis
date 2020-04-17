@@ -1,4 +1,4 @@
-import { navigate, Router, Redirect } from "@reach/router";
+import { navigate, Router } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { Link } from "gatsby";
 import React, { Fragment } from "react";
@@ -61,7 +61,8 @@ const PageContent = props => {
   const selectedTip = tipId ? content.find(tip => tip.id === tipId) : null;
 
   if ((tagId && !tags[tagId]) || (tipId && !selectedTip)) {
-    return <Redirect to="/404" />;
+    window.location = "/404";
+    return;
   }
 
   return (
