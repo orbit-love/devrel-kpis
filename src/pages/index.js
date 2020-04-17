@@ -1,4 +1,4 @@
-import { navigate, Router } from "@reach/router";
+import { navigate, Router, Redirect } from "@reach/router";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import { Link } from "gatsby";
 import React, { Fragment } from "react";
@@ -9,7 +9,6 @@ import ContentCard from "../components/ContentCard";
 import Highlight from "../components/Highlight";
 import Page from "../components/Page";
 import StyledA from "../components/StyledA";
-import NotFoundPage from "./404";
 
 const IndexPage = () => {
   // Use a shared key to that animation understands its the same component
@@ -62,7 +61,7 @@ const PageContent = props => {
   const selectedTip = tipId ? content.find(tip => tip.id === tipId) : null;
 
   if ((tagId && !tags[tagId]) || (tipId && !selectedTip)) {
-    return <NotFoundPage />;
+    return <Redirect to="/404" />;
   }
 
   return (
