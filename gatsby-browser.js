@@ -5,6 +5,10 @@
  */
 
 exports.shouldUpdateScroll = ({ routerProps: { location }, getSavedScrollPosition }) => {
-  // don't scroll when navigating
+  if (location === "/404" || location === "/privacy-policy") {
+    return true;
+  }
+
+  // Don't scroll when navigating in home page (client-side routing there)
   return false;
 };
