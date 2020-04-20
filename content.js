@@ -61,19 +61,6 @@ export const content = [
     source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
   },
   {
-    id: "apratzxq",
-    tag: "opinion",
-    author: {
-      name: "Mathilde Collin",
-      avatar: "twitter/collinmathilde",
-      bio: "CEO @ Front",
-    },
-    body:
-      "Yes, email is being replaced for some types of communication. It’s nothing to be worried about.\n\nWe have more choices for how to communicate today, and can cherry-pick the best tool for every situation. _It doesn’t mean email is dying._ It simply means that the communication ecosystem has expanded.",
-    source_url: "https://medium.com/@collinmathilde/email-will-last-forever-eaf3ea6e2196",
-    label: "Read Essay",
-  },
-  {
     id: "9xxefltv",
     tag: "opinion",
     author: {
@@ -176,6 +163,19 @@ export const content = [
       bio: "Founder of W.I.P.",
     },
     body: "Keep your replies short and sweet.",
+  },
+  {
+    id: "apratzxq",
+    tag: "opinion",
+    author: {
+      name: "Mathilde Collin",
+      avatar: "twitter/collinmathilde",
+      bio: "CEO @ Front",
+    },
+    body:
+      "Yes, email is being replaced for some types of communication. It’s nothing to be worried about.\n\nWe have more choices for how to communicate today, and can cherry-pick the best tool for every situation. _It doesn’t mean email is dying._ It simply means that the communication ecosystem has expanded.",
+    source_url: "https://medium.com/@collinmathilde/email-will-last-forever-eaf3ea6e2196",
+    label: "Read Essay",
   },
   {
     id: "l9bdawt4",
@@ -296,7 +296,7 @@ export const content = [
     source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
   },
   {
-    id: "k29pqdcr",
+    id: "kcbqjw7x",
     tag: "advice",
     author: {
       name: "Michael Seibel",
