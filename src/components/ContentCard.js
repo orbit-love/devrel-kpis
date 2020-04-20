@@ -100,8 +100,10 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
               maxHeight: "240px",
               objectFit: "cover",
               objectPosition: "top",
+              cursor: offer ? "pointer" : "auto",
             }}
             src={preview_image}
+            onClick={() => offer && window.open(offer.url, "_blank")}
             alt="Preview"
           />
         )}
