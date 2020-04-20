@@ -308,6 +308,23 @@ export const content = [
     label: "Read the study",
   },
   {
+    id: "zerywvyz",
+    tag: "app",
+    author: {
+      name: "Boxy Suite",
+      avatar: "twitter/getboxy",
+      bio: "Gmail, redesigned for Mac.",
+    },
+    body:
+      "Multitasking kills productivity, and doing email in your browser is a recipe for disaster.\n\nBoxy Suite brings Gmail, Calendar and other G Suite apps to your Mac, with single-purpose apps that look and feel native.",
+    preview_image: "https://superlinear-assets.s3.us-east-1.amazonaws.com/inboxzero/boxy-suite.png",
+    offer: {
+      title: "20% OFF",
+      subtitle: "Click here to claim the discount",
+      url: "https://boxysuite.com/?coupon=inboxzero",
+    },
+  },
+  {
     id: "53khm0uz",
     tag: "advice",
     author: {
@@ -356,23 +373,6 @@ export const content = [
     body:
       "I never understood inbox zero.\n\nEvery email isn’t more important than all the other commitments I’ve made.",
     source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
-  },
-  {
-    id: "zerywvyz",
-    tag: "app",
-    author: {
-      name: "Boxy Suite",
-      avatar: "twitter/getboxy",
-      bio: "Gmail, redesigned for Mac.",
-    },
-    body:
-      "Multitasking kills productivity, and doing email in your browser is a recipe for disaster.\n\nBoxy Suite brings Gmail, Calendar and other G Suite apps to your Mac, with single-purpose apps that look and feel native.",
-    preview_image: "https://superlinear-assets.s3.us-east-1.amazonaws.com/inboxzero/boxy-suite.png",
-    offer: {
-      title: "20% OFF",
-      subtitle: "Click here to claim the discount",
-      url: "https://boxysuite.com/?coupon=inboxzero",
-    },
   },
   {
     id: "imlnicr3",
@@ -455,6 +455,24 @@ export const content = [
       url: "https://chrome.google.com/webstore/detail/pigeon-for-gmail/ggflodpkeedjmjepigkckjmhcbhlflng?hl=en",
       icon:
         "https://lh3.googleusercontent.com/-Tm5zlsGljfFhGXAmb9VVKspSuIsgZKasUaSNZZt7l9q3MSOimjpSeGZbvxN0pU2N42OMh5BpQ=w128-h128-e365",
+    },
+  },
+  {
+    id: "5pdccp95",
+    tag: "app",
+    author: {
+      name: "Tempo",
+      avatar: "twitter/your__tempo",
+      bio: "The email client that helps you focus.",
+    },
+    body:
+      "Effortlessly sort email around your schedule. Mark important ones as To-Do, then archive or snooze the rest. Enjoy communicating in a minimal and elegant interface.\n\nHelping you hit Inbox Zero at your Tempo.\n\nMade by a small team, with maximum love.",
+    preview_image:
+      "https://uploads-ssl.webflow.com/59c3a820387ac60001b24d4d/5b913d408065b633fe9ab88d_focus-mode-p-2000.png",
+    offer: {
+      title: "30% OFF for 3 months",
+      subtitle: `Click to request`,
+      url: "https://www.yourtempo.co/friend-of-the-app",
     },
   },
   {
