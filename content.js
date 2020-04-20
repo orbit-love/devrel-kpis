@@ -72,15 +72,14 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
-    id: "hcv51m5n",
-    tag: "app",
+    id: "j3ir7629",
+    tag: "opinion",
     author: {
       name: "DHH",
       avatar: "twitter/dhh",
       bio: "Basecamp Co-Founder",
     },
-    body:
-      "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME.\n\nI use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss.\n\n_It's a perfect use case for email._",
+    body: `Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\n_All email is not important_. In fact, most of it is not important! I savor my [Mailbrews](https://mailbrew.com) exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product [Hey](https://hey.com) – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.`,
   },
   {
     id: "2dnug8c1",
@@ -126,7 +125,7 @@ export const content = [
       bio: "Y-Combinator Co-Founder",
     },
     body: "Slack fixed the chat half of email. _I'm still waiting for a startup to fix the todo-list half._",
-    url: "https://twitter.com/paulg/status/737100366563549184?s=21",
+    source_url: "https://twitter.com/paulg/status/737100366563549184?s=21",
   },
   {
     id: "k29pqdcr",
@@ -199,7 +198,7 @@ export const content = [
       bio: "Automated digests on things you love.",
     },
     body:
-      "You don't need many different newsletters to stay in touch with the people and things you care about.\n\nCreate your own email digest, from your favorite sources.",
+      "You don't need many different newsletters to stay in touch with the topics and people you care about.\n\nCreate your own email digest, from your favorite sources.",
     preview_image: "https://superlinear-assets.s3.us-east-1.amazonaws.com/inboxzero/mailbrew.png",
     offer: {
       title: "40% OFF for 3 Months",
@@ -229,6 +228,16 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
+    id: "u28lx4zr",
+    tag: "tip",
+    author: {
+      name: "Fabrizio Rinaldi",
+      avatar: "twitter/linuz90",
+      bio: "Co-Founder Mailbrew & Boxy Suite",
+    },
+    body: `A few months ago I've decided to always press unsubscribe or mark as spam if I'm not interested in an email.\n\nSince then, my inbox has become progressively cleaner, and now I hit inbox zero every few days effortlessly.\n\n_You need to unsubscribe ruthlessly._`,
+  },
+  {
     id: "6acgyamv",
     tag: "app",
     author: {
@@ -245,16 +254,6 @@ export const content = [
       subtitle: `Click to redeem`,
       url: "https://www.sanebox.com/mailbrew",
     },
-  },
-  {
-    id: "u28lx4zr",
-    tag: "tip",
-    author: {
-      name: "Fabrizio Rinaldi",
-      avatar: "twitter/linuz90",
-      bio: "Co-Founder Mailbrew & Boxy Suite",
-    },
-    body: `A few months ago I've decided to always press unsubscribe or mark as spam if I'm not interested in an email.\n\nSince then, my inbox has become progressively cleaner, and now I hit inbox zero every few days effortlessly.\n\n_You need to unsubscribe ruthlessly._`,
   },
   {
     id: "1am7ezzm",
@@ -374,16 +373,6 @@ export const content = [
       subtitle: "Click here to claim the discount",
       url: "https://boxysuite.com/?coupon=inboxzero",
     },
-  },
-  {
-    id: "j3ir7629",
-    tag: "opinion",
-    author: {
-      name: "DHH",
-      avatar: "twitter/dhh",
-      bio: "Basecamp Co-Founder",
-    },
-    body: `Inbox zero is a fool's errand.\n\nIt puts you on the treadmill of dealing with every email as soon as it comes in, and even make that appear like the organized, virtuous thing to do. But it's not.\n\n_All email is not important_. In fact, most of it is not important! I savor my [Mailbrews](https://mailbrew.com) exactly because they're not urgent. I don't try to read it all as soon as it hits my inbox.\n\nThis has been a primary mission for our new email product [Hey](https://hey.com) – get you off the inbox-zero treadmill, and back to loving email, because you're reading the important stuff urgently, and the leisurely stuff when you have time.\n\nNo stress, no shame.`,
   },
   {
     id: "imlnicr3",
@@ -584,7 +573,7 @@ export const content = [
       bio: "Y-Combinator Co-Founder",
     },
     body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
-    url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
+    source_url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
   },
 ];
 
