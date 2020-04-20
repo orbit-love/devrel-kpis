@@ -229,6 +229,24 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
+    id: "6acgyamv",
+    tag: "app",
+    author: {
+      name: "Sanebox",
+      avatar: "twitter/sanebox",
+      bio: "Your Inbox Perfected.",
+    },
+    body:
+      "SaneBox AI identifies important messages, hides distractions, has Do Not Disturb, banishes annoying senders, reminds you to followup and more...",
+    preview_image:
+      "https://assets.sanebox.com/assets/welcome/illustration-whiteboard-abe59cf7d9dff01f867f84ddfef03efd5ec2d161f8f7400c8b5a945b967c7de4.png",
+    offer: {
+      title: "$25 credit",
+      subtitle: `Click to redeem`,
+      url: "https://www.sanebox.com/mailbrew",
+    },
+  },
+  {
     id: "u28lx4zr",
     tag: "tip",
     author: {
@@ -415,6 +433,22 @@ export const content = [
       "For every email you encounter, choose from the following fast-triage options:\n\n* If a message requires no action on your behalf, archive it immediately.\n\n* If a message requires a simple reply that you can knock out in a minute or less, respond right then and there—and then archive it immediately.\n\n* If a message requires some level of thought or response that you can’t get to right away, snooze it to a time and date when you will be able to handle it—whether it’s later that same day, sometime the following week, or on a Friday two months down the road.",
     url: "https://www.fastcompany.com/40507663/the-7-step-guide-to-achieving-inbox-zero-and-staying-there-in-2018",
     label: "Read the guide to inbox zero",
+  },
+  {
+    id: "mty8e531",
+    tag: "app",
+    author: {
+      name: "Leave Me Alone",
+      avatar: "twitter/leavemealoneapp",
+      bio: "Unsubscribe from unwanted emails.",
+    },
+    body: "See all of your subscription emails in one place and unsubscribe from them with a single click.",
+    preview_image: "https://leavemealone.app/static/9a9f4acb40bfe247f8135347b4e9a574/f23df/mail-list-illustation.png",
+    offer: {
+      title: "10% OFF",
+      subtitle: `Use "INBOX_ZERO" at checkout`,
+      url: "https://leavemealone.app/",
+    },
   },
   {
     id: "skpjf90r",
