@@ -3,7 +3,7 @@ import { UIContextProvider, Container, useUpdateConfig, useResetConfig, useDarkM
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { baseConfig, darkConfig } from "../config";
-import SEO from "./SEO";
+import SEO from "./seo";
 
 const Page = props => {
   const {
