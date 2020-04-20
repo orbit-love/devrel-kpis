@@ -27,16 +27,6 @@
 
 export const content = [
   {
-    id: "uj2ecty5",
-    tag: "advice",
-    author: {
-      name: "Marc Kaöhlbrugge",
-      avatar: "twitter/marckohlbrugge",
-      bio: "Founder of W.I.P.",
-    },
-    body: "Keep your replies short and sweet.",
-  },
-  {
     id: "c5i1j2um",
     tag: "advice",
     author: {
@@ -46,6 +36,19 @@ export const content = [
     },
     body: "If you can’t delete an email without flinching or responding, you won’t scale.",
     source_url: "https://twitter.com/naval/status/1012396688349192192?s=20",
+  },
+  {
+    id: "nckucbst",
+    tag: "opinion",
+    author: {
+      name: "Alexis C. Madrigal",
+      avatar: "twitter/alexismadrigal",
+      bio: "Staff Writer The Atlantic",
+    },
+    body:
+      "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
+    url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
+    label: "Read Essay",
   },
   {
     id: "8ujxxbrl",
@@ -71,6 +74,17 @@ export const content = [
     source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
   },
   {
+    id: "9xxefltv",
+    tag: "opinion",
+    author: {
+      name: "Pat Walls",
+      avatar: "twitter/thepatwalls",
+      bio: "Founder Starter Story & Pigeon",
+    },
+    body: `“Email is dead” is the greatest lie in the tech industry.`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
+  },
+  {
     id: "hcv51m5n",
     tag: "app",
     author: {
@@ -80,6 +94,50 @@ export const content = [
     },
     body:
       "I've been using [Mailbrew](https://mailbrew.com) for the past several months, and it's AWESOME.\n\nI use it to follow people who don't tweet a lot, and would be buried in my stream, but I definitely do not want to miss.\n\n_It's a perfect use case for email._",
+  },
+  {
+    id: "2dnug8c1",
+    tag: "tip",
+    author: {
+      name: "Brendan Hufford",
+      avatar: "twitter/BrendanHufford",
+      bio: "Creator, SEO for the Rest of Us",
+    },
+    body: `Emails are either answered immediately, starred for later, forwarded to a teammate, or deleted. Following the [Eisenhower Box](https://jamesclear.com/eisenhower-box).`,
+    source_url: "https://www.gmass.co/gmailgenius/how-i-email-brendan-hufford/",
+  },
+  {
+    id: "s4h604vl",
+    tag: "advice",
+    author: {
+      name: "Naval Ravikant",
+      avatar: "twitter/naval",
+      bio: "Entrepreneur, AngelList Co-Founder",
+    },
+    body:
+      "Note to world — 95% of what you want to meet for can be easily handled in a 5-minute email exchange. Be efficient!",
+    source_url: "https://twitter.com/naval/status/203644276645707776?s=20",
+  },
+  {
+    id: "53khm0uz",
+    tag: "opinion",
+    author: {
+      name: "Paul Graham",
+      avatar: "twitter/paulg",
+      bio: "Y-Combinator Co-Founder",
+    },
+    body: "Slack fixed the chat half of email. _I'm still waiting for a startup to fix the todo-list half._",
+    url: "https://twitter.com/paulg/status/737100366563549184?s=21",
+  },
+  {
+    id: "uj2ecty5",
+    tag: "advice",
+    author: {
+      name: "Marc Kaöhlbrugge",
+      avatar: "twitter/marckohlbrugge",
+      bio: "Founder of W.I.P.",
+    },
+    body: "Keep your replies short and sweet.",
   },
   {
     id: "0db5tzie",
@@ -99,22 +157,11 @@ export const content = [
     },
   },
   {
-    id: "cjz4ignh",
-    tag: "tip",
-    author: {
-      name: "Manuel Frigerio",
-      avatar: "twitter/manuel_frigerio",
-      bio: "Founder of ReferralHero, SparkLoop",
-    },
-    body:
-      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
-  },
-  {
     id: "589etf84",
     tag: "advice",
     author: {
       name: "Kitze",
-      avatar: "twitter/thekitze",
+      avatar: "kitze.io",
       bio: "Founder React Academy",
     },
     body: "_Turn off all email notifications._ Phone, desktop, literally everywhere. You'll be fine.",
@@ -131,19 +178,6 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
   },
   {
-    id: "nckucbst",
-    tag: "opinion",
-    author: {
-      name: "Alexis C. Madrigal",
-      avatar: "twitter/alexismadrigal",
-      bio: "Staff Writer The Atlantic",
-    },
-    body:
-      "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
-    url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
-    label: "Read Essay",
-  },
-  {
     id: "u28lx4zr",
     tag: "tip",
     author: {
@@ -152,6 +186,16 @@ export const content = [
       bio: "Co-Founder Mailbrew & Boxy Suite",
     },
     body: `A few months ago I've decided to always press unsubscribe or mark as spam if I'm not interested in an email.\n\nSince then, my inbox has become progressively cleaner, and now I hit inbox zero every few days effortlessly.\n\n_You need to unsubscribe ruthlessly._`,
+  },
+  {
+    id: "1am7ezzm",
+    tag: "tip",
+    author: {
+      name: "Francesco Di Lorenzo",
+      avatar: "twitter/frankdilo",
+      bio: "Co-Founder Mailbrew & Boxy Suite",
+    },
+    body: `Use a _dedicated email address for newsletters_, something like frank+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I created, emails directed to that address never hit my inbox and go to a dedicated label that I browse when I want to read them.`,
   },
   {
     id: "h1q0fvf7",
@@ -169,18 +213,6 @@ export const content = [
       icon:
         "https://lh3.googleusercontent.com/QkFKUeSsig0JNrIA936iV5C8vdD7c51jmz6FjevlBbJUFaSXuIGteqV1Yge0jzFmkvGb5Xho=w128-h128-e365",
     },
-  },
-  {
-    id: "s4h604vl",
-    tag: "advice",
-    author: {
-      name: "Naval Ravikant",
-      avatar: "twitter/naval",
-      bio: "Entrepreneur, AngelList Co-Founder",
-    },
-    body:
-      "Note to world — 95% of what you want to meet for can be easily handled in a 5-minute email exchange. Be efficient!",
-    source_url: "https://twitter.com/naval/status/203644276645707776?s=20",
   },
   {
     id: "szjvyo4o",
@@ -290,7 +322,7 @@ export const content = [
     tag: "tip",
     author: {
       name: "Kitze",
-      avatar: "twitter/thekitze",
+      avatar: "kitze.io",
       bio: "Founder React Academy",
     },
     body:
@@ -350,19 +382,6 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
   },
   {
-    id: "of6jsxq1",
-    tag: "tip",
-    author: {
-      name: "Tim Sneath",
-      avatar: "twitter/timsneath",
-      bio: "Product Manager for Flutter & Dart",
-    },
-    body:
-      "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
-    preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
-    source_url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
-  },
-  {
     id: "69l3kl5g",
     tag: "app",
     author: {
@@ -380,11 +399,24 @@ export const content = [
     },
   },
   {
+    id: "of6jsxq1",
+    tag: "tip",
+    author: {
+      name: "Tim Sneath",
+      avatar: "twitter/timsneath",
+      bio: "Product Manager for Flutter & Dart",
+    },
+    body:
+      "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
+    preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
+    source_url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
+  },
+  {
     id: "6ip8wgwy",
     tag: "app",
     author: {
       name: "Kitze",
-      avatar: "twitter/thekitze",
+      avatar: "kitze.io",
       bio: "Founder React Academy",
     },
     body: `Gmail is overrated.\n\nUse Missive instead of Gmail, especially if you have an assistant or a team answering your emails, it's amazing.`,
@@ -392,27 +424,7 @@ export const content = [
     preview_image:
       "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
   },
-  {
-    id: "1am7ezzm",
-    tag: "tip",
-    author: {
-      name: "Francesco Di Lorenzo",
-      avatar: "twitter/frankdilo",
-      bio: "Co-Founder Mailbrew & Boxy Suite",
-    },
-    body: `I use a dedicated email address for subscribing to newsletters: frank+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I setup,  newsletters never hit my inbox and go to a dedicated folder that I browse when I want to read.`,
-  },
-  {
-    id: "9xxefltv",
-    tag: "opinion",
-    author: {
-      name: "Pat Walls",
-      avatar: "twitter/thepatwalls",
-      bio: "Founder Starter Story & Pigeon",
-    },
-    body: `“Email is dead” is the greatest lie in the tech industry.`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-pat-walls/",
-  },
+
   {
     id: "lmivwwg2",
     tag: "app",
@@ -424,17 +436,6 @@ export const content = [
     body: `The number one tool I use probably 20 times a day is FollowUpThen.\n\n I can forward any email I want right to them, specify when I want to follow up, and they will send it back then.`,
     url: "https://www.followupthen.com/",
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
-  },
-  {
-    id: "2dnug8c1",
-    tag: "tip",
-    author: {
-      name: "Brendan Hufford",
-      avatar: "twitter/BrendanHufford",
-      bio: "Creator, SEO for the Rest of Us",
-    },
-    body: `Emails are either answered immediately, starred for later, forwarded to a teammate, or deleted. Following the [Eisenhower Box](https://jamesclear.com/eisenhower-box).`,
-    source_url: "https://www.gmass.co/gmailgenius/how-i-email-brendan-hufford/",
   },
   {
     id: "1s3fmslu",
@@ -452,6 +453,28 @@ export const content = [
       url: "https://www.hidefeed.com/?ref=inboxze.ro",
       icon: "https://www.hidefeed.com/inboxze.ro/logo.png",
     },
+  },
+  {
+    id: "cjz4ignh",
+    tag: "tip",
+    author: {
+      name: "Manuel Frigerio",
+      avatar: "twitter/manuel_frigerio",
+      bio: "Founder of ReferralHero, SparkLoop",
+    },
+    body:
+      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
+  },
+  {
+    id: "53khm0uz",
+    tag: "advice",
+    author: {
+      name: "Paul Graham",
+      avatar: "twitter/paulg",
+      bio: "Y-Combinator Co-Founder",
+    },
+    body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
+    url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
   },
 ];
 
