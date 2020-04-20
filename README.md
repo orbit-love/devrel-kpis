@@ -16,3 +16,5 @@ All the content for the site lives in `content.js`. Just edit that file to [cont
 <br>
 
 Built with [Gatsby](https://www.gatsbyjs.org), [Framer Motion](https://www.framer.com/motion/) and deployed on [Zeit](https://zeit.co).
+
+Thanks [Pat Walls](https://twitter.com/thepatwalls) for the feedback and support while making this project.

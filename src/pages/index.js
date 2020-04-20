@@ -174,6 +174,13 @@ const PageContent = props => {
           </a>
           .
         </P2>
+        <P2 align="center">
+          Thanks{" "}
+          <a href="https://twitter.com/thepatwalls" target="_blank" rel="noopener noreferrer">
+            Pat Walls
+          </a>{" "}
+          for the feedback and support.
+        </P2>
       </Section>
       <AnimatePresence>
         {selectedTip && (
