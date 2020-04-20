@@ -38,19 +38,6 @@ export const content = [
     source_url: "https://twitter.com/naval/status/1012396688349192192?s=20",
   },
   {
-    id: "nckucbst",
-    tag: "opinion",
-    author: {
-      name: "Alexis C. Madrigal",
-      avatar: "twitter/alexismadrigal",
-      bio: "Staff Writer The Atlantic",
-    },
-    body:
-      "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
-    url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
-    label: "Read Essay",
-  },
-  {
     id: "8ujxxbrl",
     tag: "advice",
     author: {
@@ -59,7 +46,7 @@ export const content = [
       bio: "Staff Writer The Atlantic",
     },
     body:
-      "Best? Cheers? Thanks?\n\nNone of the above. You can write your name if it feels too naked or abrupt not to have something down there. But it shouldn’t, and it wouldn’t if it were the norm.",
+      "Best? Cheers? Thanks?\n\n_None of the above._ You can write your name if it feels too naked or abrupt not to have something down there. But it shouldn’t, and it wouldn’t if it were the norm.",
     source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
   },
   {
@@ -72,6 +59,19 @@ export const content = [
     },
     body: `_Subject lines are EVERYTHING_, and they simply MUST include a benefit to the reader.`,
     source_url: "https://www.shankman.com/how-to-send-an-email-to-me-or-anyone-and-guarantee-it-will-be-read/",
+  },
+  {
+    id: "apratzxq",
+    tag: "opinion",
+    author: {
+      name: "Mathilde Collin",
+      avatar: "twitter/collinmathilde",
+      bio: "CEO @ Front",
+    },
+    body:
+      "Yes, email is being replaced for some types of communication. It’s nothing to be worried about.\n\nWe have more choices for how to communicate today, and can cherry-pick the best tool for every situation. _It doesn’t mean email is dying._ It simply means that the communication ecosystem has expanded.",
+    source_url: "https://medium.com/@collinmathilde/email-will-last-forever-eaf3ea6e2196",
+    label: "Read Essay",
   },
   {
     id: "9xxefltv",
@@ -119,6 +119,18 @@ export const content = [
     source_url: "https://twitter.com/naval/status/203644276645707776?s=20",
   },
   {
+    id: "xtlf27uv",
+    tag: "advice",
+    author: {
+      name: "Glyph",
+      avatar: "twitter/glyph",
+      bio: "Programmer, creator of Twisted",
+    },
+    body:
+      "The trick about getting to Inbox Zero is not in somehow becoming an email-reading machine, but in _realizing that most email is worthless, and that’s OK_.\n\nIf you’re not going to do anything with it, just archive it and forget about it.",
+    source_url: "https://glyph.twistedmatrix.com/2016/04/email-isnt-the-problem.html",
+  },
+  {
     id: "53khm0uz",
     tag: "opinion",
     author: {
@@ -130,6 +142,32 @@ export const content = [
     url: "https://twitter.com/paulg/status/737100366563549184?s=21",
   },
   {
+    id: "k29pqdcr",
+    tag: "advice",
+    author: {
+      name: "Michael Seibel",
+      avatar: "twitter/mwseibel",
+      bio: "CEO at Y Combinator",
+    },
+    body:
+      "As an early stage investor I want to help startups succeed. If you email me – or anyone, really – your job is to succinctly communicate your situation and how I can help.\n\n_Clearly explain what you do._\n\nAvoid any jargon or complex terms. Remember, I’m probably not using 100% of my brain when reading your email so optimize for that. I’m sorry if this sounds like I’m disrespecting your communication. That is not my intention. It’s just that I check my email all the time and I cannot guarantee that I won’t be distracted or that my mind won’t be focused on other things.",
+    source: "https://blog.ycombinator.com/how-to-email-early-stage-investors/",
+    label: "Read the article",
+  },
+  {
+    id: "nckucbst",
+    tag: "opinion",
+    author: {
+      name: "Alexis C. Madrigal",
+      avatar: "twitter/alexismadrigal",
+      bio: "Staff Writer The Atlantic",
+    },
+    body:
+      "_Email is actually a tremendous, decentralized, open platform_ on which new, innovative things can and have been built. In that way, email represents a different model from the closed ecosystems we see proliferating across our computers and devices.\n\nEmail is a refugee from the open, interoperable, less-controlled 'web we lost.' It's an exciting landscape of freedom amidst the walled gardens of social networking and messaging services.\n\nYes, email is exciting. Get excited!",
+    url: "https://www.theatlantic.com/technology/archive/2014/08/why-email-will-never-die/375973/",
+    label: "Read Essay",
+  },
+  {
     id: "uj2ecty5",
     tag: "advice",
     author: {
@@ -138,6 +176,19 @@ export const content = [
       bio: "Founder of W.I.P.",
     },
     body: "Keep your replies short and sweet.",
+  },
+  {
+    id: "l9bdawt4",
+    tag: "advice",
+    author: {
+      name: "Matt Might",
+      avatar: "twitter/mattmight",
+      bio: "Director, Hugh Kaul Precision Medicine Inst.",
+    },
+    body:
+      "_If the entire email fits in the subject, put it in the subject._\n\nIf you think that's rude, it's not.\n\nIf you insist that it's rude, put 'Thanks!' in the body.\n\nIf the email fits in the subject, it takes a click out of processing it, and raises the probability of a reply.",
+    source: "http://matt.might.net/articles/how-to-email/",
+    label: "How to send and reply to email",
   },
   {
     id: "0db5tzie",
@@ -227,6 +278,19 @@ export const content = [
     source_url: "https://www.theatlantic.com/health/archive/2016/09/brevity-in-email/501986/",
   },
   {
+    id: "k29pqdcr",
+    tag: "advice",
+    author: {
+      name: "Michael Seibel",
+      avatar: "twitter/mwseibel",
+      bio: "CEO at Y Combinator",
+    },
+    body:
+      "Cutting back on email might reduce stress as much as picturing yourself swimming in the warm waters of a tropical island several times a day.",
+    source: "https://www.nytimes.com/2015/01/11/opinion/sunday/stop-checking-email-so-often.html",
+    label: "Read the study",
+  },
+  {
     id: "53khm0uz",
     tag: "advice",
     author: {
@@ -235,7 +299,7 @@ export const content = [
       bio: "Y-Combinator Co-Founder",
     },
     body:
-      "There are many ways to fight spam. Which works best? So far the best single solution is probably Bayesian filtering. But you don't have to choose just one. Many of the following solutions could be used in combination.",
+      "There are many ways to fight spam. Which works best?\n\nSo far the best single solution is probably Bayesian filtering. But you don't have to choose just one. Many of the following solutions could be used in combination.",
     url: "http://www.paulgraham.com/stopspam.html",
     label: "Read the essay",
   },
@@ -380,6 +444,18 @@ export const content = [
     },
     body: `Always _update the subject line when you’re changing thread_ or content. Don’t allow threads to carry over for months. With subject lines, always use complete information. Try to avoid being vague with phrases like “checking in” or “update,” instead write “update on the Jones project.” It’ll save you and the recipient time because you won’t have to guess what’s inside the email.`,
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
+  },
+  {
+    id: "z4fnnxov",
+    tag: "opinion",
+    author: {
+      name: "Andrew Lyon",
+      avatar: "twitter/killltheradio",
+      bio: "Founder Turtl",
+    },
+    body:
+      "We need to view email as a framework, not an application. It is used for sending messages. That's it. It does this reliably and predictably.\n\nReplacing email with 'smarter' features will inevitably leave people out. I understand the desire to have email just be one huge TODO list. But sometimes I just want to send a fucking message, not 'make a TODO.' Boom, I just 'broke' the new email.\n\n_Email works because it does nothing but messaging._",
+    source_url: "https://killtheradio.net/technology/email-is-not-broken-its-a-framework-not-an-application/",
   },
   {
     id: "69l3kl5g",
