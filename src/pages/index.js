@@ -72,7 +72,7 @@ const PageContent = props => {
         <Spacer size="xxxl" />
         <Logo />
         <Spacer />
-        <H2 align="center">Make Email Great Again</H2>
+        <H2 align="center">Inbox Zero</H2>
         <H3 align="center" style={{ maxWidth: "48rem" }}>
           Here’s how the most productive people manage their inbox. A&nbsp;collection of <Highlight>tips</Highlight>,{" "}
           <Highlight>apps</Highlight> and <Highlight>workflows</Highlight>.
