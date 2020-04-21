@@ -593,6 +593,22 @@ export const content = [
     body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
     source_url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
   },
+  {
+    id: "fv8h17wr",
+    tag: "app",
+    author: {
+      name: "FollowUpThen",
+      image: "twitter/followupthen",
+      bio: "The simplest way to schedule an email reminder.",
+    },
+    body:
+      "Forward an email to FollowUpThen and get it back in your inbox when you want to.",
+    offer: {
+      title: "$5 off any plan",
+      subtitle: "Click here to claim the discount",
+      url: "https://www.followupthen.com/?coupon=inboxze_ro",
+    },
+  },
 ];
 
 export const tags = {
