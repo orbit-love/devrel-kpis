@@ -598,11 +598,10 @@ export const content = [
     tag: "app",
     author: {
       name: "FollowUpThen",
-      image: "twitter/followupthen",
+      avatar: "twitter/followupthen",
       bio: "The simplest way to schedule an email reminder.",
     },
-    body:
-      "Forward an email to FollowUpThen and get it back in your inbox when you want to.",
+    body: "Forward an email to FollowUpThen and get it back in your inbox when you want to take action on it.",
     offer: {
       title: "$5 off any plan",
       subtitle: "Click here to claim the discount",
