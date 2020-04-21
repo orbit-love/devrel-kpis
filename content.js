@@ -117,7 +117,7 @@ export const content = [
     source_url: "https://glyph.twistedmatrix.com/2016/04/email-isnt-the-problem.html",
   },
   {
-    id: "53khm0uz",
+    id: "tobb0mdr",
     tag: "opinion",
     author: {
       name: "Paul Graham",
@@ -266,6 +266,17 @@ export const content = [
     body: `Use a _dedicated email address for newsletters_, something like frank+news@gmail.com (note the "+news" part).\n\nThanks to a Gmail filter I created, emails directed to that address never hit my inbox and go to a dedicated label that I browse when I want to read them.`,
   },
   {
+    id: "cjz4ignh",
+    tag: "tip",
+    author: {
+      name: "Manuel Frigerio",
+      avatar: "twitter/manuel_frigerio",
+      bio: "Founder of ReferralHero, SparkLoop",
+    },
+    body:
+      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
+  },
+  {
     id: "h1q0fvf7",
     tag: "extension",
     author: {
@@ -283,6 +294,19 @@ export const content = [
     },
   },
   {
+    id: "of6jsxq1",
+    tag: "tip",
+    author: {
+      name: "Tim Sneath",
+      avatar: "twitter/timsneath",
+      bio: "Product Manager for Flutter & Dart",
+    },
+    body:
+      "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
+    preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
+    source_url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
+  },
+  {
     id: "szjvyo4o",
     tag: "opinion",
     author: {
@@ -296,15 +320,15 @@ export const content = [
   },
   {
     id: "kcbqjw7x",
-    tag: "advice",
+    tag: "opinion",
     author: {
-      name: "Michael Seibel",
-      avatar: "twitter/mwseibel",
-      bio: "CEO at Y Combinator",
+      name: "New York Times",
+      avatar: "twitter/nytimes",
+      bio: "Kostadin Kushlev and Elizabeth W. Dunn",
     },
     body:
       "Cutting back on email might reduce stress as much as picturing yourself swimming in the warm waters of a tropical island several times a day.",
-    source: "https://www.nytimes.com/2015/01/11/opinion/sunday/stop-checking-email-so-often.html",
+    url: "https://www.nytimes.com/2015/01/11/opinion/sunday/stop-checking-email-so-often.html",
     label: "Read the study",
   },
   {
@@ -325,7 +349,7 @@ export const content = [
     },
   },
   {
-    id: "53khm0uz",
+    id: "p4zdy4cd",
     tag: "advice",
     author: {
       name: "Paul Graham",
@@ -351,18 +375,6 @@ export const content = [
     label: "Read blog post",
   },
   {
-    id: "erpxshiu",
-    tag: "tip",
-    author: {
-      name: "Keith Rarick",
-      avatar: "twitter/krarick",
-      bio: "Programmer",
-    },
-    body: "Mute. Heavily. The 'm' shortcut key is your friend.",
-    url: "https://xph.us/2013/01/22/inbox-zero-for-life.html",
-    label: "Read more tips & shortcuts",
-  },
-  {
     id: "qskiwa9h",
     tag: "opinion",
     author: {
@@ -373,6 +385,18 @@ export const content = [
     body:
       "I never understood inbox zero.\n\nEvery email isn’t more important than all the other commitments I’ve made.",
     source_url: "https://twitter.com/rrhoover/status/1167874754532917252",
+  },
+  {
+    id: "erpxshiu",
+    tag: "tip",
+    author: {
+      name: "Keith Rarick",
+      avatar: "twitter/krarick",
+      bio: "Programmer",
+    },
+    body: "Mute. Heavily. The 'm' shortcut key is your friend.",
+    url: "https://xph.us/2013/01/22/inbox-zero-for-life.html",
+    label: "Read more tips & shortcuts",
   },
   {
     id: "imlnicr3",
@@ -400,17 +424,6 @@ export const content = [
       'Check and answer emails once per day.\n\nMark emails that can wait with a "fluff" label and answer them during the weekend.',
   },
   {
-    id: "ageyw1qv",
-    tag: "tip",
-    author: {
-      name: "Rich Vreenland",
-      avatar: "richvreeland",
-      bio: "Composer of “It Follows” soundtrack",
-    },
-    body:
-      "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
-  },
-  {
     id: "75yrc814",
     tag: "advice",
     author: {
@@ -422,6 +435,17 @@ export const content = [
       "For every email you encounter, choose from the following fast-triage options:\n\n* If a message requires no action on your behalf, archive it immediately.\n\n* If a message requires a simple reply that you can knock out in a minute or less, respond right then and there—and then archive it immediately.\n\n* If a message requires some level of thought or response that you can’t get to right away, snooze it to a time and date when you will be able to handle it—whether it’s later that same day, sometime the following week, or on a Friday two months down the road.",
     url: "https://www.fastcompany.com/40507663/the-7-step-guide-to-achieving-inbox-zero-and-staying-there-in-2018",
     label: "Read the guide to inbox zero",
+  },
+  {
+    id: "ageyw1qv",
+    tag: "tip",
+    author: {
+      name: "Rich Vreenland",
+      avatar: "richvreeland",
+      bio: "Composer of “It Follows” soundtrack",
+    },
+    body:
+      "I use auto-advance (a Gmail setting) to make it easier to work through mail, send/delete/archive anything easily actionable, and snooze anything that I can't address this week.\n\nIt's easy this way to use the default keyboard shortcuts to quickly breeze through e-mail.",
   },
   {
     id: "mty8e531",
@@ -487,6 +511,17 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/how-i-email-andrew-mellen/",
   },
   {
+    id: "53khm0uz",
+    tag: "opinion",
+    author: {
+      name: "Paul Graham",
+      avatar: "twitter/paulg",
+      bio: "Y-Combinator Co-Founder",
+    },
+    body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
+    source_url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
+  },
+  {
     id: "z4fnnxov",
     tag: "opinion",
     author: {
@@ -516,19 +551,6 @@ export const content = [
     },
   },
   {
-    id: "of6jsxq1",
-    tag: "tip",
-    author: {
-      name: "Tim Sneath",
-      avatar: "twitter/timsneath",
-      bio: "Product Manager for Flutter & Dart",
-    },
-    body:
-      "Moving emails out of the inbox is no good if it simply hides them from sight. It’s critical that they’re visible.\n\nSo I rely on the [Multiple Inboxes feature](https://gsuite.google.com/learning-center/products/gmail/choose-inbox-type/#!/section-4) in Gmail to ensure that three key folders are in view:\n\n* Follow Up\n\n* Waiting\n\n* Read Through.\n\nMultiple Inboxes has been around for a while in Gmail, but only recently graduated from the experimental Labs area. You can enable it from the Advanced tab under Settings.",
-    preview_image: "https://miro.medium.com/max/2000/1*M1DUvFWbHbX4JbUSSGhjYA.png",
-    source_url: "https://medium.com/@timsneath/zero-inbox-94b326683183",
-  },
-  {
     id: "6ip8wgwy",
     tag: "app",
     author: {
@@ -541,7 +563,6 @@ export const content = [
     preview_image:
       "https://d35aizeh8x21c1.cloudfront.net/assets/home/feature-overview-light@2x-04225cd8b0712688acdbbb93b81653961209b96b2e58efea80bd32fb770efdd9.png",
   },
-
   {
     id: "lmivwwg2",
     tag: "app",
@@ -585,28 +606,6 @@ export const content = [
       url: "https://www.hidefeed.com/?ref=inboxze.ro",
       icon: "https://www.hidefeed.com/inboxze.ro/logo.png",
     },
-  },
-  {
-    id: "cjz4ignh",
-    tag: "tip",
-    author: {
-      name: "Manuel Frigerio",
-      avatar: "twitter/manuel_frigerio",
-      bio: "Founder of ReferralHero, SparkLoop",
-    },
-    body:
-      "I’ve created a Gmail filter that matches the address of all newsletter I follow (using the OR operator to do it in a single query). This filter applies a “newsletters” label to each matching email and archives it.\n\nI only check this label once a week.",
-  },
-  {
-    id: "53khm0uz",
-    tag: "advice",
-    author: {
-      name: "Paul Graham",
-      avatar: "twitter/paulg",
-      bio: "Y-Combinator Co-Founder",
-    },
-    body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
-    source_url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
   },
 ];
 
