@@ -607,6 +607,21 @@ export const content = [
       icon: "https://www.hidefeed.com/inboxze.ro/logo.png",
     },
   },
+  {
+    id: "9i27ugmh",
+    tag: "app",
+    author: {
+      name: "func.ovh",
+      avatar: "twitter/funcovh",
+      bio: "Superpowers for your email",
+    },
+    body: "Func.ovh is an e-mail based ecosystem allowing you to use features like reminders, journal and other, purely from the level of your e-mail client.\n\nNo additional software\nNo additional accounts\nNo additional fees!\n\nThe concept is really simple, just sent an e-mail to [action]@[service].func.ovh and watch the magic happening 🙂\n\nFor more information visit - https://www.func.ovh/\n\nLet's grow the E-mail Func together 🙂",
+    offer: {
+      title: "Free in 2020",
+      subtitle: "Click here to use",
+      url: "https://func.ovh",
+    },
+  },
 ];
 
 export const tags = {
