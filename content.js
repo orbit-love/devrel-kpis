@@ -555,6 +555,21 @@ export const content = [
     source_url: "https://www.gmass.co/gmailgenius/email-peter-shankman/",
   },
   {
+    id: "fv8h17wr",
+    tag: "app",
+    author: {
+      name: "FollowUpThen",
+      avatar: "twitter/followupthen",
+      bio: "Easily schedule email reminders",
+    },
+    body: "Forward an email to FollowUpThen and get it back in your inbox when you want to take action on it.",
+    offer: {
+      title: "$5 off any plan",
+      subtitle: "Click here to claim the discount",
+      url: "https://www.followupthen.com/?coupon=inboxze_ro",
+    },
+  },
+  {
     id: "1s3fmslu",
     tag: "extension",
     author: {
@@ -592,21 +607,6 @@ export const content = [
     },
     body: `Every time I get an email saying "just bumping this up in your inbox," it reminds me of the huge startup that's missing.`,
     source_url: "https://twitter.com/paulg/status/1220313659089571847?s=21",
-  },
-  {
-    id: "fv8h17wr",
-    tag: "app",
-    author: {
-      name: "FollowUpThen",
-      avatar: "twitter/followupthen",
-      bio: "Easily schedule email reminders",
-    },
-    body: "Forward an email to FollowUpThen and get it back in your inbox when you want to take action on it.",
-    offer: {
-      title: "$5 off any plan",
-      subtitle: "Click here to claim the discount",
-      url: "https://www.followupthen.com/?coupon=inboxze_ro",
-    },
   },
 ];
 
