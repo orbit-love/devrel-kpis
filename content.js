@@ -599,7 +599,7 @@ export const content = [
     author: {
       name: "FollowUpThen",
       avatar: "twitter/followupthen",
-      bio: "The simplest way to schedule an email reminder.",
+      bio: "Easily schedule email reminders",
     },
     body: "Forward an email to FollowUpThen and get it back in your inbox when you want to take action on it.",
     offer: {
