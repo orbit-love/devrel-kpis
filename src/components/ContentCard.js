@@ -258,7 +258,7 @@ const Tweet = ({ href }) => {
     >
       <P2 color="#1DA1F2">
         <Icon offset="-1px" name="twitter" color="#1DA1F2" size="12px" style={{ marginRight: "3px" }} />
-        Tweet
+        Share
       </P2>
     </a>
   );
