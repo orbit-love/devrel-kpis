@@ -72,10 +72,9 @@ const PageContent = props => {
         <Spacer size="xxxl" />
         <Logo />
         <Spacer />
-        <H2 align="center">Inbox Zero</H2>
+        <H2 align="center">DevRel Metrics</H2>
         <H3 align="center" style={{ maxWidth: "48rem" }}>
-          Here’s how the most productive people manage their inbox. A&nbsp;collection of <Highlight>tips</Highlight>,{" "}
-          <Highlight>apps</Highlight> and <Highlight>workflows</Highlight>.
+        Prove ROI <Highlight>through data + story</Highlight>. Advice from around the DevRel and Community World.
         </H3>
         <Grid width="22em">
           <StyledA
@@ -101,13 +100,9 @@ const PageContent = props => {
         <Spacer />
         <P2>
           Made by{" "}
-          <a href="https://twitter.com/linuz90" target="_blank" rel="noopener noreferrer">
-            Fabrizio
+          <a href="https://twitter.com/orbitmodel" target="_blank" rel="noopener noreferrer">
+            the team at Orbit
           </a>{" "}
-          and{" "}
-          <a href="https://twitter.com/frankdilo" target="_blank" rel="noopener noreferrer">
-            Francesco
-          </a>
           . Privacy Policy <Link to="/privacy-policy">here</Link>.
         </P2>
       </Section>
