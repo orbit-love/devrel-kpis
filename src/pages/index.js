@@ -70,11 +70,12 @@ const PageContent = props => {
     <Fragment>
       <Section width="56rem" center>
         <Spacer size="xxxl" />
-        <!-- <Logo /> -->
+        {/* <Logo /> */}
         <Spacer />
         <H2 align="center">DevRel KPIs</H2>
         <H3 align="center" style={{ maxWidth: "48rem" }}>
-        <Highlight>Metrics and methods for proving ROI </Highlight> through data + story. Advice from around the DevRel and Community World.
+          <Highlight>Metrics and methods for proving ROI </Highlight> through data + story. Advice from around the
+          DevRel and Community World.
         </H3>
         <Grid width="22em">
           <StyledA
@@ -102,7 +103,8 @@ const PageContent = props => {
           Made by{" "}
           <a href="https://orbit.love" target="_blank" rel="noopener noreferrer">
             the team at Orbit
-          </a>. 
+          </a>
+          .
         </P2>
       </Section>
       <Section width="100%">
@@ -165,10 +167,11 @@ const PageContent = props => {
           .
         </P2>
         <P2 align="center">
-        Inspired by and forked from{" "}
+          Inspired by and forked from{" "}
           <a href="https://inboxze.ro/" target="_blank" rel="noopener noreferrer">
             Inbox Zero
-          </a>.
+          </a>
+          .
         </P2>
         <P2 align="center">
           Privacy Policy <Link to="/privacy-policy">here</Link>.
