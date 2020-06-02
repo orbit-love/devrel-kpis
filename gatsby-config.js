@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "inboxze.ro",
-    description: "You're doing email wrong. Here’s how the most productive people manage their inbox.",
-    author: "@mailbrew",
-    siteUrl: "https://inboxze.ro",
+    title: "DevRel KPIs",
+    description: "Measure and prove ROI of DevRel and Community.",
+    author: "@orbitmodel",
+    siteUrl: "https://devrel-kpis.com",
   },
   plugins: [
     "gatsby-plugin-emotion",
