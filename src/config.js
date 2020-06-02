@@ -14,13 +14,13 @@ const baseConfig = {
     accent1: "hsl(249, 9%, 15%)",
     error: "hsl(360, 90%, 60%)",
     success: "hsl(130, 70%, 45%)",
-    uiBorderColor: "hsla(0, 0%, 0%, 0.14)",
+    uiBorderColor: "hsla(251, 90%, 84%, 100)",
     shadowColor: "hsla(0, 0%, 0%, .05)",
   },
   fonts: {
     faces: {
       normal:
-        "niveau-grotesk, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+        "'avenir next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     },
     weights: {
       normal: 400,
@@ -47,11 +47,11 @@ const baseConfig = {
     sizes: {
       normal: ["1em", "16px"],
       P1: ["17px", "16px"],
-      P2: ["16px", "14px"],
+      P2: ["14px", "12px"],
       H1: ["3em", "2em"],
       H2: ["2.4em", "1.8em"],
       H3: ["1.8em", "1.4em"],
-      H4: ["20px", "18px"],
+      H4: ["16px", "16px"],
       H5: "1.1em",
       Badge: ["0.9em", "16px"],
       SmallText: ["0.8em", "16px"],

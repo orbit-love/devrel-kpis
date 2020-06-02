@@ -19,7 +19,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
   return (
     <AnimatedDiv id={element.id} style={style}>
       <Card inline width style={{ marginBottom: "20px" }}>
-        <HStack align="right" vAlign="center" style={{ position: "absolute", top: "9px", right: "9px" }} gap="4px">
+        <HStack align="right" vAlign="center" style={{ position: "absolute", top: "12px", right: "9px" }} gap="4px">
           <Icon
             onClick={onLinkClick}
             name={isCurrentCard ? "closeBold" : "link"}
@@ -27,39 +27,14 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             size={isCurrentCard ? "24px" : "16px"}
           />
         </HStack>
-        {author && (
-          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer" }}>
-            {author.avatar && (
-              <img
-                src={`https://unavatar.now.sh/${author.avatar}`}
-                alt={author.name}
-                css={css`
-                  width: 46px;
-                  height: 46px;
-                  border-radius: 50%;
-                `}
-              />
-            )}
-            {!author.avatar && author.image && (
-              <img
-                src={author.image}
-                alt={author.name}
-                css={css`
-                  width: 46px;
-                  height: 46px;
-                `}
-              />
-            )}
-            <VStack gap={0}>
-              <H4>{author.name}</H4>
-              <P2 noWrap>{author.bio}</P2>
-            </VStack>
-          </HStack>
-        )}
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;", marginBottom:".5em" }}>
+          <Tag tag={tag} onClick={onTagClick} />
+        </HStack>
+
         {body && (
           <div
             css={css`
-              margin-top: 1em;
+              margin-bottom: 1em;
               white-space: pre-line;
               color: ${config.colors.c2};
               font-size: 17px;
@@ -90,6 +65,36 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             <ReactMarkdown source={body} />
           </div>
         )}
+          {author && (
+          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer", marginBottom: "1em" }}>
+            {author.avatar && (
+              <img
+                src={`https://unavatar.now.sh/${author.avatar}`}
+                alt={author.name}
+                css={css`
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                `}
+              />
+            )}
+            {!author.avatar && author.image && (
+              <img
+                src={author.image}
+                alt={author.name}
+                css={css`
+                  width: 40px;
+                  height: 40px;
+                `}
+              />
+            )}
+            <VStack gap={0}>
+              <H4>{author.name}</H4>
+              <P2 noWrap>{author.bio}</P2>
+            </VStack>
+          </HStack>
+        )}
+
         {preview_image && (
           <img
             style={{
@@ -126,7 +131,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </a>
         )}
         {url && (
-          <StyledA style={{ marginTop: "1em" }} type="primary" href={url} target="_blank" rel="noopener noreferrer">
+          <StyledA style={{ marginTop: "1em", marginBottom: "1em", backgroundColor: "#4A35A8" }} type="primary" href={url} target="_blank" rel="noopener noreferrer">
             {label || "Get it"}
           </StyledA>
         )}
@@ -167,10 +172,9 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             </SubtleCard>
           </a>
         )}
-        <HStack align="right" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
-          {source_url && <Source href={source_url} />}
+         <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;" }}>
+          {source_url &&  <Source href={source_url} />}
           <Tweet href={tweetLink} />
-          <Tag tag={tag} onClick={onTagClick} />
         </HStack>
       </Card>
     </AnimatedDiv>
@@ -209,6 +213,7 @@ const Tag = ({ tag, onClick }) => {
   );
 };
 
+// link box
 const Source = ({ href }) => {
   return (
     <a
@@ -231,6 +236,7 @@ const Source = ({ href }) => {
     >
       <P2 color="hsl(0, 0%, 50%)">
         <Icon offset="-1px" name="open" color="hsl(0, 0%, 50%)" size="12px" />
+        &nbsp;Source
       </P2>
     </a>
   );
