@@ -28,67 +28,67 @@
 export const content = [
   {
     id: "mu205jxd",
-    tag: "opensource",
+    tag: "reference",
     author: {
       name: "TODO Group",
       avatar: "twitter/todogroup",
       bio: "The professional open source program networking group at The Linux Foundation",
     },
     body:
-      "Number of pull requests submitted, open, and accepted (and length of time they remain open).",
+      "_Number of pull requests submitted, open, and accepted_ (and length of time they remain open).",
     source: "htthttps://todogroup.org/guides/measuring/ps://mbbroberg.fun/the-value-of-community-metrics/",
   },
   {
     id: "kc4ahtq8",
-    tag: "revenuesales",
+    tag: "reference",
     author: {
       name: "Ahsley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
-    body: "Number of sales calls attended when technical members of the prospect need to learn more about the technical aspects of the product.",
+    body: "_Number of sales calls attended_ when technical members of the prospect need to learn more about the technical aspects of the product.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
     label: "Read the article ››"
   },
   {
     id: "xoinja8e",
-    tag: "revenueselfserve",
+    tag: "reference",
     author: {
       name: "Ahsley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
-    body: "The rate of repeat questions in the support channels decreasing over time or number of articles created.",
+    body: "The _rate of repeat questions_ in the support channels decreasing over time or number of articles created.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
     label: "Read the article ››"
   },
   {
     id: "o80fdqfi",
-    tag: "devex",
+    tag: "reference",
     author: {
       name: "Ahsley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
-    body: "Signup-to-Active ratio.",
+    body: "_Signup-to-Active ratio._",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
     label: "Read the article ››"
   },
   {
     id: "c5i1j2um",
-    tag: "resource",
+    tag: "wisdom",
     author: {
       name: "Ahsley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
-    body: "For the most part, _goals fall into one of three broad categories: awareness, revenue and developer experience_.",
+    body: "For the most part, goals fall into one of three broad categories: awareness, revenue and developer experience.",
     url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
     label: "Read the article ››"
   },
   {
     id: "8ujxdbrl",
-    tag: "opensource",
+    tag: "reference",
     author: {
       name: "Josh Dzielak",
       avatar: "twitter/dzello",
@@ -99,7 +99,7 @@ export const content = [
   },
   {
     id: "kt8e8qts",
-    tag: "awareness",
+    tag: "reference",
     author: {
       name: "Josh Dzielak",
       avatar: "twitter/dzello",
@@ -110,7 +110,7 @@ export const content = [
   },
   {
     id: "tn5ljg64",
-    tag: "activation",
+    tag: "reference",
     author: {
       name: "Josh Dzielak",
       avatar: "twitter/dzello",
@@ -121,7 +121,7 @@ export const content = [
   },
   {
     id: "k5267ju5",
-    tag: "activation",
+    tag: "reference",
     author: {
       name: "Derric Gilling",
       avatar: "twitter/d_gilling",
@@ -132,7 +132,7 @@ export const content = [
   },
   {
     id: "qnzp2e5r",
-    tag: "devex",
+    tag: "reference",
     author: {
       name: "Derric Gilling",
       avatar: "twitter/d_gilling",
@@ -143,7 +143,7 @@ export const content = [
   },
   {
     id: "1iyg4b5i",
-    tag: "adoption",
+    tag: "reference",
     author: {
       name: "Erica Kuhl",
       avatar: "twitter/ericakuhl",
@@ -154,51 +154,31 @@ export const content = [
   },
   {
     id: "zodyzm2d",
-    tag: "engagement",
+    tag: "reference",
     author: {
       name: "Channy Yun",
       avatar: "twitter/channyun",
       bio: "Principal Tech Evangelist  @AWSKorea. Cloud, Open API, Open Source, Web Standards",
     },
-    body: "Number of unanswered questions / answered, weekly or monthly.",
+    body: "_Number of unanswered questions / answered_, weekly or monthly.",
     source_url: "https://www.slideshare.net/Channy/how-to-measure-dev-rel-performances-metrics-devrel-tokyo-2018",
-  },
-
-
-
-
-
-
-
-
-  {
-    id: "8ujxxbrl",
-    tag: "community",
-    author: {
-      name: "Patrick Woods",
-      avatar: "twitter/patrickjwoods",
-      bio: "Founder of Orbit",
-    },
-    body:
-      "Without metrics then how can you count?",
-    source_url: "https://twitter.com/patrickjwoods/status/1265087517532905472",
   },
   {
     id: "k29pqdcr",
-    tag: "quote",
+    tag: "wisdom",
     author: {
       name: "Matt Broberg",
       avatar: "twitter/mbbroberg",
       bio: "open source community storyteller @Opensourceway",
     },
     body:
-      "Measuring everything is only slightly better than measuring nothing. &nbsp;_Pick one KPI and do it well_.",
+      "Measuring everything is only slightly better than measuring nothing. Pick one KPI and do it well.",
     source: "https://mbbroberg.fun/the-value-of-community-metrics/",
     label: "Read the article.",
   },
   {
     id: "8ujxdbrl",
-    tag: "quote",
+    tag: "wisdom",
     author: {
       name: "Joe Beda",
       avatar: "twitter/jbeda",
@@ -216,69 +196,15 @@ export const tags = {
     name: "Show All",
     color: "",
   },
-  awareness: {
-    value: "awareness",
-    name: "Awareness",
+  reference: {
+    value: "reference",
+    name: "KPI Reference",
     color: "#8348FF",
   },
-    activation: {
-    value: "activation",
-    name: "Activation",
-    color: "#8348FF",
-  },
-  adoption: {
-    value: "adoption",
-    name: "Adoption",
-    color: "#4545A1",
-  },
-  engagement: {
-    value: "engagement",
-    name: "Engagement",
-    color: "#4545A1",
-  },
-  revenuesales: {
-    value: "revenuesales",
-    name: "Revenue - Sales",
-    color: "#0f9520",
-  },
-  revenueselfserve: {
-    value: "revenueselfserve",
-    name: "Revenue - Self-serve",
-    color: "#017d11",
-  },
-
-
-  devrel: {
-    value: "devrel",
-    name: "DevRel",
-    color: "#3576f2",
-  },
-  community: {
-    value: "community",
-    name: "Community",
-    color: "#3576F2",
-  },
-  devex: {
-    value: "developerexperience",
-    name: "Developer Experience",
-    color: "#4B5269",
-  },
-  opensource: {
-    value: "open-source",
-    name: "Open Source",
-    color: "#3576F2",
-  },
-
-
-  quote: {
-    value: "quote",
-    name: "Quote",
-    color: "#3576F2",
-  },
-  resource: {
-    value: "resource",
-    name: "Resource",
-    color: "#3576F2",
+  wisdom: {
+    value: "wisdom",
+    name: "KPI Wisdom",
+    color: "#15a3bf",
   }
 };
 
