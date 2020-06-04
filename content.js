@@ -120,6 +120,19 @@ export const content = [
     source_url: "https://twitter.com/dzello/status/1262392071715008512/",
   },
   {
+    id: "8ujxdbrl",
+    tag: "wisdom",
+    author: {
+      name: "Joe Beda",
+      avatar: "twitter/jbeda",
+      bio: "Principal Engineer at @VMware",
+    },
+    body:
+      "I think using metrics as a way to inform the trend is good. Using them as the only method of success leads you to trouble.",
+    source_url: "https://todogroup.org/guides/measuring/",
+  },
+
+  {
     id: "k5267ju5",
     tag: "reference",
     author: {
@@ -175,18 +188,6 @@ export const content = [
       "Measuring everything is only slightly better than measuring nothing. Pick one KPI and do it well.",
     source: "https://mbbroberg.fun/the-value-of-community-metrics/",
     label: "Read the article.",
-  },
-  {
-    id: "8ujxdbrl",
-    tag: "wisdom",
-    author: {
-      name: "Joe Beda",
-      avatar: "twitter/jbeda",
-      bio: "Principal Engineer at @VMware",
-    },
-    body:
-      "I think using metrics as a way to inform the trend is good. Using them as the only method of success leads you to trouble.",
-    source_url: "https://todogroup.org/guides/measuring/",
   }
 ];
 
@@ -198,12 +199,12 @@ export const tags = {
   },
   reference: {
     value: "reference",
-    name: "KPI Reference",
+    name: "Reference",
     color: "#8348FF",
   },
   wisdom: {
     value: "wisdom",
-    name: "KPI Wisdom",
+    name: "Wisdom",
     color: "#15a3bf",
   }
 };
