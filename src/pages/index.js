@@ -75,7 +75,7 @@ const PageContent = props => {
         <H2 align="center">DevRel KPIs</H2>
         <H3 align="center" style={{ maxWidth: "48rem" }}>
           <Highlight>Metrics and methods for proving ROI </Highlight> through data + story. Advice from around the
-          DevRel and Community World.
+          DevRel and Community world.
         </H3>
         <Grid width="22em">
           <StyledA
