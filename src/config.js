@@ -11,7 +11,7 @@ const baseConfig = {
     bg2: "hsl(0, 0%, 96%)",
     bg3: "hsl(0, 0%, 94%)",
     bg4: "hsl(0, 0%, 93%)",
-    accent1: "hsl(249, 9%, 15%)",
+    accent1: "#5B41CF",
     error: "hsl(360, 90%, 60%)",
     success: "hsl(130, 70%, 45%)",
     uiBorderColor: "hsla(251, 90%, 84%, 100)",
