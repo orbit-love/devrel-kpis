@@ -1,28 +1,23 @@
-/**
+/*
  * This file contains all the tips and apps of https://devrel-kpis.com
  *
  * 💡 CONTRIBUTE:
  *
  * - Add your tip to the BOTTOM of this file.
  * - In the "avatar" field you can specify a username, email address or domain (we use unavatar.now.sh)
- * - Get a unique id to use for each tip: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
+ * - Get a unique id to use for each tip; this turns into the direct URL for the card: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
+ * 
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
- * - Use `source_url` by default, and only use `url` when visiting the link is required to learn more about the tip/workflow.
  *
  * - Use one of these tags:
- *   - tip
- *   - app
- *   - advice
- *   - opinion
- *   - extension
+ *   - reference = an actual KPI to measure
+ *   - wisdom = general advice our guidance about KPIs and measurement
  *
  * 📩 SOURCES:
  *
  * Some content doesn't has a source. That's because some people were so kind
  * to send us private messages with their tips and takes on email.
- *
- * So thank you to DHH, Kitze, Rich Vreeland, Manuel Frigerio and Marc Köhlbrugge for their messages.
- *
+ * *
  */
 
 export const content = [
@@ -290,6 +285,19 @@ export const content = [
       "The mission of a developer relations team following the [orbit model](https://github.com/orbit-love/orbit-model) is to facilitate high-quality word-of-mouth exchanges.",
       source_url: "https://orbit.love/blog/why-orbit-is-better-than-funnel-for-developer-relations",
     label: "Read the article.",
+  },
+  {
+    id: "756w3c1s",
+    tag: "wisdom",
+    author: {
+      name: "David Spinks",
+      avatar: "twitter/DavidSpinks",
+      bio: "Founder of @cmx, VP Community @bevylabs",
+    },
+    body:
+      "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
+      source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
+    label: "See the tweet.",
   }
 ];
 
