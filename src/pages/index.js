@@ -79,7 +79,7 @@ const PageContent = props => {
         </H3>
         <Grid width="22em">
           <StyledA
-            href="https://github.com/superlinear-hq/inboxzero-web/edit/master/content.js"
+            href="https://github.com/orbit-love/devrel-kpis"
             icon="github"
             type="primary"
             target="_blank"

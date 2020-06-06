@@ -27,6 +27,17 @@
 
 export const content = [
   {
+    id: "1iyg4b5i",
+    tag: "reference",
+    author: {
+      name: "Erica Kuhl",
+      avatar: "twitter/ericakuhl",
+      bio: "CEO & Founder of Erica Kuhl Consulting, Former VP Community at Salesforce",
+    },
+    body: "_Compare customers that are engaged in the community versus customers that are not_ across pipeline, ACV (Annual Contract Value), product adoption, and attrition.",
+    source_url: "https://medium.com/@erica.kuhl/its-all-about-that-data-4733b9d6873f",
+  },
+  {
     id: "mu205jxd",
     tag: "reference",
     author: {
@@ -75,6 +86,19 @@ export const content = [
     label: "Read the article ››"
   },
   {
+    id: "m0xtu216",
+    tag: "wisdom",
+    author: {
+      name: "Mary Thengvall",
+      avatar: "twitter/mary_grace",
+      bio: "DevRel director @Camunda and author of The Business Value of Developer Relations",
+    },
+    body:
+      "_DevRel Qualified Leads_ are connections passed along to the right team in hopes that together, they will be able to accomplish a task that furthers the overarching company goals.",
+      source_url: "https://www.marythengvall.com/blog/2019/12/14/devrel-qualified-leads-repurposing-a-common-business-metrics-to-prove-value",
+    label: "Read the article.",
+  },
+  {
     id: "c5i1j2um",
     tag: "wisdom",
     author: {
@@ -83,8 +107,21 @@ export const content = [
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
     body: "For the most part, goals fall into one of three broad categories: awareness, revenue and developer experience.",
-    url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
+    source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
     label: "Read the article ››"
+  },
+  {
+    id: "o6ozqg5c",
+    tag: "reference",
+    author: {
+      name: "Patrick Woods",
+      avatar: "twitter/patrickjwoods",
+      bio: "Writer, fencer, and co-founder and CEO of Orbit",
+    },
+    body:
+      "One way to demonstrate the impact of community activities is by calculating _Natural Rate of Growth (NRG)_ and showing how community and DevRel contribute. NRG = 100 x Annual Growth Rate x % Organic Signups X % ARR from Products",
+      source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
+    label: "Read the article.",
   },
   {
     id: "8ujxdbrl",
@@ -186,7 +223,72 @@ export const content = [
     },
     body:
       "Measuring everything is only slightly better than measuring nothing. Pick one KPI and do it well.",
-    source: "https://mbbroberg.fun/the-value-of-community-metrics/",
+      source_url: "https://mbbroberg.fun/the-value-of-community-metrics/",
+    label: "Read the article.",
+  },
+  {
+    id: "2erzxey7",
+    tag: "wisdom",
+    author: {
+      name: "Baruch Sadogursky",
+      avatar: "twitter/jbaruch",
+      bio: "Head of DevOps Advocacy at JFrog",
+    },
+    body:
+      "At JFrog, measuring face-to-face comes back to how well it feeds into online activity. “The first goal is to bring people online because from there we can actually measure.“",
+      source_url: "https://devrel.net/strategy-and-metrics/measuring-face-to-face-dev-rel-at-jfrog",
+    label: "Read the article.",
+  },
+  {
+    id: "6u1gh5c6",
+    tag: "reference",
+    author: {
+      name: "Max Katz",
+      avatar: "twitter/maxkatz",
+      bio: "Program Director, Developer Advocacy, @ibmdeveloper / @ibm",
+    },
+    body:
+      "I believe that _how many developers did we help_ is a very good way to measure success.",
+      source_url: "https://maxkatz.org/2019/12/05/how-many-developers-did-we-help/",
+    label: "Read the article.",
+  },
+  {
+    id: "m0xtu216",
+    tag: "wisdom",
+    author: {
+      name: "Mary Thengvall",
+      avatar: "twitter/mary_grace",
+      bio: "DevRel director @Camunda and author of The Business Value of Developer Relations",
+    },
+    body:
+      "DevRel cannot be held responsible for the final outcome, whether that is a guest post, a partnership, a new hire or a converted customer. _The value DevRel delivers is the connection itself_—the opportunity for marketing or product or sales or another team to transform the DevRel qualified lead into a valuable business asset. That’s what you have to measure.",
+      source_url: "https://openviewpartners.com/blog/the-truth-about-devrel-how-to-make-it-work/",
+    label: "Read the article.",
+  },
+  {
+    id: "o6ozqg5c",
+    tag: "wisdom",
+    author: {
+      name: "Patrick Woods",
+      avatar: "twitter/patrickjwoods",
+      bio: "Writer, fencer, and co-founder and CEO of Orbit",
+    },
+    body:
+      "_Revenue is a natural second-order effect of high gravity_. With communities, as gravity increases, more users will end up in the adoption funnel.",
+      source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
+    label: "Read the article.",
+  },
+  {
+    id: "e8gjwgpk",
+    tag: "wisdom",
+    author: {
+      name: "Josh Dzielak",
+      avatar: "twitter/dzello",
+      bio: "the developer advocate's advocate · co-founder / CTO @OrbitModel · formerly @algolia and @keen_io · Ruby · Rails · JAMstack · he/him",
+    },
+    body:
+      "The mission of a developer relations team following the [orbit model](https://github.com/orbit-love/orbit-model) is to facilitate high-quality word-of-mouth exchanges.",
+      source_url: "https://orbit.love/blog/why-orbit-is-better-than-funnel-for-developer-relations",
     label: "Read the article.",
   }
 ];

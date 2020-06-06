@@ -12,16 +12,15 @@ const PrivacyPolicyPage = () => {
 This document can be printed for reference by using the print command in the settings of any browser.
 
 ## Owner and Data Controller  
-Superlinear Srl  
-Via Paolo da Cannobio, 9  
-20122 Milano (MI), Italy  
-VAT ID: IT10540450961  
+Orbit Labs Inc.  
+325 9th St   
+San Francisco, CA 94117
 
-Owner contact email: [hello@superlinear.co](mailto:hello@superlinear.co)
+Owner contact email: [hello@orbit.love](hello@orbit.love)
 
 ## Types of Data collected
 
-Among the types of Personal Data that [inboxze.ro](https://inboxze.ro) collects, by itself or through third parties, there are: Cookies; Usage Data; Data communicated while using the service.
+Among the types of Personal Data that [devrel-kpis.com](https://devrel-kpis.com) collects, by itself or through third parties, there are: Cookies; Usage Data; Data communicated while using the service.
 
 The Data concerning the User is collected to allow the Owner to provide its Service, comply with its legal obligations, respond to enforcement requests, protect its rights and interests (or those of its Users or third parties), detect any malicious or fraudulent activity, as well as the following: Analytics.
 
