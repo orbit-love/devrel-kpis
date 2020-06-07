@@ -106,7 +106,7 @@ export const content = [
     label: "Read the article ››"
   },
   {
-    id: "o6ozqg5c",
+    id: "o3ozqg5c",
     tag: "reference",
     author: {
       name: "Patrick Woods",
@@ -114,9 +114,9 @@ export const content = [
       bio: "Writer, fencer, and co-founder and CEO of Orbit",
     },
     body:
-      "One way to demonstrate the impact of community activities is by calculating _Natural Rate of Growth (NRG)_ and showing how community and DevRel contribute. NRG = 100 x Annual Growth Rate x % Organic Signups X % ARR from Products",
-      source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
-    label: "Read the article.",
+      "Community managers should track the _Love and Reach_ of their community as well as the _distribution of Orbit levels_, and the change in each over time. ",
+    url: "https://orbit.love/",
+    label: "Track with Orbit ››",
   },
   {
     id: "8ujxdbrl",
@@ -150,6 +150,19 @@ export const content = [
     },
     body: "_Community activation_: what % of product users join the community?",
     source_url: "https://twitter.com/dzello/status/1262392071715008512/",
+  },
+  {
+    id: "o6ozqg5c",
+    tag: "reference",
+    author: {
+      name: "Patrick Woods",
+      avatar: "twitter/patrickjwoods",
+      bio: "Writer, fencer, and co-founder and CEO of Orbit",
+    },
+    body:
+      "One way to demonstrate the impact of community activities is by calculating _Natural Rate of Growth (NRG)_ and showing how community and DevRel contribute. NRG = 100 x Annual Growth Rate x % Organic Signups X % ARR from Products",
+      source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
+    label: "Read the article.",
   },
   {
     id: "8ujxdbrl",

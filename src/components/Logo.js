@@ -3,7 +3,7 @@ import React from "react";
 const Logo = () => (
 
 
-<svg width="82" height="82" viewBox="0 0 762 773" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="82" height="101" viewBox="0 0 762 773" fill="none" xmlns="http://www.w3.org/2000/svg">
 <ellipse rx="348.516" ry="354.936" transform="matrix(0.995608 0.0936252 -0.0948605 0.995491 381.345 386.966)" fill="#BFB1FB"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="32" y="31" width="698" height="711">
 <ellipse rx="348.516" ry="354.936" transform="matrix(0.995621 0.0934828 -0.0949982 0.995477 380.698 386.501)" fill="#4F565F"/>
