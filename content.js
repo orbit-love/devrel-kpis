@@ -42,7 +42,7 @@ export const content = [
       bio: "The professional open source program networking group at The Linux Foundation",
     },
     body: "_Number of pull requests submitted, open, and accepted_ (and length of time they remain open).",
-    source: "htthttps://todogroup.org/guides/measuring/ps://mbbroberg.fun/the-value-of-community-metrics/",
+    source_url: "https://todogroup.org/guides/measuring/ps://mbbroberg.fun/the-value-of-community-metrics/",
   },
   {
     id: "kc4ahtq8",
