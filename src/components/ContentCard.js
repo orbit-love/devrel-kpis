@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { motion } from "framer-motion";
-import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, VStack } from "superlinear-react-ui";
+import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, useDarkMode, VStack } from "superlinear-react-ui";
 import { tags } from "../../content";
 import StyledA from "./StyledA";
 import ReactMarkdown from "react-markdown";
@@ -9,6 +9,7 @@ import removeMd from "remove-markdown";
 
 const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
+  const [darkMode] = useDarkMode();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
 
@@ -44,7 +45,9 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
               }
               em {
                 font-style: normal;
-                background: linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%);
+                background: ${darkMode
+                  ? "linear-gradient(-15deg, hsla(230, 100%, 15%, 0.6) 0%, hsla(225, 100%, 15%, 1) 100%)"
+                  : "linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%)"};
                 padding: 3px 4px;
                 margin: -3px -4px;
               }

@@ -121,6 +121,25 @@ const baseConfig = {
   },
 };
 
-const darkConfig = {};
+const darkConfig = {
+  colors: {
+    c1: "hsl(68, 9%, 85%)",
+    c2: "hsl(72, 10%, 80%)",
+    c3: "hsl(70, 9%, 60%)",
+    c4: "hsl(249, 9%, 60%)",
+    c5: "hsl(249, 9%, 75%)",
+    c6: "hsl(249, 9%, 92%)",
+    bg0: "black",
+    bg1: "hsl(0, 0%, 2%)",
+    bg2: "hsl(0, 0%, 4%)",
+    bg3: "hsl(0, 0%, 6%)",
+    bg4: "hsl(0, 0%, 7%)",
+    accent1: "#a4be30",
+    error: "hsl(180, 90%, 40%)",
+    success: "hsl(310, 70%, 55%)",
+    uiBorderColor: "hsla(70, 90%, 16%, 100)",
+    shadowColor: "hsla(0, 0%, 0%, .95)",
+  },
+};
 
 export { baseConfig, darkConfig };
