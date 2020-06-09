@@ -27,7 +27,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             size={isCurrentCard ? "24px" : "16px"}
           />
         </HStack>
-        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;", marginBottom:".5em" }}>
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;", marginBottom: ".5em" }}>
           <Tag tag={tag} onClick={onTagClick} />
         </HStack>
 
@@ -65,7 +65,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             <ReactMarkdown source={body} />
           </div>
         )}
-          {author && (
+        {author && (
           <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer", marginBottom: "1em" }}>
             {author.avatar && (
               <img
@@ -131,7 +131,13 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </a>
         )}
         {url && (
-          <StyledA style={{ marginTop: "1em", marginBottom: "1em", backgroundColor: "#4A35A8" }} type="primary" href={url} target="_blank" rel="noopener noreferrer">
+          <StyledA
+            style={{ marginTop: "1em", marginBottom: "1em", backgroundColor: "#4A35A8" }}
+            type="primary"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {label || "Get it"}
           </StyledA>
         )}
@@ -172,8 +178,8 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             </SubtleCard>
           </a>
         )}
-         <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;" }}>
-          {source_url &&  <Source href={source_url} />}
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;" }}>
+          {source_url && <Source href={source_url} />}
           <Tweet href={tweetLink} />
         </HStack>
       </Card>
