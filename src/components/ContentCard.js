@@ -281,11 +281,11 @@ function createTweetLink(tip) {
 
   const trimmedBody = plainText.length > 220 ? plainText.slice(0, 220) + "..." : plainText;
 
-  const introText = tip.tag === "tip" || tip.tag === "advice" ? `Love this ${tip.tag}:\n\n` : "";
+  const introText = tip.tag === "wisdom" ? `Love this ${tip.tag}:\n\n` : "";
 
   const text = `${introText}"${trimmedBody}"`;
 
-  const url = `http://inboxze.ro/t/${tip.id}`;
+  const url = `https://devrel-kpis.com/t/${tip.id}`;
 
   return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
 }

@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: "https://inboxze.ro",
+        siteUrl: "https://devrel-kpis.com",
       },
     },
   ],
