@@ -308,7 +308,7 @@ export const content = [
   },
   {
     id: "jc82osj4",
-    tag: "reference",
+    tag: "wisdom",
     author: {
       name: "Nicolas Goutay",
       avatar: "twitter/phacks",
