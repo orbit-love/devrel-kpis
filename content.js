@@ -55,7 +55,6 @@ export const content = [
     body:
       "_Number of sales calls attended_ when technical members of the prospect need to learn more about the technical aspects of the product.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
-    label: "Read the article ››",
   },
   {
     id: "xoinja8e",
@@ -67,7 +66,6 @@ export const content = [
     },
     body: "The _rate of repeat questions_ in the support channels decreasing over time or number of articles created.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
-    label: "Read the article ››",
   },
   {
     id: "o80fdqfi",
@@ -79,7 +77,6 @@ export const content = [
     },
     body: "_Signup-to-Active ratio._",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
-    label: "Read the article ››",
   },
   {
     id: "m0xtu216",
@@ -93,7 +90,6 @@ export const content = [
       "_DevRel Qualified Leads_ are connections passed along to the right team in hopes that together, they will be able to accomplish a task that furthers the overarching company goals.",
     source_url:
       "https://www.marythengvall.com/blog/2019/12/14/devrel-qualified-leads-repurposing-a-common-business-metrics-to-prove-value",
-    label: "Read the article.",
   },
   {
     id: "c5i1j2um",
@@ -106,7 +102,6 @@ export const content = [
     body:
       "For the most part, goals fall into one of three broad categories: awareness, revenue and developer experience.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
-    label: "Read the article ››",
   },
   {
     id: "o3ozqg5c",
@@ -168,7 +163,6 @@ export const content = [
     body:
       "One way to demonstrate the impact of community activities is by calculating _Natural Rate of Growth (NRG)_ and showing how community and DevRel contribute. NRG = 100 x Annual Growth Rate x % Organic Signups X % ARR from Products",
     source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
-    label: "Read the article.",
   },
   {
     id: "hsgd83hs",
@@ -239,7 +233,6 @@ export const content = [
     },
     body: "Measuring everything is only slightly better than measuring nothing. Pick one KPI and do it well.",
     source_url: "https://mbbroberg.fun/the-value-of-community-metrics/",
-    label: "Read the article.",
   },
   {
     id: "2erzxey7",
@@ -252,7 +245,6 @@ export const content = [
     body:
       "At JFrog, measuring face-to-face comes back to how well it feeds into online activity. “The first goal is to bring people online because from there we can actually measure.“",
     source_url: "https://devrel.net/strategy-and-metrics/measuring-face-to-face-dev-rel-at-jfrog",
-    label: "Read the article.",
   },
   {
     id: "6u1gh5c6",
@@ -264,7 +256,6 @@ export const content = [
     },
     body: "I believe that _how many developers did we help_ is a very good way to measure success.",
     source_url: "https://maxkatz.org/2019/12/05/how-many-developers-did-we-help/",
-    label: "Read the article.",
   },
   {
     id: "27hhdus7",
@@ -277,7 +268,6 @@ export const content = [
     body:
       "DevRel cannot be held responsible for the final outcome, whether that is a guest post, a partnership, a new hire or a converted customer. _The value DevRel delivers is the connection itself_—the opportunity for marketing or product or sales or another team to transform the DevRel qualified lead into a valuable business asset. That’s what you have to measure.",
     source_url: "https://openviewpartners.com/blog/the-truth-about-devrel-how-to-make-it-work/",
-    label: "Read the article.",
   },
   {
     id: "kjuegbsh",
@@ -290,7 +280,6 @@ export const content = [
     body:
       "_Revenue is a natural second-order effect of high gravity_. With communities, as gravity increases, more users will end up in the adoption funnel.",
     source_url: "https://orbit.love/blog/whats-your-communitys-nrg",
-    label: "Read the article.",
   },
   {
     id: "e8gjwgpk",
@@ -304,7 +293,6 @@ export const content = [
     body:
       "The mission of a developer relations team following the [orbit model](https://github.com/orbit-love/orbit-model) is to facilitate high-quality word-of-mouth exchanges.",
     source_url: "https://orbit.love/blog/why-orbit-is-better-than-funnel-for-developer-relations",
-    label: "Read the article.",
   },
   {
     id: "756w3c1s",
@@ -317,7 +305,6 @@ export const content = [
     body:
       "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
-    label: "See the tweet.",
   },
   {
     id: "jc82osj4",
