@@ -171,7 +171,7 @@ export const content = [
     label: "Read the article.",
   },
   {
-    id: "8ujxdbrl",
+    id: "hsgd83hs",
     tag: "wisdom",
     author: {
       name: "Joe Beda",
@@ -182,7 +182,6 @@ export const content = [
       "I think using metrics as a way to inform the trend is good. Using them as the only method of success leads you to trouble.",
     source_url: "https://todogroup.org/guides/measuring/",
   },
-
   {
     id: "k5267ju5",
     tag: "reference",
@@ -208,7 +207,7 @@ export const content = [
     source_url: "https://nordicapis.com/how-to-measure-the-success-of-developer-relations/",
   },
   {
-    id: "1iyg4b5i",
+    id: "l9038shs",
     tag: "reference",
     author: {
       name: "Erica Kuhl",
@@ -268,7 +267,7 @@ export const content = [
     label: "Read the article.",
   },
   {
-    id: "m0xtu216",
+    id: "27hhdus7",
     tag: "wisdom",
     author: {
       name: "Mary Thengvall",
@@ -281,7 +280,7 @@ export const content = [
     label: "Read the article.",
   },
   {
-    id: "o6ozqg5c",
+    id: "kjuegbsh",
     tag: "wisdom",
     author: {
       name: "Patrick Woods",
