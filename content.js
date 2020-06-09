@@ -320,6 +320,23 @@ export const content = [
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
     label: "See the tweet.",
   },
+  {
+    id: "jc82osj4",
+    tag: "reference",
+    author: {
+      name: "Nicolas Goutay",
+      avatar: "twitter/phacks",
+      bio: "Software Engineer, Orbit",
+    },
+    body:
+      "Having _community insights at hand in GitHub issues and PRs_ is a great way to direct my open source efforts to new and/or inexperienced contributors, improving their contributing experience.",
+    chrome_extension: {
+      title: "Orbit Chrome Extension",
+      url: "https://chrome.google.com/webstore/detail/orbit/ibgahekkldapaohbpmpbckmeljidicmn",
+      icon:
+        "https://lh3.googleusercontent.com/Q8EiWv9H3lug9YoSk826qTf9TU20lBQaeUStVqNTc0vMXnebpCTYCx80FSCMZTl1nuwRcVawJ6g=w128-h128-e365",
+    },
+  },
 ];
 
 export const tags = {
