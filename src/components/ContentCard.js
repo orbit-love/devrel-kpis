@@ -69,7 +69,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </div>
         )}
         {author && (
-          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer", marginBottom: "1em" }}>
+          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer" }}>
             {author.avatar && (
               <img
                 src={`https://unavatar.now.sh/${author.avatar}`}
@@ -181,7 +181,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             </SubtleCard>
           </a>
         )}
-        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;" }}>
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
           {source_url && <Source href={source_url} />}
           <Tweet href={tweetLink} />
         </HStack>
