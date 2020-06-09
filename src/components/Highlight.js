@@ -30,8 +30,8 @@ const Highlight = props => {
           y2="252.851"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor={darkMode ? "#121601" : "#EDE9FE"} />
-          <stop offset="1" stopColor={darkMode ? "#404e04" : "#BFB1FB"} stopOpacity="0" />
+          <stop stopColor={darkMode ? "#252457" : "#EDE9FE"} />
+          <stop offset="1" stopColor={darkMode ? "#6762F0" : "#BFB1FB"} stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
