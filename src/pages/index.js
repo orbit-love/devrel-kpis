@@ -70,7 +70,7 @@ const PageContent = props => {
     <Fragment>
       <Section width="56rem" center>
         <Spacer size="xxxl" />
-        { <Logo /> }
+        {<Logo />}
         <Spacer />
         <H2 align="center">DevRel KPIs</H2>
         <H3 align="center" style={{ maxWidth: "48rem" }}>
