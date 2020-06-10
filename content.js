@@ -5,17 +5,13 @@
  *
  * - Add your tip to the BOTTOM of this file.
  * - In the "avatar" field you can specify a username, email address or domain (we use unavatar.now.sh)
- * - Get a unique id to use for each tip; this turns into the direct URL for the card: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
- * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
+ * - Get a unique id to use for each tip; this turns into the direct URL for the card (among other things): https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
+ * ☝️ don't forget to add a unique id
+ * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted on the site.
  *
  * - Use one of these tags:
  *   - reference = an actual KPI to measure
  *   - wisdom = general advice our guidance about KPIs and measurement
- *
- * 📩 SOURCES:
- *
- * Some content doesn't has a source. That's because some people were so kind
- * to send us private messages with their tips and takes on email.
  * *
  */
 
@@ -294,18 +290,6 @@ export const content = [
     source_url: "https://orbit.love/blog/why-orbit-is-better-than-funnel-for-developer-relations",
   },
   {
-    id: "756w3c1s",
-    tag: "wisdom",
-    author: {
-      name: "David Spinks",
-      avatar: "twitter/DavidSpinks",
-      bio: "Founder of @cmx, VP Community @bevylabs",
-    },
-    body:
-      "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
-    source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
-  },
-  {
     id: "jc82osj4",
     tag: "wisdom",
     author: {
@@ -320,8 +304,20 @@ export const content = [
       url: "https://chrome.google.com/webstore/detail/orbit/ibgahekkldapaohbpmpbckmeljidicmn",
       icon:
         "https://lh3.googleusercontent.com/Q8EiWv9H3lug9YoSk826qTf9TU20lBQaeUStVqNTc0vMXnebpCTYCx80FSCMZTl1nuwRcVawJ6g=w128-h128-e365",
-    },
+    }
   },
+  {
+    id: "756w3c1s",
+    tag: "wisdom",
+    author: {
+      name: "David Spinks",
+      avatar: "twitter/DavidSpinks",
+      bio: "Founder of @cmx, VP Community @bevylabs",
+    },
+    body:
+      "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
+    source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
+  }
 ];
 
 export const tags = {
