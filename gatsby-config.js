@@ -37,16 +37,16 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-23035506-17",
+        trackingId: "UA-149604794-2",
         head: true,
         respectDNT: true,
-        cookieDomain: "inboxze.ro",
+        cookieDomain: "devrel-kpis.com",
       },
     },
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: "https://inboxze.ro",
+        siteUrl: "https://devrel-kpis.com",
       },
     },
   ],

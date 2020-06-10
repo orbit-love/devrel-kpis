@@ -1,3 +1,8 @@
+  <p align="center">
+    <a href="https://devrel-kpis.com/">
+      <img alt="Devrel KPIs" src="https://devrel-kpis.com/logo.svg" width="100" />
+    </a>
+</p>
 <h1 align="center">DevRel KPIs
 </h1>
 

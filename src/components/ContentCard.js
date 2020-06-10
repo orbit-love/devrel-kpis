@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import { motion } from "framer-motion";
-import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, VStack } from "superlinear-react-ui";
+import { Card, Grid, H4, HStack, Icon, P1, P2, SubtleCard, useConfig, useDarkMode, VStack } from "superlinear-react-ui";
 import { tags } from "../../content";
 import StyledA from "./StyledA";
 import ReactMarkdown from "react-markdown";
@@ -9,6 +9,7 @@ import removeMd from "remove-markdown";
 
 const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, style }) => {
   const config = useConfig();
+  const [darkMode] = useDarkMode();
 
   const { tag, author, body, url, label, preview_image, source_url, offer, chrome_extension } = element;
 
@@ -27,7 +28,7 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             size={isCurrentCard ? "24px" : "16px"}
           />
         </HStack>
-        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;", marginBottom:".5em" }}>
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;", marginBottom: ".5em" }}>
           <Tag tag={tag} onClick={onTagClick} />
         </HStack>
 
@@ -44,7 +45,9 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
               }
               em {
                 font-style: normal;
-                background: linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%);
+                background: ${darkMode
+                  ? "linear-gradient(-15deg, hsla(230, 100%, 15%, 0.6) 0%, hsla(225, 100%, 15%, 1) 100%)"
+                  : "linear-gradient(-15deg, hsla(50, 100%, 85%, 0.6) 0%, hsla(45, 100%, 85%, 1) 100%)"};
                 padding: 3px 4px;
                 margin: -3px -4px;
               }
@@ -65,8 +68,8 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             <ReactMarkdown source={body} />
           </div>
         )}
-          {author && (
-          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer", marginBottom: "1em" }}>
+        {author && (
+          <HStack gap="4px" noWrap onClick={onLinkClick} style={{ cursor: "pointer" }}>
             {author.avatar && (
               <img
                 src={`https://unavatar.now.sh/${author.avatar}`}
@@ -131,7 +134,13 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
           </a>
         )}
         {url && (
-          <StyledA style={{ marginTop: "1em", marginBottom: "1em", backgroundColor: "#4A35A8" }} type="primary" href={url} target="_blank" rel="noopener noreferrer">
+          <StyledA
+            style={{ marginTop: "1em", marginBottom: "1em", backgroundColor: "#4A35A8" }}
+            type="primary"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {label || "Get it"}
           </StyledA>
         )}
@@ -172,8 +181,8 @@ const ContentCard = ({ show, isCurrentCard, element, onLinkClick, onTagClick, st
             </SubtleCard>
           </a>
         )}
-         <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "0em;" }}>
-          {source_url &&  <Source href={source_url} />}
+        <HStack align="left" vAlign="center" gap="4px" style={{ marginTop: "1em" }}>
+          {source_url && <Source href={source_url} />}
           <Tweet href={tweetLink} />
         </HStack>
       </Card>
@@ -275,11 +284,11 @@ function createTweetLink(tip) {
 
   const trimmedBody = plainText.length > 220 ? plainText.slice(0, 220) + "..." : plainText;
 
-  const introText = tip.tag === "tip" || tip.tag === "advice" ? `Love this ${tip.tag}:\n\n` : "";
+  const introText = tip.tag === "wisdom" ? `Love this ${tip.tag}:\n\n` : "";
 
   const text = `${introText}"${trimmedBody}"`;
 
-  const url = `http://inboxze.ro/t/${tip.id}`;
+  const url = `https://devrel-kpis.com/t/${tip.id}`;
 
   return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
 }
