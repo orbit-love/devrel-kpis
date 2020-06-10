@@ -6,7 +6,7 @@
  * - Add your tip to the BOTTOM of this file.
  * - In the "avatar" field you can specify a username, email address or domain (we use unavatar.now.sh)
  * - Get a unique id to use for each tip; this turns into the direct URL for the card: https://www.random.org/strings/?num=1&len=8&digits=on&loweralpha=on&unique=on&format=plain&rnd=new
- * 
+ *  MAKE THIS EXPLICIT 
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted in the site (use this sparsely).
  *
  * - Use one of these tags:
@@ -48,7 +48,7 @@ export const content = [
     id: "kc4ahtq8",
     tag: "reference",
     author: {
-      name: "Ahsley Smith",
+      name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
@@ -60,7 +60,7 @@ export const content = [
     id: "xoinja8e",
     tag: "reference",
     author: {
-      name: "Ahsley Smith",
+      name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
@@ -72,7 +72,7 @@ export const content = [
     id: "o80fdqfi",
     tag: "reference",
     author: {
-      name: "Ahsley Smith",
+      name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
@@ -97,7 +97,7 @@ export const content = [
     id: "c5i1j2um",
     tag: "wisdom",
     author: {
-      name: "Ahsley Smith",
+      name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
       bio: "CMO at Gatsby and Venture Partner at OpenView.",
     },
