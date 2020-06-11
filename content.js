@@ -317,6 +317,18 @@ export const content = [
     body:
       "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
+  },
+  {
+    id: "ja2no1zy",
+    tag: "reference",
+    author: {
+      name: "Jaime Lopez Jr",
+      avatar: "twitter/devwiththehair",
+      bio: "Developer Advocate at Jack Henry & Associates",
+    },
+    body:
+      "_Measuring the traffic to your developer portal (e.g. page views)_ is an important way to get a sense of how to be more effective at creating developer-friendly docs.",
+    source_url: "https://twitter.com/devwiththehair/status/1271115493617750016",
   }
 ];
 
