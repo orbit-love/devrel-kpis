@@ -63,6 +63,17 @@ export const content = [
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
   },
   {
+    id: "high-value-leads",
+    tag: "reference",
+    author: {
+      name: "Ahmad Awais",
+      avatar: "twitter/mrahmadawais",
+      bio: "Award-winning DevRel & Google Developers Expert.",
+    },
+    body: "The _number of high-value leads (actively engaged open-sorcerers) contributing to your open source projects_ sometimes trumps high-volume leads. It is an excellent #DevRel KPI metric.",
+    source_url: "https://twitter.com/MrAhmadAwais/status/1272417982308745216",
+  },
+  {
     id: "o80fdqfi",
     tag: "reference",
     author: {
