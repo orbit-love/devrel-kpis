@@ -317,7 +317,18 @@ export const content = [
     body:
       "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
-  }
+  },
+  {
+    id: "tx4qesv3",
+    tag: "reference",
+    author: {
+      name: "Max Katz",
+      avatar: "twitter/maxkatz",
+      bio: "Program Director, Developer Advocacy, @ibmdeveloper / @ibm",
+    },
+    body: "Measuring success in Developer Relations, a 3-part framework",
+    source_url: "https://maxkatz.org/2020/02/14/measuring-success-in-developer-relations-a-3-part-framework/",
+  }
 ];
 
 export const tags = {
