@@ -317,6 +317,18 @@ export const content = [
     body:
       "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
+  },
+  {
+    id: "hml9qy70",
+    tag: "wisdom",
+    author: {
+      name: "Stathis Georgakopoulos",
+      avatar: "twitter/OhMyCaptain",
+      bio: "Marketing & Under The Hood of Developer Marketing Podcast Host @SlashDataHQ",
+    },
+    body:
+      "Developer marketing KPIs and DevRel KPIs are different. We ran a survey on what makes a developer program successful and asked developer program leaders what are their KPIs and how they set their strategy. Made the results into a webinar.",
+    source_url: "https://dev.to/slashdatahq/developer-marketing-kpis-are-different-from-devrel-kpis-3i8l",
   }
 ];
 
