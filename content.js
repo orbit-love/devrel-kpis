@@ -10,8 +10,10 @@
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted on the site.
  *
  * - Use one of these tags:
- *   - reference = an actual KPI to measure. Ideally this is a single thing to measure that is easy to browse and understand on its own without having to click into the underlying source. 
- *   - wisdom = general advice our guidance about KPIs and measurement
+ *   - reference = an actual KPI to measure. Ideally this is a single thing to measure that is easy to browse and 
+ *                 understand on its own without having to click into the underlying source. 
+ *   - wisdom = general advice or guidance about KPIs and measurement. Please try to extract a quote or idea for the card
+ *              that is easy to browse and understand on its own without having to click into the underlying source.
  * *
  */
 
