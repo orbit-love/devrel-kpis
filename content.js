@@ -327,7 +327,7 @@ export const content = [
       bio: "Marketing & Under The Hood of Developer Marketing Podcast Host @SlashDataHQ",
     },
     body:
-      "Developer marketing KPIs and DevRel KPIs are different. We ran a survey on what makes a developer program successful and asked developer program leaders what are their KPIs and how they set their strategy. Made the results into a webinar.",
+      "We ran a survey on what makes a developer program successful and asked developer program leaders about their KPIs and strategy. One key result: Developer marketing KPIs and DevRel KPIs are different. The top 2 DevRel KPIs were: 1. registered developers accounts (48%) and 2. developer satisfaction score (48%). On the other hand, the top 2 KPIs for developer marketing were: 1. page or video views (55%) 2. unique visitors or IP addresses (54%). All key outcomes are showcased in a free webinar. You can watch the whole webinar in the source below. ",
     source_url: "https://dev.to/slashdatahq/developer-marketing-kpis-are-different-from-devrel-kpis-3i8l",
   }
 ];
