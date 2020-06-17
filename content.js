@@ -10,8 +10,10 @@
  * - You can use markdown in the tips body. If you use _emphasis_, text will be highlighted on the site.
  *
  * - Use one of these tags:
- *   - reference = an actual KPI to measure
- *   - wisdom = general advice our guidance about KPIs and measurement
+ *   - reference = an actual KPI to measure. Ideally this is a single thing to measure that is easy to browse and 
+ *                 understand on its own without having to click into the underlying source. 
+ *   - wisdom = general advice or guidance about KPIs and measurement. Please try to extract a quote or idea for the card
+ *              that is easy to browse and understand on its own without having to click into the underlying source.
  * *
  */
 
@@ -61,6 +63,17 @@ export const content = [
     },
     body: "The _rate of repeat questions_ in the support channels decreasing over time or number of articles created.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
+  },
+  {
+    id: "high-value-leads",
+    tag: "reference",
+    author: {
+      name: "Ahmad Awais",
+      avatar: "twitter/mrahmadawais",
+      bio: "Award-winning DevRel & Google Developers Expert.",
+    },
+    body: "The _number of high-value leads (actively engaged open-sorcerers) contributing to your open source projects_ sometimes trumps high-volume leads. It is an excellent #DevRel KPI metric.",
+    source_url: "https://twitter.com/MrAhmadAwais/status/1272417982308745216",
   },
   {
     id: "o80fdqfi",
@@ -317,6 +330,18 @@ export const content = [
     body:
       "You don’t need everything you do to build community to be tied to revenue.\n\nIt’s okay to do things just to build the community and trust that the value will show up in ways you can’t measure.\n\nIn fact, it’s a requirement in order to build real community.",
     source_url: "https://twitter.com/DavidSpinks/status/1264976828445257729",
+  },
+  {
+    id: "hml9qy70",
+    tag: "wisdom",
+    author: {
+      name: "Stathis Georgakopoulos",
+      avatar: "twitter/OhMyCaptain",
+      bio: "Marketing & Under The Hood of Developer Marketing Podcast Host @SlashDataHQ",
+    },
+    body:
+      "_Developer marketing KPIs and DevRel KPIs are different._ According to our survey, the top 2 DevRel KPIs were: \n1. Registered developers accounts (48%) \n2. Developer satisfaction score (48%). \n\nOn the other hand, the top 2 KPIs for developer marketing were: \n1. Page or video views (55%) \n2. Unique visitors or IP addresses (54%) \n\n View the full results in the source below. ",
+    source_url: "https://dev.to/slashdatahq/developer-marketing-kpis-are-different-from-devrel-kpis-3i8l",
   },
   {
     id: "ja2no1zy",
