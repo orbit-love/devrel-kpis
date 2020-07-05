@@ -354,6 +354,18 @@ export const content = [
     body:
       "_Measuring the traffic to your developer portal (e.g. page views)_ is an important way to get a sense of how to be more effective at creating developer-friendly docs.",
     source_url: "https://twitter.com/devwiththehair/status/1271115493617750016",
+  },
+  {
+    id: "devrel-events-1",
+    tag: "wisdom",
+    author: {
+      name: "Alyss Noland",
+      avatar: "https://twitter.com/PreciselyAlyss",
+      bio: "Senior Developer Advocate at Box",
+    },
+    body:
+      "_KPIs make sense when you have a set of action points that depend on the numbers you get_ - here's a fable of what happens when a manager asks for KPIs just because they need something.",
+    source_url: "https://youtu.be/2lbG2sBcRM0",
   }
 ];
 
