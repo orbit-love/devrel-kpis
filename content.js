@@ -354,7 +354,18 @@ export const content = [
     body:
       "_Measuring the traffic to your developer portal (e.g. page views)_ is an important way to get a sense of how to be more effective at creating developer-friendly docs.",
     source_url: "https://twitter.com/devwiththehair/status/1271115493617750016",
-  }
+  },
+  {
+    id: "tx4qesv3",
+    tag: "reference",
+    author: {
+      name: "Max Katz",
+      avatar: "twitter/maxkatz",
+      bio: "Program Director, Developer Advocacy, @ibmdeveloper / @ibm",
+    },
+    body: "I’d like to offer a framework to measure success. The framework can be adjusted for a company’s specific goal and needs. The framework consists of three parts: 1) DevRel Qualified Leads; 2) Measuring something tied to business goals; 3) Helping developers",
+    source_url: "https://maxkatz.org/2020/02/14/measuring-success-in-developer-relations-a-3-part-framework/",
+  }
 ];
 
 export const tags = {
