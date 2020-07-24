@@ -365,7 +365,18 @@ export const content = [
     },
     body: "I’d like to offer a framework to measure success. The framework can be adjusted for a company’s specific goal and needs. The framework consists of three parts: 1) DevRel Qualified Leads; 2) Measuring something tied to business goals; 3) Helping developers",
     source_url: "https://maxkatz.org/2020/02/14/measuring-success-in-developer-relations-a-3-part-framework/",
-  }
+  },
+  {
+    id: "ivhjedqx",
+    tag: "wisdom",
+    author: {
+      name: "Ray Paik",
+      avatar: "twitter/rspaik",
+      bio: "Community Manager @gitlab",
+    },
+    body: "Look beyond the numbers and understand your community members' motivation for contributing.",
+    source_url: "https://www.openstack.org/videos/summits/vancouver-2018/what-we-learned-from-metrics-as-community-managers",
+  },
 ];
 
 export const tags = {
