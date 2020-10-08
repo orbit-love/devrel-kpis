@@ -47,7 +47,7 @@ export const content = [
     author: {
       name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
-      bio: "CMO at Gatsby and Venture Partner at OpenView.",
+      bio: "Venture Partner at OpenView.",
     },
     body:
       "_Number of sales calls attended_ when technical members of the prospect need to learn more about the technical aspects of the product.",
@@ -59,7 +59,7 @@ export const content = [
     author: {
       name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
-      bio: "CMO at Gatsby and Venture Partner at OpenView.",
+      bio: "Venture Partner at OpenView.",
     },
     body: "The _rate of repeat questions_ in the support channels decreasing over time or number of articles created.",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
@@ -81,7 +81,7 @@ export const content = [
     author: {
       name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
-      bio: "CMO at Gatsby and Venture Partner at OpenView.",
+      bio: "Venture Partner at OpenView.",
     },
     body: "_Signup-to-Active ratio._",
     source_url: "https://openviewpartners.com/blog/measuring-the-impact-of-your-developer-relations-team/",
@@ -105,7 +105,7 @@ export const content = [
     author: {
       name: "Ashley Smith",
       avatar: "twitter/ashl3ysm1th",
-      bio: "CMO at Gatsby and Venture Partner at OpenView.",
+      bio: "Venture Partner at OpenView.",
     },
     body:
       "For the most part, goals fall into one of three broad categories: awareness, revenue and developer experience.",
