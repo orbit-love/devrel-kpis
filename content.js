@@ -356,27 +356,17 @@ export const content = [
     source_url: "https://twitter.com/devwiththehair/status/1271115493617750016",
   },
   {
-    id: "tx4qesv3",
-    tag: "reference",
-    author: {
-      name: "Max Katz",
-      avatar: "twitter/maxkatz",
-      bio: "Program Director, Developer Advocacy, @ibmdeveloper / @ibm",
-    },
-    body: "I’d like to offer a framework to measure success. The framework can be adjusted for a company’s specific goal and needs. The framework consists of three parts: 1) DevRel Qualified Leads; 2) Measuring something tied to business goals; 3) Helping developers",
-    source_url: "https://maxkatz.org/2020/02/14/measuring-success-in-developer-relations-a-3-part-framework/",
-  },
-  {
-    id: "ivhjedqx",
+    id: "devrel-events-1",
     tag: "wisdom",
     author: {
-      name: "Ray Paik",
-      avatar: "twitter/rspaik",
-      bio: "Community Manager @gitlab",
+      name: "Alyss Noland",
+      avatar: "https://twitter.com/PreciselyAlyss",
+      bio: "Senior Developer Advocate at Box",
     },
-    body: "Look beyond the numbers and understand your community members' motivation for contributing.",
-    source_url: "https://www.openstack.org/videos/summits/vancouver-2018/what-we-learned-from-metrics-as-community-managers",
-  },
+    body:
+      "_KPIs make sense when you have a set of action points that depend on the numbers you get_ - here's a fable of what happens when a manager asks for KPIs just because they need something.",
+    source_url: "https://youtu.be/2lbG2sBcRM0",
+  }
 ];
 
 export const tags = {
