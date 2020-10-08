@@ -360,7 +360,7 @@ export const content = [
     tag: "wisdom",
     author: {
       name: "Alyss Noland",
-      avatar: "https://twitter.com/PreciselyAlyss",
+      avatar: "twitter/PreciselyAlyss",
       bio: "Senior Developer Advocate at Box",
     },
     body:
