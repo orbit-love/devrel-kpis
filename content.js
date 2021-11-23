@@ -366,6 +366,54 @@ export const content = [
     body:
       "_KPIs make sense when you have a set of action points that depend on the numbers you get_ - here's a fable of what happens when a manager asks for KPIs just because they need something.",
     source_url: "https://youtu.be/2lbG2sBcRM0",
+  },
+  {
+    id: "mghrsplx",
+    tag: "wisdom",
+    author: {
+      name: "Kurt Kemple",
+      avatar: "twitter/theworstdev",
+      bio: "DX Consultant | Developer Relations Manager, Apollo",
+    },
+    body:
+      "_Don't measure that which is already counted._ If you try to use metrics that are already owned by another team/function, then you run the risk of: 1) competing against a team you should be impacting, 2) never being able to produce the same results as a team dedicated to that metric, and 3) Doing the same work that another function already does well.",
+    source_url: "https://theworst.dev/developer-advocates-guide-to-metrics-and-reporting",
+  },
+  {
+    id: "m6fin2tq",
+    tag: "wisdom",
+    author: {
+      name: "Kurt Kemple",
+      avatar: "twitter/theworstdev",
+      bio: "DX Consultant | Developer Relations Manager, Apollo",
+    },
+    body:
+      "_You can't measure that which you don't record._ One of the most valuable lessons I've learned about developer advocacy, or devrel in general, is that tracking the work you do is fundamental to your success. ",
+    source_url: "https://theworst.dev/developer-advocates-guide-to-metrics-and-reporting",
+  },
+  {
+    id: "6xrv2bxi",
+    tag: "wisdom",
+    author: {
+      name: "Kurt Kemple",
+      avatar: "twitter/theworstdev",
+      bio: "DX Consultant | Developer Relations Manager, Apollo",
+    },
+    body:
+      "_If the metrics change and you don't, stop measuring it._ If you're not taking action in response to the metric going up or down (or qualitative getting better or worse), then you shouldn't be measuring it. You're wasting effort, and other functions will be more aware than you think.",
+    source_url: "https://theworst.dev/developer-advocates-guide-to-metrics-and-reporting",
+  },
+  {
+    id: "pye2lzbr",
+    tag: "wisdom",
+    author: {
+      name: "Kurt Kemple",
+      avatar: "twitter/theworstdev",
+      bio: "DX Consultant | Developer Relations Manager, Apollo",
+    },
+    body:
+      "_Not all metrics are equally trusted._ It turns out, the more degrees of separation between your metric and your company's north start metric (generally revenue related), the less likely it is to be trusted. Just because you show a report doesn't mean others trust the associated impact on the business. Sometimes you have to build trust in your metrics.",
+    source_url: "https://theworst.dev/developer-advocates-guide-to-metrics-and-reporting",
   }
 ];
 
