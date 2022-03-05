@@ -414,6 +414,18 @@ export const content = [
     body:
       "_Not all metrics are equally trusted._ It turns out, the more degrees of separation between your metric and your company's north start metric (generally revenue related), the less likely it is to be trusted. Just because you show a report doesn't mean others trust the associated impact on the business. Sometimes you have to build trust in your metrics.",
     source_url: "https://theworst.dev/developer-advocates-guide-to-metrics-and-reporting",
+  },
+    {
+    id: "lgg099x9",
+    tag: "reference",
+    author: {
+      name: "Bolaji Ayodeji",
+      avatar: "twitter/iambolajiayo",
+      bio: "Software Engineer, Content Creator, and Developer Advocate at Commerce Layer",
+    },
+    body:
+      "_Measuring the number of community members responding to other members' support questions_ is a great way to understand how your devrel efforts are building a solid community of self-sufficient members",
+    source_url: "https://twitter.com/iambolajiayo/status/1499972881022869506?s=21",
   }
 ];
 
