@@ -20,7 +20,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^2.1.2",
-    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-remark-copy-linked-files": "^2.0.12",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.0.11",
